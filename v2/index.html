@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LINK Community Hub™ — Lake Norman</title>
+<meta name="description" content="LINK Community Hub™ connects nonprofits, businesses, schools, students, volunteers and community leaders across Lake Norman.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:wght@400;600;700&family=Yellowtail&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-shell">
+    <a class="brand" href="#top">
+      <div class="brand-main">LINK<span>⛓</span></div>
+      <div class="brand-sub">COMMUNITY HUB™</div>
+    </a>
+    <nav class="main-nav">
+      <a href="#discover"><strong>DISCOVER</strong><span>Resources & Needs</span></a>
+      <a href="#partners"><strong>CONNECT</strong><span>People & Partners</span></a>
+      <a href="#get-involved"><strong>ACTIVATE</strong><span>Get Involved</span></a>
+      <a href="#ecosystem"><strong>RESOURCES</strong><span>Tools & Support</span></a>
+      <a href="#ecosystem"><strong>ABOUT</strong><span>Our Story</span></a>
+    </nav>
+    <a class="get-involved" href="#get-involved">GET INVOLVED ♥</a>
+  </div>
+</header>
+
+<main>
+<section id="top" class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-shade"></div>
+  <div class="hero-copy">
+    <h1>TOGETHER,<br>WE CAN DO</h1>
+    <div class="script">Extraordinary Things</div>
+    <p>Real people. Real needs.<br>Real impact across Lake Norman.</p>
+    <a class="impact-link" href="#ecosystem"><span>▶</span> SEE OUR IMPACT STORY</a>
+  </div>
+</section>
+
+<section class="impact-band">
+  <div class="wave"></div>
+  <div class="impact-grid">
+    <div class="impact"><b>♡</b><div><strong id="nonprofitCount">20</strong><span>Participating Nonprofits</span></div></div>
+    <div class="impact"><b>◷</b><div><strong>340+</strong><span>Volunteer Hours This Month</span></div></div>
+    <div class="impact"><b>♙</b><div><strong>1,250+</strong><span>People Engaged</span></div></div>
+    <div class="impact"><b>▣</b><div><strong>100+</strong><span>Local Businesses Supporting</span></div></div>
+    <div class="impact"><b>♡</b><div><strong class="countless">Countless</strong><span>Lives Impacted</span></div></div>
+  </div>
+</section>
+
+<section id="get-involved" class="engage-section">
+  <div class="section-title">EXPLORE WAYS TO GET INVOLVED</div>
+  <div class="engage-grid">
+    <article class="engage-card"><img src="./assets/volunteer.jpg" alt=""><i class="ico gold">♡</i><h3>VOLUNTEER</h3><p>Your time<br>makes a difference.</p><button onclick="scrollNeeds()">LEARN MORE →</button></article>
+    <article class="engage-card"><img src="./assets/donate.jpg" alt=""><i class="ico teal">$</i><h3>DONATE</h3><p>Support local<br>organizations and families.</p><button onclick="scrollNeeds()">LEARN MORE →</button></article>
+    <article class="engage-card"><img src="./assets/mentor.jpg" alt=""><i class="ico navy">♙</i><h3>MENTOR</h3><p>Guide the next<br>generation.</p><button onclick="openStudentModal()">LEARN MORE →</button></article>
+    <article class="engage-card"><img src="./assets/partner.jpg" alt=""><i class="ico green">🤝</i><h3>PARTNER</h3><p>Build a stronger<br>community together.</p><button onclick="openBusinessModal()">LEARN MORE →</button></article>
+    <article class="engage-card"><img src="./assets/engage.jpg" alt=""><i class="ico red">🎓</i><h3>ENGAGE</h3><p>Students, schools &<br>teams unite.</p><button onclick="openStudentModal()">LEARN MORE →</button></article>
+    <article class="engage-card"><img src="./assets/attend.jpg" alt=""><i class="ico amber">▦</i><h3>ATTEND</h3><p>Join events that<br>bring us together.</p><button onclick="openEventsModal()">LEARN MORE →</button></article>
+  </div>
+</section>
+
+<section id="discover" class="needs-section">
+  <div class="needs-grid">
+    <div class="needs-intro">
+      <h2>Real Needs.<br>Real People.<br>Real Impact.</h2>
+      <p>Explore current needs and opportunities in our community.</p>
+      <p>Every action — big or small — creates lasting change.</p>
+      <button class="gold-btn" onclick="openAllNeeds()">VIEW ALL NEEDS &<br>OPPORTUNITIES →</button>
+    </div>
+
+    <article class="need-card"><img src="./assets/need1.jpg" alt=""><span class="tag goldtag">VOLUNTEERS NEEDED</span><div class="need-body"><h3>Saturday Build Day Volunteers</h3><p>Help build homes and strengthen communities across the Charlotte region.</p><button onclick="openOpportunity('Habitat for Humanity CLT Region','Saturday Build Day Volunteers')">VIEW OPPORTUNITY →</button></div></article>
+
+    <article class="need-card"><img src="./assets/need2.jpg" alt=""><span class="tag tealtag">MENTORS NEEDED</span><div class="need-body"><h3>Mentors & Tutors Needed</h3><p>Support young people through mentorship, tutoring and educational encouragement.</p><button onclick="openOpportunity('Parker Smith','Mentors & Tutors Needed')">VIEW OPPORTUNITY →</button></div></article>
+
+    <article class="need-card"><img src="./assets/need3.jpg" alt=""><span class="tag redtag">DONATIONS NEEDED</span><div class="need-body"><h3>Children's Clothing & Supplies</h3><p>Help local families with clothing, backpacks and essential supplies.</p><button onclick="openOpportunity('Bags of Hope','Children Clothing & Supplies')">VIEW OPPORTUNITY →</button></div></article>
+
+    <article class="need-card"><img src="./assets/need4.jpg" alt=""><span class="tag greentag">VOLUNTEERS NEEDED</span><div class="need-body"><h3>Medical Volunteers & Interpreters</h3><p>Support compassionate care for uninsured and underserved neighbors.</p><button onclick="openOpportunity('Cook Community Clinic','Medical Volunteers & Interpreters')">VIEW OPPORTUNITY →</button></div></article>
+  </div>
+
+  <div id="partners" class="partners-panel">
+    <div class="partners-head"><strong>OUR COMMUNITY PARTNERS</strong><button onclick="openPartnerModal()">VIEW ALL PARTNERS →</button></div>
+    <div id="partnerRail" class="partner-rail"></div>
+  </div>
+</section>
+
+<section id="ecosystem" class="ecosystem">
+  <div class="ecosystem-shell">
+    <div class="eco-copy">
+      <div class="eco-kicker">THE LINK ECOSYSTEM</div>
+      <h2>A Living Ecosystem.<br>Stronger Together.</h2>
+      <p>LINK connects nonprofits, businesses, schools, students and community leaders to create real impact across Lake Norman.</p>
+      <button onclick="openHowModal()">SEE HOW IT WORKS →</button>
+    </div>
+    <div class="flow">
+      <div class="flow-row"><article><img src="./assets/eco1.jpg" alt=""><span>REAL NEEDS</span></article><b>→</b><article><img src="./assets/eco2.jpg" alt=""><span>RIGHT PEOPLE</span></article><b>→</b><article><img src="./assets/eco3.jpg" alt=""><span>RIGHT ORGANIZATIONS</span></article></div>
+      <div class="flow-row"><article><img src="./assets/eco4.jpg" alt=""><span>ACTION TAKEN</span></article><b>←</b><article><img src="./assets/eco5.jpg" alt=""><span>COMMUNITY IMPACT</span></article><b>←</b><article><img src="./assets/eco6.jpg" alt=""><span>STRONGER CONNECTIONS</span></article></div>
+    </div>
+  </div>
+</section>
+
+<section class="footer-cta">
+  <div class="footer-shell">
+    <div class="footer-message"><span class="heart">♥</span><div><strong>Be Part of Something Bigger</strong><small>Your time, your talents, your resources — together, we build a better Lake Norman.</small></div></div>
+    <button onclick="scrollGetInvolved()">GET STARTED TODAY →</button>
+  </div>
+</section>
+</main>
+
+<div class="modal-backdrop" id="modalBackdrop" hidden>
+  <div class="modal">
+    <button class="close" onclick="closeModal()">×</button>
+    <div class="modal-kicker" id="modalKicker">LINK COMMUNITY HUB™</div>
+    <h2 id="modalTitle">Get Involved</h2>
+    <div id="modalContent"></div>
+  </div>
+</div>
+
+<script src="./data/nonprofits.js"></script>
+<script src="./app.js"></script>
+</body>
+</html>

@@ -1,0 +1,632 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Register or Update Your Nonprofit | LINK Community Hub™</title>
+  <meta
+    name="description"
+    content="Register, renew or update a nonprofit serving the Lake Norman community through LINK Community Hub™."
+  >
+  <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="link-form-page">
+
+<header class="link-form-header">
+  <a href="../" class="link-form-brand">
+    <strong>LINK</strong>
+    <span>Community Hub™</span>
+  </a>
+
+  <a href="../" class="link-form-back">
+    ← Back to Community Hub
+  </a>
+</header>
+
+<main class="link-form-main">
+
+  <section class="link-form-intro">
+    <div class="link-form-eyebrow">
+      NONPROFIT COMMUNITY PARTNERS
+    </div>
+
+    <h1>
+      Register, Renew or Update<br>
+      Your Nonprofit
+    </h1>
+
+    <p>
+      There is no cost for eligible 501(c)(3) nonprofit organizations to participate in
+      LINK Community Hub™.
+    </p>
+
+    <p>
+      Organizations may be located outside the immediate Lake Norman
+      area when they can demonstrate that they actively serve people
+      within the communities surrounding Lake Norman.
+    </p>
+
+    <div class="link-process-strip">
+      <span>1. Submit</span>
+      <b>→</b>
+      <span>2. LINK Reviews</span>
+      <b>→</b>
+      <span>3. Approve</span>
+      <b>→</b>
+      <span>4. Publish</span>
+    </div>
+  </section>
+
+
+  <section class="link-form-shell">
+
+    
+    <section
+      class="link-form-section"
+      aria-labelledby="eligibilityTitle"
+    >
+
+      <h2 id="eligibilityTitle">
+        Nonprofit Eligibility & Participation Standards
+      </h2>
+
+      <p>
+        LINK Community Hub™ is a community connection and resource
+        ecosystem. It is not a fundraising or donation-processing
+        platform.
+      </p>
+
+      <ul>
+        <li>
+          Participation is free for eligible organizations.
+        </li>
+
+        <li>
+          The organization must be recognized as a
+          <strong>501(c)(3) nonprofit organization.</strong>
+        </li>
+
+        <li>
+          The organization must serve residents or communities
+          within the Lake Norman region or an approved surrounding
+          service area.
+        </li>
+
+        <li>
+          Political campaigns, candidates, candidate committees,
+          political parties, PACs and partisan campaign entities
+          are not eligible.
+        </li>
+
+        <li>
+          Organizations may share community needs, events,
+          resources needed, volunteer opportunities, programs,
+          expertise needed, collaboration opportunities and ways
+          businesses or residents can engage.
+        </li>
+
+        <li>
+          LINK does not collect or distribute charitable donations
+          on behalf of participating organizations.
+        </li>
+
+        <li>
+          All organizations and submitted information are subject
+          to LINK review and verification before publication.
+        </li>
+
+        <li>
+          Participation does not constitute endorsement by LINK
+          Community Hub™.
+        </li>
+
+      </ul>
+
+    </section>
+
+<form id="nonprofitRegistrationForm">
+
+      <input
+        type="hidden"
+        id="submissionId"
+        name="submissionId"
+      >
+
+      <fieldset>
+        <legend>1. Submission Type</legend>
+
+        <div class="link-choice-grid">
+
+          <label class="link-choice">
+            <input
+              type="radio"
+              name="submissionType"
+              value="new"
+              required
+            >
+            <strong>New Organization</strong>
+            <span>
+              Apply to become part of LINK Community Hub™.
+            </span>
+          </label>
+
+          <label class="link-choice">
+            <input
+              type="radio"
+              name="submissionType"
+              value="renewal"
+              required
+            >
+            <strong>Annual Renewal</strong>
+            <span>
+              Confirm that your existing information is current.
+            </span>
+          </label>
+
+          <label class="link-choice">
+            <input
+              type="radio"
+              name="submissionType"
+              value="update"
+              required
+            >
+            <strong>Update Existing Listing</strong>
+            <span>
+              Submit corrected information, needs or opportunities.
+            </span>
+          </label>
+
+        </div>
+      </fieldset>
+
+
+      <fieldset>
+        <legend>2. Organization Information</legend>
+
+        <div class="link-form-grid">
+
+          <label>
+            Organization Name *
+            <input
+              name="organizationName"
+              required
+              autocomplete="organization"
+            >
+          </label>
+
+          <label>
+            Website *
+            <input
+              name="website"
+              type="url"
+              required
+              placeholder="https://"
+            >
+          </label>
+
+          <label>
+            Public Phone
+            <input
+              name="publicPhone"
+              type="tel"
+            >
+          </label>
+
+          <label>
+            Public Email
+            <input
+              name="publicEmail"
+              type="email"
+            >
+          </label>
+
+          <label class="link-form-full">
+            Physical Address
+            <input
+              name="physicalAddress"
+              autocomplete="street-address"
+            >
+          </label>
+
+          <label>
+            City
+            <input name="city">
+          </label>
+
+          <label>
+            State
+            <input
+              name="state"
+              value="NC"
+            >
+          </label>
+
+          <label>
+            ZIP
+            <input name="zip">
+          </label>
+
+          <label>
+            Organization Category
+            <select name="category">
+              <option value="">Select one</option>
+              <option>Animals</option>
+              <option>Arts & Culture</option>
+              <option>Children & Youth</option>
+              <option>Community Development</option>
+              <option>Disability Services</option>
+              <option>Education</option>
+              <option>Environment</option>
+              <option>Family Support</option>
+              <option>Food & Nutrition</option>
+              <option>Healthcare</option>
+              <option>Housing</option>
+              <option>Mental Health</option>
+              <option>Older Adults</option>
+              <option>Veterans & First Responders</option>
+              <option>Workforce & Career Development</option>
+              <option>Other</option>
+            </select>
+          </label>
+
+        </div>
+
+        <label>
+          Mission *
+          <textarea
+            name="mission"
+            rows="5"
+            required
+            placeholder="Please provide your organization's current mission."
+          ></textarea>
+        </label>
+
+      </fieldset>
+
+
+      <fieldset>
+        <legend>3. Lake Norman Service Area</legend>
+
+        <p class="link-field-help">
+          Select every community your organization currently serves.
+          Organizations do not have to be headquartered in Lake Norman,
+          but service to this area must be verifiable.
+        </p>
+
+        <div class="link-checkbox-grid">
+
+          <label>
+            <input type="checkbox" name="serviceAreas" value="Huntersville">
+            Huntersville
+          </label>
+
+          <label>
+            <input type="checkbox" name="serviceAreas" value="Cornelius">
+            Cornelius
+          </label>
+
+          <label>
+            <input type="checkbox" name="serviceAreas" value="Davidson">
+            Davidson
+          </label>
+
+          <label>
+            <input type="checkbox" name="serviceAreas" value="North Charlotte">
+            North Charlotte
+          </label>
+
+          <label>
+            <input type="checkbox" name="serviceAreas" value="Mooresville">
+            Mooresville
+          </label>
+
+          <label>
+            <input type="checkbox" name="serviceAreas" value="Troutman">
+            Troutman
+          </label>
+
+          <label>
+            <input type="checkbox" name="serviceAreas" value="Denver">
+            Denver
+          </label>
+
+          <label>
+            <input type="checkbox" name="serviceAreas" value="Sherrills Ford">
+            Sherrills Ford
+          </label>
+
+          <label>
+            <input type="checkbox" name="serviceAreas" value="Other Lake Norman Area">
+            Other Lake Norman Area
+          </label>
+
+        </div>
+
+        <label>
+          How does your organization serve the Lake Norman community? *
+          <textarea
+            name="serviceAreaExplanation"
+            rows="4"
+            required
+            placeholder="Programs, clients served, events, facilities, outreach, partnerships or other evidence."
+          ></textarea>
+        </label>
+
+      </fieldset>
+
+
+      <fieldset>
+        <legend>4. Organization Contact</legend>
+
+        <p class="link-field-help">
+          This information is for LINK administration and verification.
+          It will not automatically be displayed publicly.
+        </p>
+
+        <div class="link-form-grid">
+
+          <label>
+            Primary Contact Name *
+            <input
+              name="contactName"
+              required
+            >
+          </label>
+
+          <label>
+            Title / Role *
+            <input
+              name="contactTitle"
+              required
+            >
+          </label>
+
+          <label>
+            Contact Email *
+            <input
+              name="contactEmail"
+              type="email"
+              required
+            >
+          </label>
+
+          <label>
+            Contact Phone
+            <input
+              name="contactPhone"
+              type="tel"
+            >
+          </label>
+
+        </div>
+      </fieldset>
+
+
+      <fieldset>
+        <legend>5. Current Needs & Opportunities</legend>
+
+        <label>
+          Current Community Needs
+          <textarea
+            name="needs"
+            rows="5"
+            placeholder="Items, funding, supplies, skills, services or other current needs."
+          ></textarea>
+        </label>
+
+        <label>
+          Volunteer Opportunities
+          <textarea
+            name="volunteerOpportunities"
+            rows="5"
+            placeholder="Describe current volunteer roles, requirements, locations and scheduling."
+          ></textarea>
+        </label>
+
+        <label>
+          Donation / Giving Opportunities
+          <textarea
+            name="donationOpportunities"
+            rows="4"
+          ></textarea>
+        </label>
+
+        <label>
+          Student / Youth Opportunities
+          <textarea
+            name="studentOpportunities"
+            rows="4"
+            placeholder="Volunteer hours, service projects, career exploration, internships, mentoring, etc."
+          ></textarea>
+        </label>
+
+        <label>
+          Business / Corporate Opportunities
+          <textarea
+            name="businessOpportunities"
+            rows="4"
+            placeholder="Team service, sponsorship, skilled volunteering, drives, employee engagement, etc."
+          ></textarea>
+        </label>
+
+      </fieldset>
+
+
+      <fieldset>
+        <legend>6. Events</legend>
+
+        <label>
+          Upcoming Events
+          <textarea
+            name="events"
+            rows="6"
+            placeholder="Include event name, date, time, location, registration link and a short description."
+          ></textarea>
+        </label>
+      </fieldset>
+
+
+      <fieldset>
+        <legend>7. Logo & Public Links</legend>
+
+        <label>
+          Logo File
+          <input
+            id="logoFile"
+            name="logoFile"
+            type="file"
+            accept=".png,.jpg,.jpeg,.webp,.svg"
+          >
+        </label>
+
+        <p class="link-field-help">
+          PNG, JPG, JPEG, WEBP or SVG. Maximum 5 MB for this local test.
+        </p>
+
+        <div class="link-form-grid">
+          <label>
+            Facebook
+            <input
+              name="facebook"
+              type="url"
+              placeholder="https://"
+            >
+          </label>
+
+          <label>
+            Instagram
+            <input
+              name="instagram"
+              type="url"
+              placeholder="https://"
+            >
+          </label>
+
+          <label>
+            LinkedIn
+            <input
+              name="linkedin"
+              type="url"
+              placeholder="https://"
+            >
+          </label>
+
+          <label>
+            Other Public Link
+            <input
+              name="otherLink"
+              type="url"
+              placeholder="https://"
+            >
+          </label>
+        </div>
+
+      </fieldset>
+
+
+      <fieldset>
+        <legend>8. Authorization & Governance</legend>
+
+        <div class="link-policy-box">
+
+          <label>
+            <input
+              type="checkbox"
+              name="authorizedRepresentative"
+              required
+            >
+            I confirm that I am authorized to submit information
+            on behalf of this organization.
+          </label>
+
+          <label>
+            <input
+              type="checkbox"
+              name="contentPermission"
+              required
+            >
+            I authorize LINK Community Hub™ to display approved
+            organization information, logos, events, opportunities
+            and other submitted public materials while our
+            organization participates in the Hub.
+          </label>
+
+          <label>
+            <input
+              type="checkbox"
+              name="accuracyConfirmation"
+              required
+            >
+            I certify that the information submitted is accurate
+            to the best of my knowledge.
+          </label>
+
+          <label>
+            <input
+              type="checkbox"
+              name="serviceAreaConfirmation"
+              required
+            >
+            I confirm that this organization currently serves one
+            or more Lake Norman-area communities.
+          </label>
+
+          <label>
+            <input
+              type="checkbox"
+              name="policyAgreement"
+              required
+            >
+            I understand that submissions are subject to LINK
+            eligibility, verification, privacy, security,
+            community-use and content-governance policies and
+            that submission does not guarantee publication.
+          </label>
+
+        </div>
+
+      </fieldset>
+
+
+      <div class="link-form-submit">
+
+        <p>
+          Your submission will remain pending until reviewed by
+          LINK Community Hub™ administration.
+        </p>
+
+        <button type="submit">
+          SUBMIT FOR LINK REVIEW →
+        </button>
+
+      </div>
+
+      <div
+        id="submissionMessage"
+        class="link-submission-message"
+        hidden
+      ></div>
+
+    </form>
+
+  </section>
+
+</main>
+
+<footer class="link-form-footer">
+  <strong>LINK Community Hub™</strong>
+
+  <p>
+    Organization names, logos and third-party trademarks remain
+    the property of their respective owners.
+  </p>
+
+  <p>
+    © 2026 LINK Lake Norman. All Rights Reserved.
+  </p>
+</footer>
+
+<script src="./register.js"></script>
+</body>
+</html>

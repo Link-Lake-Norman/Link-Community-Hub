@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width,initial-scale=1"
+  >
+
+  <title>
+    Nonprofit Directory | LINK Community Hub™
+  </title>
+
+  <meta
+    name="description"
+    content="Explore verified nonprofit organizations serving the Lake Norman community."
+  >
+
+  <link
+    rel="stylesheet"
+    href="../styles.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="./directory.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  >
+</head>
+
+<body class="link-directory-page">
+
+<header class="directory-header">
+  <a
+    href="../"
+    class="directory-brand"
+  >
+    <strong>LINK</strong>
+    <span>Community Hub™</span>
+  </a>
+
+  <nav>
+    <a href="../">
+      Lake Norman Hub
+    </a>
+
+    <a href="./register.html">
+      Register / Update Nonprofit
+    </a>
+  </nav>
+</header>
+
+<main>
+
+  <section class="directory-hero">
+
+    <div class="directory-eyebrow">
+      VERIFIED COMMUNITY ORGANIZATIONS
+    </div>
+
+    <h1>
+      Find nonprofits serving
+      the Lake Norman community.
+    </h1>
+
+    <p>
+      Explore organizations, missions, needs,
+      volunteer opportunities and events that
+      LINK has verified as serving communities
+      around Lake Norman.
+    </p>
+
+    <div class="directory-controls">
+
+      <input
+        id="directorySearch"
+        type="search"
+        placeholder="Search organizations, missions or categories..."
+        aria-label="Search nonprofit directory"
+      >
+
+      <select
+        id="directoryArea"
+        aria-label="Filter by service area"
+      >
+        <option value="">
+          All Lake Norman Areas
+        </option>
+
+        <option>Huntersville</option>
+        <option>Cornelius</option>
+        <option>Davidson</option>
+        <option>North Charlotte</option>
+        <option>Mooresville</option>
+        <option>Troutman</option>
+        <option>Denver</option>
+        <option>Sherrills Ford</option>
+        <option>Other Lake Norman Area</option>
+      </select>
+
+    </div>
+
+  </section>
+
+
+  <section class="directory-summary">
+
+    <div>
+      <strong id="directoryCount">0</strong>
+      <span>Organizations</span>
+    </div>
+
+    <div>
+      <strong id="directoryMapped">0</strong>
+      <span>Mapped Locations</span>
+    </div>
+
+    <div>
+      <strong>FREE</strong>
+      <span>Nonprofit Participation</span>
+    </div>
+
+  </section>
+
+
+  <section class="directory-map-section">
+
+    <div class="section-heading">
+
+      <div>
+        <span>COMMUNITY MAP</span>
+
+        <h2>
+          See where organizations
+          connect across the region.
+        </h2>
+      </div>
+
+      <p>
+        Map markers represent verified public
+        organization or event locations.
+        Organizations serving Lake Norman from
+        outside the region remain eligible but
+        are not presented as locally headquartered.
+      </p>
+
+    </div>
+
+    <div
+      id="nonprofitMap"
+      class="nonprofit-map"
+      aria-label="Lake Norman nonprofit map"
+    ></div>
+
+  </section>
+
+
+  <section class="directory-list-section">
+
+    <div class="section-heading">
+
+      <div>
+        <span>A–Z DIRECTORY</span>
+
+        <h2>
+          Verified organizations
+        </h2>
+      </div>
+
+    </div>
+
+    <div
+      id="directoryStatus"
+      class="directory-status"
+    >
+      Loading organizations...
+    </div>
+
+    <div
+      id="directoryGrid"
+      class="directory-grid"
+    ></div>
+
+  </section>
+
+</main>
+
+
+<footer class="directory-footer">
+
+  <strong>
+    LINK Community Hub™
+  </strong>
+
+  <p>
+    Organization names, logos and third-party
+    trademarks remain the property of their
+    respective owners.
+  </p>
+
+  <p>
+    Participation and publication are subject
+    to LINK verification, governance and
+    community-use policies.
+  </p>
+
+  <p>
+    © 2026 LINK Lake Norman.
+    All Rights Reserved.
+  </p>
+
+</footer>
+
+
+<script src="../data/organizations.js"></script>
+
+<script
+  src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+></script>
+
+<script src="./directory.js"></script>
+
+</body>
+</html>

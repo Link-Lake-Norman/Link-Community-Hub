@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LINK Community Hub™ — Lake Norman</title>
+<meta name="description" content="LINK Community Hub™ connects nonprofits, businesses, schools, students, volunteers and community leaders across Lake Norman.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:wght@400;600;700&family=Yellowtail&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-shell">
+    <a class="brand" href="#top">
+      <div class="brand-main">LINK<span>⛓</span></div><div class="brand-place">LAKE NORMAN</div>
+      <div class="brand-sub">COMMUNITY HUB™</div>
+    </a>
+    <nav class="main-nav">
+      <a href="#discover"><strong>DISCOVER</strong><span>Resources & Needs</span></a>
+      <a href="#partners"><strong>CONNECT</strong><span>People & Partners</span></a>
+      <a href="#get-involved"><strong>ACTIVATE</strong><span>Get Involved</span></a>
+      <a href="#ecosystem"><strong>RESOURCES</strong><span>Tools & Support</span></a>
+      <a href="#ecosystem"><strong>ABOUT</strong><span>Our Story</span></a>
+    </nav>
+    <a class="get-involved" href="#get-involved">GET INVOLVED ♥</a>
+  </div>
+</header>
+
+<main>
+<section id="top" class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-shade"></div>
+  <div class="hero-copy">
+    <h1>TOGETHER,<br>WE CAN DO</h1>
+    <div class="script">Extraordinary Things</div>
+    <p>Real people. Real needs.<br>Real impact across Lake Norman.</p>
+    <a class="impact-link" href="#ecosystem"><span>▶</span> SEE OUR IMPACT STORY</a>
+  </div>
+</section>
+
+<section class="impact-band">
+  <div class="wave"></div>
+  <div class="impact-grid">
+    <div class="impact"><b>♡</b><div><strong id="nonprofitCount">—</strong><span>Verified Organizations</span></div></div>
+    <div class="impact"><b>◷</b><div><strong>340+</strong><span>Volunteer Hours This Month</span></div></div>
+    <div class="impact"><b>♙</b><div><strong>1,250+</strong><span>People Engaged</span></div></div>
+    <div class="impact"><b>▣</b><div><strong>100+</strong><span>Local Businesses Supporting</span></div></div>
+    <div class="impact"><b>♡</b><div><strong class="countless">Countless</strong><span>Lives Impacted</span></div></div>
+  </div>
+</section>
+
+<section id="get-involved" class="engage-section">
+  <div class="section-title">EXPLORE WAYS TO GET INVOLVED</div>
+  <div class="engage-grid">
+    <article class="engage-card"><img src="./assets/volunteer.jpg" alt=""><i class="ico gold">♡</i><h3>VOLUNTEER</h3><p>Your time<br>makes a difference.</p><button onclick="scrollNeeds()">LEARN MORE →</button></article>
+    <article class="engage-card"><img src="./assets/donate.jpg" alt=""><i class="ico teal">$</i><h3>DONATE</h3><p>Support local<br>organizations and families.</p><button onclick="scrollNeeds()">LEARN MORE →</button></article>
+    <article class="engage-card"><img src="./assets/mentor.jpg" alt=""><i class="ico navy">♙</i><h3>MENTOR</h3><p>Guide the next<br>generation.</p><button onclick="openStudentModal()">LEARN MORE →</button></article>
+    <article class="engage-card"><img src="./assets/partner.jpg" alt=""><i class="ico green">🤝</i><h3>PARTNER</h3><p>Build a stronger<br>community together.</p><button onclick="openBusinessModal()">LEARN MORE →</button></article>
+    <article class="engage-card"><img src="./assets/engage.jpg" alt=""><i class="ico red">🎓</i><h3>ENGAGE</h3><p>Students, schools &<br>teams unite.</p><button onclick="openStudentModal()">LEARN MORE →</button></article>
+    <article class="engage-card"><img src="./assets/attend.jpg" alt=""><i class="ico amber">▦</i><h3>ATTEND</h3><p>Join events that<br>bring us together.</p><button onclick="openEventsModal()">LEARN MORE →</button></article>
+  </div>
+</section>
+
+<section id="discover" class="needs-section">
+  <div class="needs-grid">
+
+    <div class="needs-intro">
+
+      <h2>
+        Real Needs.<br>
+        Real People.<br>
+        Real Impact.
+      </h2>
+
+      <p>
+        Explore current verified needs and opportunities
+        across the Lake Norman community.
+      </p>
+
+      <p>
+        Every action — big or small —
+        creates lasting change.
+      </p>
+
+      <button
+        class="gold-btn"
+        onclick="openAllNeeds()"
+      >
+        VIEW ALL NEEDS &<br>
+        OPPORTUNITIES →
+      </button>
+
+    </div>
+
+    <div
+      id="verifiedOpportunityCards"
+      class="verified-opportunity-grid"
+    ></div>
+
+  </div>
+
+  <div
+    id="partners"
+    class="partners-panel"
+  >
+
+    <div class="partners-head">
+
+      <strong>
+        OUR COMMUNITY PARTNERS
+      </strong>
+
+      <button onclick="openPartnerModal()">
+        VIEW ALL PARTNERS →
+      </button>
+
+    </div>
+
+    <div
+      id="partnerRail"
+      class="partner-rail"
+    ></div>
+
+  </div>
+
+</section>
+
+
+
+
+
+
+<section class="participation-recognition" id="recognition">
+
+  <div class="recognition-shell">
+
+    <div class="recognition-copy">
+
+      <div class="small-label">
+        PARTICIPATION & RECOGNITION
+      </div>
+
+      <h2>
+        Show That You Are Part
+        of the Community.
+      </h2>
+
+      <p>
+        LINK Community Hub™ recognizes the organizations
+        actively participating in the local ecosystem.
+      </p>
+
+      <p>
+        These marks represent participation and community
+        connection — not simply placement in a directory.
+      </p>
+
+    </div>
+
+
+    <div class="recognition-grid">
+
+
+      <!-- BUSINESS / COMMUNITY PARTNER -->
+
+      <article class="recognition-card">
+
+        <div class="recognition-badge">
+
+          <img
+            src="./assets/badges/LINK-Certified-Community-Partner-2026.svg"
+            alt="LINK Certified Community Partner 2026 badge"
+          >
+
+        </div>
+
+        <div class="recognition-type">
+          BUSINESSES & COMMUNITY PARTNERS
+        </div>
+
+        <h3>
+          Certified Community Partner
+        </h3>
+
+        <p>
+          For businesses and community partners
+          actively investing time, talent, resources,
+          expertise and relationships locally.
+        </p>
+
+      </article>
+
+
+      <!-- NONPROFIT -->
+
+      <article class="recognition-card">
+
+        <div class="recognition-badge">
+
+          <img
+            src="./assets/badges/LINK-Proudly-Served-Community-2026.svg"
+            alt="Proudly Served by My LINK LKN Community badge"
+          >
+
+        </div>
+
+        <div class="recognition-type">
+          PARTICIPATING NONPROFITS
+        </div>
+
+        <h3>
+          Proudly Served by My Community
+        </h3>
+
+        <p>
+          For participating nonprofits connected through
+          LINK Community Hub™ to local people, partners,
+          resources and opportunities.
+        </p>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<section class="v3-ecosystem" id="ecosystem">
+
+  <div class="v3-ecosystem-shell">
+
+    <div class="v3-ecosystem-copy">
+
+      <div class="v3-eyebrow">
+        THE LINK ECOSYSTEM
+      </div>
+
+      <h2>
+        A Living Ecosystem.<br>
+        Stronger Together.
+      </h2>
+
+      <p>
+        LINK connects people, nonprofits, schools, businesses,
+        workforce partners and community organizations around
+        real local needs — then helps turn those connections
+        into action, opportunity and lasting relationships.
+      </p>
+
+      <button
+        type="button"
+        onclick="openHowModal()">
+        SEE HOW IT WORKS →
+      </button>
+
+    </div>
+
+
+    <div class="v3-flow-grid">
+
+      <article class="v3-flow-card">
+        <div class="v3-image-slot">IMAGE</div>
+        <div class="v3-flow-icon gold">♡</div>
+        <h3>REAL NEEDS</h3>
+        <p>We identify what matters most.</p>
+      </article>
+
+      <div class="v3-arrow">→</div>
+
+      <article class="v3-flow-card">
+        <div class="v3-image-slot">IMAGE</div>
+        <div class="v3-flow-icon teal">◎</div>
+        <h3>RIGHT PEOPLE</h3>
+        <p>
+          We connect residents, volunteers,
+          students, mentors and professionals.
+        </p>
+      </article>
+
+      <div class="v3-arrow">→</div>
+
+      <article class="v3-flow-card">
+        <div class="v3-image-slot">IMAGE</div>
+        <div class="v3-flow-icon blue">◇</div>
+        <h3>RIGHT PARTNERS</h3>
+        <p>
+          We align trusted organizations,
+          schools, businesses and community partners.
+        </p>
+      </article>
+
+      <article class="v3-flow-card">
+        <div class="v3-image-slot">IMAGE</div>
+        <div class="v3-flow-icon green">✓</div>
+        <h3>ACTION TAKEN</h3>
+        <p>
+          People volunteer, mentor, give,
+          sponsor, train and solve.
+        </p>
+      </article>
+
+      <div class="v3-arrow reverse">←</div>
+
+      <article class="v3-flow-card">
+        <div class="v3-image-slot">IMAGE</div>
+        <div class="v3-flow-icon red">↗</div>
+        <h3>COMMUNITY IMPACT</h3>
+        <p>
+          We measure engagement and strengthen
+          the community together.
+        </p>
+      </article>
+
+      <div class="v3-arrow reverse">←</div>
+
+      <article class="v3-flow-card">
+        <div class="v3-image-slot">IMAGE</div>
+        <div class="v3-flow-icon amber">∞</div>
+        <h3>STRONGER CONNECTIONS</h3>
+        <p>
+          Relationships deepen and local
+          support becomes lasting.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+<section class="footer-cta">
+  <div class="footer-shell">
+    <div class="footer-message"><span class="heart">♥</span><div><strong>Be Part of Something Bigger</strong><small>Your time, your talents, your resources — together, we build a better Lake Norman.</small></div></div>
+    <button onclick="scrollGetInvolved()">GET STARTED TODAY →</button>
+  </div>
+</section>
+</main>
+
+<div class="modal-backdrop" id="modalBackdrop" hidden>
+  <div class="modal">
+    <button class="close" onclick="closeModal()">×</button>
+    <div class="modal-kicker" id="modalKicker">LINK COMMUNITY HUB™</div>
+    <h2 id="modalTitle">Get Involved</h2>
+    <div id="modalContent"></div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<script src="./data/organizations.js"></script>
+<script src="./app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1189 @@
+window.LINK_ORGANIZATIONS = [
+
+  
+  {
+    id: "alongside-families",
+    name: "Alongside Families",
+    website: "https://www.alongsidefamilies.org",
+    category: "Family Preservation & Crisis Support",
+
+    logo: null,
+    logoStatus: "needed",
+
+    active: true,
+
+    mission:
+      "Helps preserve vulnerable families by surrounding parents and children with supportive relationships, practical care and temporary hosting so children can remain safely connected to their families during crisis.",
+
+    missionSource:
+      "https://www.alongsidefamilies.org/take-action/",
+
+    needs: [
+      {
+        id: "alongside-monthly-giving",
+        type: "donation",
+        title: "Monthly & Financial Support",
+        description:
+          "Ongoing financial support helps expand family-preservation services and volunteer response capacity.",
+        actionUrl:
+          "https://www.alongsidefamilies.org/",
+        source:
+          "https://www.alongsidefamilies.org/stories-and-news/changing-the-trajectory/"
+      }
+    ],
+
+    opportunities: [
+      {
+        id: "alongside-host-family",
+        type: "volunteer",
+        title: "Host Family",
+        description:
+          "Volunteer families temporarily host children while parents navigate crisis and work toward stability.",
+        actionUrl:
+          "https://www.alongsidefamilies.org/take-action/",
+        source:
+          "https://www.alongsidefamilies.org/take-action/"
+      },
+      {
+        id: "alongside-family-coach",
+        type: "volunteer",
+        title: "Family Coach",
+        description:
+          "Family Coaches build consistent relationships with parents and support family-defined goals.",
+        actionUrl:
+          "https://www.alongsidefamilies.org/",
+        source:
+          "https://sharecharlotte.org/opportunities/alongside-families/family-coach"
+      },
+      {
+        id: "alongside-support-line",
+        type: "volunteer",
+        title: "Support Line Volunteer",
+        description:
+          "Remote volunteers help cover scheduled support-line shifts for families seeking assistance.",
+        actionUrl:
+          "https://www.alongsidefamilies.org/",
+        source:
+          "https://www.alongsidefamilies.org/stories-and-news/changing-the-trajectory/"
+      },
+      {
+        id: "alongside-church-partnership",
+        type: "community-partner",
+        title: "Church Partnership",
+        description:
+          "Churches can partner with Alongside Families to build local family-preservation support networks.",
+        actionUrl:
+          "https://www.alongsidefamilies.org/take-action/",
+        source:
+          "https://www.alongsidefamilies.org/take-action/"
+      }
+    ],
+
+    verificationStatus: "official-site-verified",
+    lastVerified: "2026-08-20"
+  },
+
+  
+  {
+    id: "angels-and-sparrows",
+    name: "Angels & Sparrows",
+    website: "https://angelsandsparrows.org",
+    category: "Food Security & Education",
+
+    logo: null,
+    logoStatus: "needed",
+
+    active: true,
+
+    mission:
+      "Empowers families to reach their potential by providing access to food security and educational opportunities that lead to a fresh start.",
+
+    missionSource:
+      "https://angelsandsparrows.org/",
+
+    needs: [
+      {
+        id: "angels-food-support",
+        type: "donation",
+        title: "Food & Meal Support",
+        description:
+          "Support nutritious meals and food-security programs for families and individuals.",
+        source:
+          "https://angelsandsparrows.org/"
+      },
+      {
+        id: "angels-financial-giving",
+        type: "donation",
+        title: "Financial Support",
+        description:
+          "Financial gifts support food, resources, education and opportunities for families.",
+        source:
+          "https://angelsandsparrows.org/"
+      }
+    ],
+
+    opportunities: [
+      {
+        id: "angels-volunteer",
+        type: "volunteer",
+        title: "Volunteer with Angels & Sparrows",
+        description:
+          "Volunteer opportunities support the Community Table, programs and families served.",
+        actionUrl:
+          "https://angelsandsparrows.org/",
+        source:
+          "https://angelsandsparrows.org/"
+      },
+      {
+        id: "angels-fundraising",
+        type: "fundraising",
+        title: "Support Fundraising Campaigns",
+        description:
+          "Participate in current fundraising initiatives supporting meals, education and family opportunity.",
+        actionUrl:
+          "https://angelsandsparrows.org/full-plate-fundraiser/",
+        source:
+          "https://angelsandsparrows.org/full-plate-fundraiser/"
+      }
+    ],
+
+    verificationStatus: "official-site-verified",
+    lastVerified: "2026-08-20"
+  },
+
+  
+  {
+    id: "bags-of-hope",
+    name: "Bags of Hope",
+    website: "https://bagsofhopelkn.com",
+    category: "Youth Food Security",
+
+    logo: null,
+    logoStatus: "needed",
+
+    active: true,
+
+    mission:
+      "Brings hope to the Lake Norman and greater Charlotte area by supplying free weekend food provisions to school children who experience food insecurity.",
+
+    missionSource:
+      "https://bagsofhopelkn.com/",
+
+    needs: [
+      {
+        id: "bags-food-donations",
+        type: "donation",
+        title: "Weekend Food Bag Items",
+        description:
+          "Food items used in student weekend bags and extended-break food support.",
+        actionUrl:
+          "https://bagsofhopelkn.com/faq/",
+        source:
+          "https://bagsofhopelkn.com/faq/"
+      },
+      {
+        id: "bags-financial-support",
+        type: "donation",
+        title: "Financial Support",
+        description:
+          "Monetary gifts help provide weekend food bags to local students.",
+        actionUrl:
+          "https://bagsofhopelkn.com/",
+        source:
+          "https://bagsofhopelkn.com/"
+      },
+      {
+        id: "bags-food-drives",
+        type: "donation-drive",
+        title: "Food Drives",
+        description:
+          "Community food drives help stock the warehouse and support students during extended school breaks.",
+        actionUrl:
+          "https://bagsofhopelkn.com/",
+        source:
+          "https://bagsofhopelkn.com/"
+      }
+    ],
+
+    opportunities: [
+      {
+        id: "bags-public-packing",
+        type: "volunteer",
+        title: "Public Packing Events",
+        description:
+          "Individuals can register for recurring public packing opportunities at the warehouse.",
+        actionUrl:
+          "https://bagsofhopelkn.com/faq/",
+        source:
+          "https://bagsofhopelkn.com/faq/"
+      },
+      {
+        id: "bags-group-packing",
+        type: "group-volunteer",
+        title: "Group Packing Events",
+        description:
+          "Businesses, teams, churches and community groups can organize warehouse packing events.",
+        actionUrl:
+          "https://bagsofhopelkn.com/faq/",
+        source:
+          "https://bagsofhopelkn.com/faq/"
+      },
+      {
+        id: "bags-student-packing",
+        type: "student-volunteer",
+        title: "Student Packing Events",
+        description:
+          "Middle and high school students can participate in designated packing events during the school year.",
+        actionUrl:
+          "https://bagsofhopelkn.com/faq/",
+        source:
+          "https://bagsofhopelkn.com/faq/"
+      },
+      {
+        id: "bags-student-food-drives",
+        type: "student-volunteer",
+        title: "Student Food Drives & Neighborhood Ambassador",
+        description:
+          "Students can support food drives and Neighborhood Ambassador initiatives.",
+        actionUrl:
+          "https://bagsofhopelkn.com/faq/",
+        source:
+          "https://bagsofhopelkn.com/faq/"
+      }
+    ],
+
+    verificationStatus: "official-site-verified",
+    lastVerified: "2026-08-20"
+  },
+
+  
+  {
+    id: "brownicity",
+    name: "Brownicity",
+    website: "https://brownicity.com",
+    category: "Education, Cultural Competence & Belonging",
+
+    logo: null,
+    logoStatus: "needed",
+
+    active: true,
+
+    mission:
+      "Designs accessible and transformative educational experiences that foster connection, grow cultural competence and help communities build a lasting culture of justice and belonging.",
+
+    missionSource:
+      "https://brownicity.com/",
+
+    needs: [
+      {
+        id: "brownicity-donate",
+        type: "donation",
+        title: "Support Learners & Educators",
+        description:
+          "Donations help support Brownicity learners, educators and educational resources.",
+        actionUrl:
+          "https://brownicity.com/",
+        source:
+          "https://brownicity.com/"
+      }
+    ],
+
+    opportunities: [
+      {
+        id: "brownicity-courses",
+        type: "education",
+        title: "Courses & Learning Resources",
+        description:
+          "Individuals can participate in Brownicity courses and on-demand educational resources.",
+        actionUrl:
+          "https://brownicity.com/",
+        source:
+          "https://brownicity.com/"
+      },
+      {
+        id: "brownicity-professional-development",
+        type: "professional-development",
+        title: "Professional Development & Consulting",
+        description:
+          "Organizations can engage Brownicity for professional development, coaching, workshops and customized learning experiences.",
+        actionUrl:
+          "https://brownicity.com/contact/",
+        source:
+          "https://brownicity.com/contact/"
+      },
+      {
+        id: "brownicity-learning-community",
+        type: "membership",
+        title: "Learning Community",
+        description:
+          "Participants can join Brownicity's learning community for guided growth and continuing education.",
+        actionUrl:
+          "https://brownicity.com/",
+        source:
+          "https://brownicity.com/"
+      }
+    ],
+
+    verificationStatus: "official-site-verified",
+    lastVerified: "2026-08-20"
+  },
+
+  
+  {
+    id: "caterpillar-ministries",
+    name: "Caterpillar Ministries",
+    website: "https://www.caterpillarministries.org",
+    category: "Faith, Family Stability & Education",
+
+    logo: "./assets/logos/caterpillar-ministries.png",
+    logoStatus: "uploaded",
+
+    active: true,
+
+    mission:
+      "Empowers the people of Huntington Green to build a secure and vibrant community by fostering faith, advocacy and learning.",
+
+    missionSource:
+      "https://www.caterpillarministries.org/",
+
+    needs: [
+      {
+        id: "caterpillar-family-stability",
+        type: "program-support",
+        title: "Family Stability Support",
+        description:
+          "Programs include rental and utility assistance, food assistance, transportation, infant and toddler supplies, and referrals.",
+        actionUrl:
+          "https://www.caterpillarministries.org/what-we-do",
+        source:
+          "https://www.caterpillarministries.org/what-we-do"
+      },
+      {
+        id: "caterpillar-academic-support",
+        type: "education",
+        title: "Academic Enrichment",
+        description:
+          "Support includes tutoring, literacy, back-to-school supplies, school liaison work and college-application guidance.",
+        actionUrl:
+          "https://www.caterpillarministries.org/what-we-do",
+        source:
+          "https://www.caterpillarministries.org/what-we-do"
+      }
+    ],
+
+    opportunities: [
+      {
+        id: "caterpillar-volunteer",
+        type: "volunteer",
+        title: "Volunteer with Caterpillar Ministries",
+        description:
+          "Volunteers support faith development, academics, family stability and community engagement across Huntington Green.",
+        actionUrl:
+          "https://www.caterpillarministries.org/",
+        source:
+          "https://www.caterpillarministries.org/"
+      }
+    ],
+
+    verificationStatus: "official-site-verified",
+    lastVerified: "2026-08-20"
+  },
+
+  
+  {
+    id: "cook-community-clinic",
+    name: "Cook Community Clinic",
+    website: "https://cookcommunityclinic.org",
+    category: "Healthcare",
+
+    logo: null,
+    logoStatus: "needed",
+
+    active: true,
+
+    mission:
+      "Provides high-quality professional healthcare to uninsured residents of Mecklenburg and southern Iredell counties.",
+
+    missionSource:
+      "https://cookcommunityclinic.org/",
+
+    needs: [
+      {
+        id: "cook-medications-supplies",
+        type: "donation",
+        title: "Medical & Clinic Supplies",
+        description:
+          "Support the clinic with medications, medical supplies and other approved clinic needs.",
+        actionUrl:
+          "https://cookcommunityclinic.org/",
+        source:
+          "https://cookcommunityclinic.org/"
+      }
+    ],
+
+    opportunities: [
+      {
+        id: "cook-clinical-volunteers",
+        type: "clinical-volunteer",
+        title: "Clinical Volunteers",
+        description:
+          "Qualified medical volunteers support patient care in a professional clinical environment.",
+        actionUrl:
+          "https://cookcommunityclinic.org/",
+        source:
+          "https://cookcommunityclinic.org/wp-content/uploads/2024/07/COOK_PDF-Vol-Guidelines-Non-Disclosure-form-final.pdf"
+      },
+      {
+        id: "cook-nonmedical-volunteers",
+        type: "volunteer",
+        title: "Nonmedical Volunteers",
+        description:
+          "Nonmedical volunteers support clinic operations under formal volunteer guidelines.",
+        actionUrl:
+          "https://cookcommunityclinic.org/",
+        source:
+          "https://cookcommunityclinic.org/wp-content/uploads/2024/07/COOK_PDF-Vol-Guidelines-Non-Disclosure-form-final.pdf"
+      }
+    ],
+
+    verificationStatus: "official-site-verified",
+    lastVerified: "2026-08-20"
+  },
+
+  
+  {
+    id: "frankie-mae-foundation",
+    name: "The Frankie Mae Foundation",
+    website: "https://the-frankie-mae-foundation.multiscreensite.com/",
+    category: "Caregiver Support",
+
+    logo: "./assets/logos/frankie-mae-foundation.png",
+    logoStatus: "uploaded",
+
+    active: true,
+
+    mission:
+      "Advocates for the caregiver as a whole person by providing resources for physical, emotional and spiritual well-being through programs, resources and services.",
+
+    missionSource:
+      "https://the-frankie-mae-foundation.multiscreensite.com/about",
+
+    needs: [
+      {
+        id: "frankie-mae-caregiver-resources",
+        type: "program-support",
+        title: "Caregiver Resources & Support",
+        description:
+          "Support helps provide caregiver education, emotional support, resources and programs that improve quality of life.",
+        actionUrl:
+          "https://the-frankie-mae-foundation.multiscreensite.com/",
+        source:
+          "https://the-frankie-mae-foundation.multiscreensite.com/about"
+      }
+    ],
+
+    opportunities: [
+      {
+        id: "frankie-mae-community",
+        type: "community",
+        title: "Join the Caregiver Community",
+        description:
+          "Caregivers and supporters can connect through programs, meetups and resource-sharing opportunities.",
+        actionUrl:
+          "https://the-frankie-mae-foundation.multiscreensite.com/",
+        source:
+          "https://the-frankie-mae-foundation.multiscreensite.com/"
+      }
+    ],
+
+    verificationStatus: "official-site-verified",
+    lastVerified: "2026-08-20"
+  },
+
+  
+  {
+    id: "go-jen-go",
+    name: "Go Jen Go Foundation",
+    website: "https://gojengo.org",
+    category: "Breast Cancer Family Support",
+
+    logo: "./assets/logos/go-jen-go.png",
+    logoStatus: "uploaded",
+
+    active: true,
+
+    mission:
+      "Provides critical financial assistance and family support to breast cancer patients during diagnosis, treatment and recovery.",
+
+    missionSource:
+      "https://gojengo.org/",
+
+    needs: [
+      {
+        id: "go-jen-go-financial-support",
+        type: "donation",
+        title: "Critical Financial Assistance",
+        description:
+          "Support helps patients with housing, utilities, transportation, groceries and other essential living expenses.",
+        actionUrl:
+          "https://gojengo.org/",
+        source:
+          "https://gojengo.org/"
+      }
+    ],
+
+    opportunities: [
+      {
+        id: "go-jen-go-volunteer",
+        type: "volunteer",
+        title: "Volunteer with Go Jen Go",
+        description:
+          "Volunteers support events, committees and other organizational needs.",
+        actionUrl:
+          "https://gojengo.org/",
+        source:
+          "https://gojengo.org/"
+      },
+      {
+        id: "go-jen-go-fundraise",
+        type: "fundraising",
+        title: "Host or Support a Fundraiser",
+        description:
+          "Individuals and organizations can help raise funds for breast cancer patients and families.",
+        actionUrl:
+          "https://gojengo.org/",
+        source:
+          "https://gojengo.org/"
+      },
+      {
+        id: "go-jen-go-partner",
+        type: "business",
+        title: "Partner or Sponsor",
+        description:
+          "Businesses can participate through year-round partnerships, event sponsorships and program sponsorships.",
+        actionUrl:
+          "https://gojengo.org/",
+        source:
+          "https://gojengo.org/"
+      }
+    ],
+
+    verificationStatus: "official-site-verified",
+    lastVerified: "2026-08-20"
+  },
+
+  
+  {
+    id: "habitat-for-humanity-clt-region",
+    name: "Habitat for Humanity of the Charlotte Region",
+    website: "https://habitatcltregion.org",
+    category: "Affordable Housing",
+
+    logo:
+      "./assets/logos/habitat-for-humanity-clt-region.png",
+
+    logoStatus: "uploaded",
+
+    active: true,
+
+    mission:
+      "Advances economic mobility for local families through affordable homeownership and home preservation.",
+
+    missionSource:
+      "https://habitatcltregion.org/",
+
+    needs: [
+      {
+        id: "habitat-land",
+        type: "in-kind",
+        title: "Land Donations",
+        description:
+          "Land contributions can support development of affordable communities.",
+        source:
+          "https://media.habitatcltregion.org/wp-content/uploads/2026-Partnership-Packet-digital.pdf"
+      },
+      {
+        id: "habitat-furniture",
+        type: "in-kind",
+        title: "Furniture Donations",
+        description:
+          "Furniture contributions can support Habitat programs and ReStore operations.",
+        source:
+          "https://media.habitatcltregion.org/wp-content/uploads/2026-Partnership-Packet-digital.pdf"
+      },
+      {
+        id: "habitat-professional-services",
+        type: "in-kind",
+        title: "Professional Services",
+        description:
+          "Professional services are among the contributions Habitat Charlotte Region can use.",
+        source:
+          "https://media.habitatcltregion.org/wp-content/uploads/2026-Partnership-Packet-digital.pdf"
+      },
+      {
+        id: "habitat-construction-materials",
+        type: "in-kind",
+        title: "Construction Materials",
+        description:
+          "Construction-material donations can support affordable housing and preservation work.",
+        source:
+          "https://media.habitatcltregion.org/wp-content/uploads/2026-Partnership-Packet-digital.pdf"
+      }
+    ],
+
+    opportunities: [
+      {
+        id: "habitat-construction-volunteer",
+        type: "volunteer",
+        title: "Construction Site Volunteering",
+        description:
+          "Volunteer on Habitat construction projects; prior experience is not required.",
+        actionUrl:
+          "https://habitatcltregion.org/",
+        source:
+          "https://media.habitatcltregion.org/wp-content/uploads/2026-Partnership-Packet-digital.pdf"
+      },
+      {
+        id: "habitat-restore-volunteer",
+        type: "volunteer",
+        title: "ReStore Volunteering",
+        description:
+          "Volunteer shifts are available through Habitat Charlotte Region ReStores.",
+        actionUrl:
+          "https://habitatcltregion.org/",
+        source:
+          "https://media.habitatcltregion.org/wp-content/uploads/2026-Partnership-Packet-digital.pdf"
+      },
+      {
+        id: "habitat-warehouse-volunteer",
+        type: "volunteer",
+        title: "Warehouse Volunteering",
+        description:
+          "Groups and individuals can support scheduled warehouse work.",
+        actionUrl:
+          "https://habitatcltregion.org/",
+        source:
+          "https://media.habitatcltregion.org/wp-content/uploads/2026-Partnership-Packet-digital.pdf"
+      },
+      {
+        id: "habitat-community-events",
+        type: "volunteer",
+        title: "Community Event Volunteering",
+        description:
+          "Volunteer opportunities include Habitat community events and neighborhood projects.",
+        actionUrl:
+          "https://habitatcltregion.org/",
+        source:
+          "https://media.habitatcltregion.org/wp-content/uploads/2026-Partnership-Packet-digital.pdf"
+      },
+      {
+        id: "habitat-business-partnership",
+        type: "business",
+        title: "Corporate & Community Partnership",
+        description:
+          "Organizations can engage employees and support Habitat through time, talent and financial investment.",
+        actionUrl:
+          "https://habitatcltregion.org/",
+        source:
+          "https://media.habitatcltregion.org/wp-content/uploads/2026-Partnership-Packet-digital.pdf"
+      }
+    ],
+
+    verificationStatus: "official-site-verified",
+    lastVerified: "2026-08-20"
+  },
+
+  
+  {
+    id: "heart-2-harmony",
+    name: "Heart2Harmony",
+    website: "https://www.heart2harmony.org",
+    category: "Culture, Arts & Community Connection",
+
+    logo: null,
+    logoStatus: "needed",
+
+    active: true,
+
+    mission:
+      "Spreads awareness, appreciation and respect for cultures around the world by using festivals, performances, workshops, storytelling, music and dance to build understanding and connection.",
+
+    missionSource:
+      "https://www.heart2harmony.org/about.html",
+
+    needs: [
+      {
+        id: "heart2harmony-donate",
+        type: "donation",
+        title: "Support Cultural Programs",
+        description:
+          "Donations support multicultural events, educational experiences, performances and community programming.",
+        actionUrl:
+          "https://heart2harmony.org/",
+        source:
+          "https://heart2harmony.org/"
+      }
+    ],
+
+    opportunities: [
+      {
+        id: "heart2harmony-volunteer",
+        type: "volunteer",
+        title: "Get Involved",
+        description:
+          "Volunteers can help support cultural events, workshops and community programs.",
+        actionUrl:
+          "https://heart2harmony.org/",
+        source:
+          "https://heart2harmony.org/"
+      },
+      {
+        id: "heart2harmony-partner",
+        type: "community-partner",
+        title: "Partner with Heart2Harmony",
+        description:
+          "Organizations and community members can collaborate on cultural programming and community connection.",
+        actionUrl:
+          "https://heart2harmony.org/",
+        source:
+          "https://www.heart2harmony.org/about.html"
+      },
+      {
+        id: "heart2harmony-share-story",
+        type: "community",
+        title: "Share Your Culture or Story",
+        description:
+          "Community members can participate by sharing traditions, stories and cultural experiences.",
+        actionUrl:
+          "https://heart2harmony.org/",
+        source:
+          "https://www.heart2harmony.org/about.html"
+      }
+    ],
+
+    verificationStatus: "official-site-verified",
+    lastVerified: "2026-08-20"
+  },
+
+  
+  {
+    id: "homes-for-heroes-foundation",
+    name: "Homes for Heroes Foundation",
+    website: "https://www.homesforheroes.com/about/foundation/",
+    category: "Hero Support & Emergency Assistance",
+
+    logo: "./assets/logos/homes-for-heroes.png",
+    logoStatus: "uploaded",
+
+    active: true,
+
+    mission:
+      "Awards grants to organizations providing essential support to heroes facing housing crises, disasters, and health or family hardships.",
+
+    missionSource:
+      "https://www.homesforheroes.com/about/foundation/",
+
+    needs: [
+      {
+        id: "homes-for-heroes-foundation-donations",
+        type: "donation",
+        title: "Foundation Donations",
+        description:
+          "Financial gifts support grants benefiting heroes and their families in times of critical need.",
+        actionUrl:
+          "https://www.homesforheroes.com/about/foundation/",
+        source:
+          "https://www.homesforheroes.com/about/foundation/"
+      }
+    ],
+
+    opportunities: [
+      {
+        id: "homes-for-heroes-support-foundation",
+        type: "donation",
+        title: "Support the Homes for Heroes Foundation",
+        description:
+          "Support helps fund nonprofit organizations serving heroes through housing, disaster relief, health and family needs.",
+        actionUrl:
+          "https://www.homesforheroes.com/about/foundation/",
+        source:
+          "https://www.homesforheroes.com/about/foundation/"
+      }
+    ],
+
+    verificationStatus: "official-site-verified",
+    lastVerified: "2026-08-20"
+  },
+
+  {
+    id: "lake-norman-it-professionals",
+    name: "Lake Norman IT Professionals",
+    website: "https://lknitp.com",
+    category: "Technology",
+    logo: "./assets/logos/lake-norman-it-professionals.png",
+    logoStatus: "uploaded",
+    active: true,
+    mission: null,
+    missionSource: null,
+    needs: [],
+    opportunities: [],
+    verificationStatus: "official-site-review-needed"
+  },
+
+  
+  {
+    id: "little-smiles",
+    name: "Little Smiles",
+    website: "https://www.littlesmiles.org",
+    category: "Children & Family Support",
+
+    logo: "./assets/logos/little-smiles.jpeg",
+    logoStatus: "uploaded",
+
+    active: true,
+
+    mission:
+      "Helps kids be kids during difficult times by bringing joy to children impacted by serious illness, homelessness or tragedy.",
+
+    missionSource:
+      "https://www.littlesmiles.org/about/",
+
+    needs: [
+      {
+        id: "little-smiles-gifts-supplies",
+        type: "donation",
+        title: "Gifts, Supplies & Program Support",
+        description:
+          "Little Smiles provides gifts, activities, supplies and financial support to caregivers helping children through difficult circumstances.",
+        actionUrl:
+          "https://www.littlesmiles.org/",
+        source:
+          "https://www.littlesmiles.org/about/"
+      }
+    ],
+
+    opportunities: [
+      {
+        id: "little-smiles-community-support",
+        type: "volunteer",
+        title: "Support Little Smiles North Carolina",
+        description:
+          "Community participation helps Little Smiles provide activities, gifts and joyful experiences for children.",
+        actionUrl:
+          "https://www.littlesmiles.org/contact-us/",
+        source:
+          "https://www.littlesmiles.org/about/"
+      }
+    ],
+
+    verificationStatus: "official-site-verified",
+    lastVerified: "2026-08-20"
+  },
+
+  {
+    id: "make-an-impact",
+    name: "Make An Impact Foundation",
+    website: "https://makeanimpact.org",
+    category: "Community Development",
+    logo: "./assets/logos/make-an-impact.png",
+    logoStatus: "uploaded",
+    active: true,
+    mission: null,
+    missionSource: null,
+    needs: [],
+    opportunities: [],
+    verificationStatus: "official-site-review-needed"
+  },
+
+  
+  {
+    id: "north-carolina-youth-orchestra",
+    name: "North Carolina Youth Orchestra",
+    website: "https://www.ncyo.com",
+    category: "Youth Music Education & Performing Arts",
+
+    logo: null,
+    logoStatus: "needed",
+
+    active: true,
+
+    mission:
+      "Provides youth music education and orchestral performing opportunities while serving the community through concerts, live music and other performing-arts events.",
+
+    missionSource:
+      "https://www.ncyo.com/",
+
+    needs: [
+      {
+        id: "ncyo-financial-support",
+        type: "donation",
+        title: "Support Youth Music Education",
+        description:
+          "Financial support helps provide educational programming and performing opportunities for young musicians.",
+        actionUrl:
+          "https://www.ncyo.com/",
+        source:
+          "https://www.ncyo.com/our-story/"
+      }
+    ],
+
+    opportunities: [
+      {
+        id: "ncyo-events-volunteer",
+        type: "volunteer",
+        title: "Events Volunteer",
+        description:
+          "Volunteers assist with ushering, ticketing and coordination at concerts and community events.",
+        actionUrl:
+          "https://www.ncyo.com/volunteer/",
+        source:
+          "https://www.ncyo.com/volunteer/"
+      },
+      {
+        id: "ncyo-admin-volunteer",
+        type: "volunteer",
+        title: "Administrative Volunteer",
+        description:
+          "Administrative volunteers assist with communication, coordination and organizational tasks.",
+        actionUrl:
+          "https://www.ncyo.com/volunteer/",
+        source:
+          "https://www.ncyo.com/volunteer/"
+      },
+      {
+        id: "ncyo-recruitment-volunteer",
+        type: "volunteer",
+        title: "Recruitment Volunteer",
+        description:
+          "Recruitment volunteers represent NCYO at community events and help distribute information.",
+        actionUrl:
+          "https://www.ncyo.com/volunteer/",
+        source:
+          "https://www.ncyo.com/volunteer/"
+      },
+      {
+        id: "ncyo-student-programs",
+        type: "student-program",
+        title: "Youth Music Programs",
+        description:
+          "Students can participate in educational classes, ensembles and orchestral performance programs.",
+        actionUrl:
+          "https://www.ncyo.com/programs/",
+        source:
+          "https://www.ncyo.com/programs/"
+      }
+    ],
+
+    verificationStatus: "official-site-verified",
+    lastVerified: "2026-08-20"
+  },
+
+  {
+    id: "parker-smith",
+    name: "Parker Smith",
+    website: "https://parkersmithinc.org",
+    category: "Youth & Education",
+    logo: null,
+    logoStatus: "needed",
+    active: true,
+    mission: null,
+    missionSource: null,
+    needs: [],
+    opportunities: [],
+    verificationStatus: "official-site-review-needed"
+  },
+
+  
+  {
+    id: "rural-hill-farm",
+    name: "Rural Hill",
+    website: "https://ruralhill.net",
+    category: "History, Education, Nature & Agriculture",
+
+    logo: null,
+    logoStatus: "needed",
+
+    active: true,
+
+    mission:
+      "Operates a historic site, working farm, nature preserve, educational destination and cultural-event venue while preserving local history and providing community-oriented programming.",
+
+    missionSource:
+      "https://ruralhill.net/",
+
+    needs: [
+      {
+        id: "rural-hill-working-farm",
+        type: "donation",
+        title: "Support the Working Farm",
+        description:
+          "Contributions help Rural Hill remain a working farm, care for its animals and preserve the historic property for future generations.",
+        actionUrl:
+          "https://ruralhill.net/item/support-the-working-farm-at-rural-hill/",
+        source:
+          "https://ruralhill.net/item/support-the-working-farm-at-rural-hill/"
+      },
+      {
+        id: "rural-hill-endowment",
+        type: "donation",
+        title: "Rural Hill Endowment Support",
+        description:
+          "Endowment giving supports long-term preservation and operation of Rural Hill.",
+        actionUrl:
+          "https://ruralhill.net/",
+        source:
+          "https://ruralhill.net/"
+      }
+    ],
+
+    opportunities: [
+      {
+        id: "rural-hill-farm-volunteer",
+        type: "volunteer",
+        title: "Farm Volunteer",
+        description:
+          "Volunteers can support work on the Rural Hill farm.",
+        actionUrl:
+          "https://ruralhill.net/item/become-a-rural-hill-volunteer/",
+        source:
+          "https://ruralhill.net/item/become-a-rural-hill-volunteer/"
+      },
+      {
+        id: "rural-hill-office-volunteer",
+        type: "volunteer",
+        title: "Office Volunteer",
+        description:
+          "Volunteer support is needed for office and operational tasks.",
+        actionUrl:
+          "https://ruralhill.net/item/become-a-rural-hill-volunteer/",
+        source:
+          "https://ruralhill.net/item/become-a-rural-hill-volunteer/"
+      },
+      {
+        id: "rural-hill-event-volunteer",
+        type: "volunteer",
+        title: "Event Volunteer",
+        description:
+          "Volunteers help Rural Hill operate cultural events and community programming.",
+        actionUrl:
+          "https://ruralhill.net/item/become-a-rural-hill-volunteer/",
+        source:
+          "https://ruralhill.net/item/become-a-rural-hill-volunteer/"
+      }
+    ],
+
+    verificationStatus: "official-site-verified",
+    lastVerified: "2026-08-20"
+  },
+
+  
+  {
+    id: "safe-alliance",
+    name: "Safe Alliance",
+    website: "https://www.safealliance.org",
+    category: "Domestic Violence, Sexual Assault & Human Trafficking",
+
+    logo: "./assets/logos/safe-alliance.png",
+    logoStatus: "uploaded",
+
+    active: true,
+
+    mission:
+      "Provides hope and healing to those impacted by domestic violence, sexual assault and human trafficking.",
+
+    missionSource:
+      "https://www.safealliance.org/",
+
+    needs: [
+      {
+        id: "safe-alliance-client-needs",
+        type: "donation",
+        title: "Client Needs & Essential Items",
+        description:
+          "Current client needs include approved personal-care, baby, household, food, gift-card and technology items.",
+        actionUrl:
+          "https://www.safealliance.org/get-involved/collection-drives-kit-building/",
+        source:
+          "https://www.safealliance.org/get-involved/collection-drives-kit-building/"
+      },
+      {
+        id: "safe-alliance-collection-drives",
+        type: "donation-drive",
+        title: "Collection Drives & Kit Building",
+        description:
+          "Community groups can organize approved collection drives, shelf-stable dinner kits and children's kits.",
+        actionUrl:
+          "https://www.safealliance.org/get-involved/collection-drives-kit-building/",
+        source:
+          "https://www.safealliance.org/get-involved/collection-drives-kit-building/"
+      }
+    ],
+
+    opportunities: [
+      {
+        id: "safe-alliance-volunteer",
+        type: "volunteer",
+        title: "Safe Alliance Volunteer Program",
+        description:
+          "Volunteer roles require application, background check, introductory training and program-specific onboarding.",
+        actionUrl:
+          "https://secure.safealliance.org/get-involved/volunteer-opportunities/",
+        source:
+          "https://secure.safealliance.org/get-involved/volunteer-opportunities/"
+      },
+      {
+        id: "safe-alliance-internships",
+        type: "internship",
+        title: "Internship Opportunities",
+        description:
+          "Safe Alliance includes internships among its current ways to get involved.",
+        actionUrl:
+          "https://www.safealliance.org/get-involved/",
+        source:
+          "https://www.safealliance.org/get-involved/"
+      }
+    ],
+
+    verificationStatus: "official-site-verified",
+    lastVerified: "2026-08-20"
+  },
+
+  {
+    id: "she-built-this-city",
+    name: "She Built This City",
+    website: "https://shebuiltthiscity.org",
+    category: "Women & Workforce",
+    logo: null,
+    logoStatus: "needed",
+    active: true,
+    mission: null,
+    missionSource: null,
+    needs: [],
+    opportunities: [],
+    verificationStatus: "official-site-review-needed"
+  },
+
+  {
+    id: "soul-to-sole-connection",
+    name: "Soul to Sole Connection",
+    website: null,
+    category: "Military, First Responders & Mental Health",
+    logo: "./assets/logos/soul-to-sole-connection.jpeg",
+    logoStatus: "uploaded",
+    active: true,
+
+    mission:
+      "Provides free counseling and wellness services to veterans, service members, first responders and their families, focused on healing from trauma.",
+
+    missionSource:
+      "https://lakenormanfondo.com/giving-back/",
+
+    needs: [],
+
+    opportunities: [],
+
+    verificationStatus: "identity-verified-needs-review-needed",
+    lastVerified: "2026-08-20"
+  }
+
+];

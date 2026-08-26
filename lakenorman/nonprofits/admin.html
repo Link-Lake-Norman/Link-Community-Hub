@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width,initial-scale=1"
+  >
+
+  <title>
+    LINK Nonprofit Review
+  </title>
+
+  <link
+    rel="stylesheet"
+    href="../styles.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="./admin.css"
+  >
+</head>
+
+<body class="link-review-page">
+
+<header class="review-header">
+
+  <div>
+    <strong>LINK</strong>
+    <span>
+      Nonprofit Governance
+    </span>
+  </div>
+
+  <nav>
+    <a href="./">
+      Directory
+    </a>
+
+    <a href="./register.html">
+      Registration Form
+    </a>
+  </nav>
+
+</header>
+
+
+<main class="review-main">
+
+  <section class="review-intro">
+
+    <div>
+      <span>
+        LINK ADMIN
+      </span>
+
+      <h1>
+        Nonprofit Review Queue
+      </h1>
+
+      <p>
+        Verify identity, Lake Norman service,
+        submitted information, authorization,
+        opportunities and publication status.
+      </p>
+    </div>
+
+  </section>
+
+
+  <section
+    id="adminUnlock"
+    class="admin-unlock"
+  >
+
+    <h2>
+      Admin Access
+    </h2>
+
+    <p>
+      Enter the LINK admin access key for this
+      staging review system.
+    </p>
+
+    <form id="adminUnlockForm">
+
+      <input
+        id="adminKey"
+        type="password"
+        autocomplete="current-password"
+        placeholder="LINK admin key"
+        required
+      >
+
+      <button type="submit">
+        OPEN REVIEW QUEUE
+      </button>
+
+    </form>
+
+    <div
+      id="unlockError"
+      class="review-error"
+      hidden
+    ></div>
+
+  </section>
+
+
+  <section
+    id="adminWorkspace"
+    hidden
+  >
+
+    <div class="review-toolbar">
+
+      <div
+        id="reviewCounts"
+        class="review-counts"
+      ></div>
+
+      <div class="review-filters">
+
+        <button
+          type="button"
+          data-filter="all"
+          class="active"
+        >
+          All
+        </button>
+
+        <button
+          type="button"
+          data-filter="pending-review"
+        >
+          Pending
+        </button>
+
+        <button
+          type="button"
+          data-filter="needs-information"
+        >
+          Needs Info
+        </button>
+
+        <button
+          type="button"
+          data-filter="approved"
+        >
+          Approved
+        </button>
+
+        <button
+          type="button"
+          data-filter="rejected"
+        >
+          Rejected
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <div
+      id="reviewStatus"
+      class="review-status"
+    >
+      Loading submissions...
+    </div>
+
+
+    <section
+      id="reviewList"
+      class="review-list"
+    ></section>
+
+  </section>
+
+</main>
+
+<script src="./admin.js"></script>
+
+</body>
+</html>

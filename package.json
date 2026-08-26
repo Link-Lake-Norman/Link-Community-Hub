@@ -1,0 +1,11 @@
+{
+  "name": "link-community-hub",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@neondatabase/serverless": "^1.0.1",
+    "@vercel/blob": "^1.1.1",
+    "formidable": "^3.5.4",
+    "resend": "^6.0.2"
+  }
+}

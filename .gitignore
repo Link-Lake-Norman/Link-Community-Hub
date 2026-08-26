@@ -1,0 +1,9 @@
+node_modules/
+.env
+.env.*
+.vercel/
+.DS_Store
+_production-snapshot/
+_v2-backups/
+.vercel
+.env*

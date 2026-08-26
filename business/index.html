@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>LINK Business Portal™ | Lake Norman</title>
+  <meta name="description" content="Business access to LINK Community Hub™ — resources, community connections and local impact.">
+  <link rel="stylesheet" href="/business/styles.css">
+</head>
+<body class="auth-page">
+  <main class="auth-shell">
+    <a class="wordmark" href="/"><strong>LINK</strong><span>Community Hub™ · Lake Norman</span></a>
+    <section class="auth-card">
+      <div class="eyebrow">BUSINESS PORTAL</div>
+      <h1>Connect resources to local needs.</h1>
+      <p class="lead">Post available resources, respond to approved nonprofit requests, track local impact and choose the community priorities your business cares about.</p>
+      <div class="tab-row"><button class="tab active" type="button" data-tab="signin">Sign In</button><button class="tab" type="button" data-tab="register">Create Account</button></div>
+      <form id="signinForm" class="auth-form">
+        <label>Business email<input id="signinEmail" type="email" autocomplete="email" required></label>
+        <button class="primary" type="submit">Email Me a Secure Sign-In Link</button>
+        <p id="signinStatus" class="status" aria-live="polite"></p>
+      </form>
+      <form id="registerForm" class="auth-form hidden">
+        <div class="grid-two"><label>Business name *<input id="businessName" required maxlength="180" autocomplete="organization"></label><label>Your name *<input id="contactName" required maxlength="140" autocomplete="name"></label></div>
+        <div class="grid-two"><label>Business email *<input id="registerEmail" type="email" required maxlength="180" autocomplete="email"></label><label>Phone<input id="phone" maxlength="50" autocomplete="tel"></label></div>
+        <label>Website<input id="website" type="url" maxlength="500" placeholder="https://"></label>
+        <label class="check-row"><input id="termsAccepted" type="checkbox" required><span>I am authorized to create this business account and agree that information submitted to LINK Community Hub™ must be accurate and authorized for use.</span></label>
+        <button class="primary" type="submit">Create Business Account</button>
+        <p id="registerStatus" class="status" aria-live="polite"></p>
+      </form>
+    </section>
+    <p class="disclaimer">LINK Community Hub™ connects businesses with approved local nonprofits. LINK does not collect funds, hold donations, store inventory, arrange delivery, determine tax deductibility, issue donation receipts or take possession of donated property.</p>
+  </main>
+  <script type="module" src="/business/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>LINK Business Portal™</title>
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="stylesheet" href="/business/styles.css">
+</head>
+<body>
+<div class="portal-shell">
+  <aside class="sidebar">
+    <a class="wordmark portal-wordmark" href="/"><strong>LINK</strong><span>Business Portal™</span></a>
+    <nav class="portal-nav">
+      <button class="nav-button active" data-view="home">Overview</button>
+      <button class="nav-button" data-view="resources">Resources</button>
+      <button class="nav-button" data-view="requests">Requests</button>
+      <button class="nav-button" data-view="impact">Impact</button>
+      <button class="nav-button" data-view="share">Share LINK</button>
+      <button class="nav-button" data-view="settings">Settings</button>
+    </nav>
+    <button id="logoutButton" class="logout-button" type="button">Sign Out</button>
+  </aside>
+  <main class="portal-main">
+    <header class="portal-header"><div><div class="eyebrow">LINK COMMUNITY HUB™ · LAKE NORMAN</div><h1 id="businessHeading">Business Portal</h1></div><div id="planBadge" class="plan-badge">Community Business</div></header>
+    <div id="globalStatus" class="global-status" aria-live="polite"></div>
+
+    <section id="view-home" class="view active">
+      <div class="section-heading"><div><div class="eyebrow">OVERVIEW</div><h2>Keep community impact simple.</h2></div><button class="primary compact" type="button" data-open-resource>Add Resource</button></div>
+      <div id="metricGrid" class="metric-grid"></div>
+      <div class="two-column"><article class="panel"><div class="panel-kicker">WHAT NEEDS YOUR ATTENTION</div><div id="attentionList" class="stack-list"></div></article><article class="panel"><div class="panel-kicker">MISSION-ALIGNED CONNECTIONS</div><div id="homeMatches" class="stack-list"></div></article></div>
+      <article class="panel share-mini"><div><div class="panel-kicker">GROW THE ECOSYSTEM</div><h3>Know a business, nonprofit, school or community group that should be here?</h3></div><button class="secondary" type="button" data-go-view="share">Share LINK</button></article>
+    </section>
+
+    <section id="view-resources" class="view"><div class="section-heading"><div><div class="eyebrow">RESOURCES</div><h2>Available resources</h2><p>You control availability. A nonprofit request does not reserve an item.</p></div><button class="primary" type="button" data-open-resource>Add Resource</button></div><div id="resourceList" class="card-grid"></div></section>
+
+    <section id="view-requests" class="view"><div class="section-heading"><div><div class="eyebrow">REQUESTS</div><h2>Nonprofit requests</h2><p>Connect directly with the nonprofit, then mark the request completed after the transfer is finished.</p></div></div><div id="requestList" class="stack-list"></div></section>
+
+    <section id="view-impact" class="view"><div class="section-heading"><div><div class="eyebrow">LOCAL IMPACT</div><h2>Your community connections</h2><p>LINK tracks the connection. The business and nonprofit handle the actual transfer.</p></div></div><div id="impactMetricGrid" class="metric-grid"></div><article class="panel"><div class="panel-kicker">NONPROFITS ALIGNED WITH YOUR PRIORITIES</div><div id="matchList" class="match-grid"></div></article><article id="upgradePanel" class="panel hidden"><div class="panel-kicker">COMMUNITY PARTNER</div><h3>Expand your LINK participation</h3><p>Community Partner options can include expanded listings, public logo/website visibility, featured placement and expanded impact tools.</p><a id="upgradeLink" class="primary inline-link" target="_blank" rel="noopener noreferrer">Explore Community Partner</a></article></section>
+
+    <section id="view-share" class="view"><div class="section-heading"><div><div class="eyebrow">SHARE LINK</div><h2>Invite another part of the community.</h2><p>The ecosystem becomes more useful as more local businesses, nonprofits, schools, volunteers and community organizations participate.</p></div></div><div class="two-column"><article class="panel"><div class="panel-kicker">SHARE THE SITE</div><label>Who are you sharing with?<select id="shareAudience"><option value="business">Business</option><option value="nonprofit">Nonprofit</option><option value="school">School</option><option value="organization">Club / Organization / Team</option><option value="volunteer">Volunteer</option><option value="community">Community</option></select></label><div class="button-row"><button id="nativeShareButton" class="primary" type="button">Share LINK</button><button id="copyShareButton" class="secondary" type="button">Copy Link</button></div></article><article class="panel"><div class="panel-kicker">EMAIL AN INVITATION</div><form id="inviteForm"><label>Name<input id="inviteeName" maxlength="140"></label><label>Email *<input id="inviteeEmail" type="email" required maxlength="180"></label><label>Invite as<select id="inviteAudience"><option value="business">Business</option><option value="nonprofit">Nonprofit</option><option value="school">School</option><option value="organization">Club / Organization / Team</option><option value="volunteer">Volunteer</option><option value="community">Community</option></select></label><button class="primary" type="submit">Send Invitation</button><p id="inviteStatus" class="status" aria-live="polite"></p></form></article></div></section>
+
+    <section id="view-settings" class="view"><div class="section-heading"><div><div class="eyebrow">SETTINGS</div><h2>Business profile & giving preferences</h2></div></div><div class="two-column"><article class="panel"><div class="panel-kicker">BUSINESS PROFILE</div><form id="profileForm"><div class="logo-row"><div id="logoPreview" class="logo-preview">LOGO</div><label class="upload-button">Upload Logo<input id="logoInput" type="file" accept="image/png,image/jpeg,image/webp" hidden></label></div><label>Business name *<input id="profileBusinessName" required maxlength="180"></label><label>Contact name *<input id="profileContactName" required maxlength="140"></label><label>Phone<input id="profilePhone" maxlength="50"></label><label>Website<input id="profileWebsite" type="url" maxlength="500" placeholder="https://"></label><label>Nonprofit giving interval<select id="claimWindowMonths"><option value="6">One completed item per nonprofit every 6 months</option><option value="12">One completed item per nonprofit every 12 months</option></select></label><label class="check-row"><input id="publicProfileEnabled" type="checkbox"><span>Allow this business to appear in public LINK resource listings.</span></label><button class="primary" type="submit">Save Business Settings</button><p id="profileStatus" class="status" aria-live="polite"></p></form></article><article class="panel"><div class="panel-kicker">MY GIVING PREFERENCES</div><p class="panel-copy">Choose the mission areas your business typically supports. LINK uses these privately to improve nonprofit and community matches.</p><form id="preferenceForm"><div id="missionTagGrid" class="tag-grid"></div><button class="primary" type="submit">Save Giving Preferences</button><p id="preferenceStatus" class="status" aria-live="polite"></p></form><hr><div class="panel-kicker">OPTIONAL COMMUNITY CHALLENGES</div><label class="check-row"><input id="leaderboardOptIn" type="checkbox"><span>Participate in LINK leaderboards/challenges. This is optional and can be changed anytime.</span></label><label>Public display name<input id="leaderboardDisplayName" maxlength="120" placeholder="Business name or approved display name"></label></article></div></section>
+  </main>
+</div>
+
+<div id="resourceModal" class="modal" aria-hidden="true"><div class="modal-card"><div class="modal-head"><div><div class="eyebrow">RESOURCE</div><h2 id="resourceModalTitle">Add Resource</h2></div><button id="closeResourceModal" class="icon-button" type="button" aria-label="Close">×</button></div><form id="resourceForm"><input id="resourceId" type="hidden"><div class="grid-two"><label>Resource title *<input id="resourceTitle" required maxlength="180"></label><label>Category *<select id="resourceCategory" required><option value="">Select</option><option>Gift Cards / Certificates</option><option>Office Items</option><option>Equipment</option><option>Event Supplies</option><option>End-of-Season Inventory</option><option>Packaged / Nonperishable Items</option><option>Service / Expertise</option><option>Other</option></select></label></div><label>Description *<textarea id="resourceDescription" required maxlength="3000"></textarea></label><div class="grid-two"><label>Quantity<input id="resourceQuantity" maxlength="200" placeholder="Example: 12 boxes"></label><label>Optional estimated value<input id="resourceValue" type="number" min="0" step="0.01" placeholder="0.00"></label></div><label>Availability notes<textarea id="resourceAvailability" maxlength="1000"></textarea></label><label>Pickup / contact instructions<textarea id="resourcePickup" maxlength="1000"></textarea></label><label>Listing expiration<input id="resourceExpires" type="datetime-local"></label><div class="button-row"><button class="primary" type="submit">Save Resource</button><button id="cancelResourceButton" class="secondary" type="button">Cancel</button></div><p id="resourceStatus" class="status" aria-live="polite"></p></form></div></div>
+<script type="module" src="/business/portal.js"></script>
+</body>
+</html>

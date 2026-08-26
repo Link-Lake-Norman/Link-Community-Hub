@@ -1,0 +1,3 @@
+import { Resend } from 'resend';
+export function client(){if(!process.env.RESEND_API_KEY) throw new Error('RESEND_API_KEY is not configured.');return new Resend(process.env.RESEND_API_KEY);}
+export async function ensureSegment(sql){const rows=await sql`SELECT resend_segment_id FROM hub_community_brief_settings WHERE id=1`;if(rows[0]?.resend_segment_id)return rows[0].resend_segment_id;const resend=client();const {data,error}=await resend.segments.create({name:'LINK Community Brief'});if(error)throw new Error(error.message||'Could not create newsletter segment.');await sql`UPDATE hub_community_brief_settings SET resend_segment_id=${data.id},updated_at=now() WHERE id=1`;return data.id;}

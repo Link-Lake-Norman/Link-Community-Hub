@@ -1,0 +1,3 @@
+import { clearCookie,noStore,sql,tokenHash } from '../_auth.js';
+function get(req){for(const p of String(req.headers.cookie||'').split(';')){const [k,...r]=p.trim().split('=');if(k==='link_nonprofit_session')return decodeURIComponent(r.join('='));}return '';}
+export default async function handler(req,res){noStore(res);if(req.method!=='POST'){res.status(405).json({ok:false,error:'Method not allowed.'});return;}const raw=get(req);if(raw&&process.env.DATABASE_URL){try{const db=sql();await db`DELETE FROM hub_nonprofit_portal_sessions WHERE token_hash=${tokenHash(raw)}`;}catch{}}clearCookie(res);res.status(200).json({ok:true});}

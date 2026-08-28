@@ -9,38 +9,26 @@
   };
 
   var search =
-    document.getElementById(
-      "directorySearch"
-    );
+    document.getElementById("directorySearch");
 
   var area =
-    document.getElementById(
-      "directoryArea"
-    );
+    document.getElementById("directoryArea");
 
   var grid =
-    document.getElementById(
-      "directoryGrid"
-    );
+    document.getElementById("directoryGrid");
 
   var status =
-    document.getElementById(
-      "directoryStatus"
-    );
+    document.getElementById("directoryStatus");
 
   var count =
-    document.getElementById(
-      "directoryCount"
-    );
+    document.getElementById("directoryCount");
 
   var mapped =
-    document.getElementById(
-      "directoryMapped"
-    );
+    document.getElementById("directoryMapped");
 
 
   function esc(value) {
-    return String(value || "")
+    return String(value == null ? "" : value)
       .replace(/&/g, "&amp;")
       .replace(/</g, "&lt;")
       .replace(/>/g, "&gt;")
@@ -49,39 +37,65 @@
   }
 
 
+  function finite(value) {
+    if (
+      value === null ||
+      value === undefined ||
+      value === ""
+    ) {
+      return null;
+    }
+
+    var number = Number(value);
+
+    return Number.isFinite(number)
+      ? number
+      : null;
+  }
+
+
+  function normalizeLogo(value) {
+    if (!value) {
+      return null;
+    }
+
+    return String(value).replace(
+      /^\.\/assets\/logos\//,
+      "/lakenorman/assets/logos/"
+    );
+  }
+
+
   function normalizeDatabaseOrg(row) {
     return {
       source: "database",
 
-      id: row.id,
+      id: row.id || "",
 
       name:
         row.display_name ||
+        row.name ||
         "",
 
       website:
         row.website_url ||
+        row.website ||
         "",
 
       publicEmail:
-        row.public_email ||
-        "",
+        row.public_email || "",
 
       publicPhone:
-        row.public_phone ||
-        "",
+        row.public_phone || "",
 
       mission:
-        row.mission ||
-        "",
+        row.mission || "",
 
       category:
-        row.category ||
-        "",
+        row.category || "",
 
       whoTheyServe:
-        row.who_they_serve ||
-        "",
+        row.who_they_serve || "",
 
       address:
         [
@@ -95,42 +109,53 @@
           .join(", "),
 
       city:
-        row.city ||
-        "",
+        row.city || "",
 
       latitude:
-        row.latitude === null
-          ? null
-          : Number(row.latitude),
+        finite(row.latitude),
 
       longitude:
-        row.longitude === null
-          ? null
-          : Number(row.longitude),
+        finite(row.longitude),
 
       logo:
-        row.logo_url ||
-        null,
-
-      serviceAreas:
-        (
-          row.service_areas ||
-          []
-        ).map(
-          item =>
-            item.name
+        normalizeLogo(
+          row.logo_url ||
+          row.logo
         ),
 
+      serviceAreas:
+        Array.isArray(row.service_areas)
+          ? row.service_areas.map(
+              function (item) {
+                return (
+                  item.name ||
+                  item.area_name ||
+                  item
+                );
+              }
+            )
+          : [],
+
       needs:
-        row.needs || [],
+        Array.isArray(row.needs)
+          ? row.needs
+          : [],
 
       opportunities:
-        row.opportunities || [],
+        Array.isArray(row.opportunities)
+          ? row.opportunities
+          : [],
 
       events:
-        row.events || [],
+        Array.isArray(row.events)
+          ? row.events
+          : [],
 
       verified: true,
+
+      verificationStatus:
+        row.verification_status ||
+        "official-site-verified",
 
       locatedInServiceArea:
         Boolean(
@@ -138,9 +163,7 @@
         ),
 
       servesServiceArea:
-        Boolean(
-          row.serves_service_area
-        )
+        row.serves_service_area !== false
     };
   }
 
@@ -150,60 +173,340 @@
       source: "legacy",
 
       id:
-        org.id ||
-        "",
+        org.id || "",
 
       name:
-        org.name ||
-        "",
+        org.name || "",
 
       website:
-        org.website ||
+        org.website || "",
+
+      publicEmail:
+        org.publicEmail ||
+        org.public_email ||
         "",
 
-      publicEmail: "",
-      publicPhone: "",
+      publicPhone:
+        org.publicPhone ||
+        org.public_phone ||
+        "",
 
       mission:
-        org.mission ||
-        "",
+        org.mission || "",
 
       category:
-        org.category ||
-        "",
+        org.category || "",
 
-      whoTheyServe: "",
+      whoTheyServe:
+        org.whoTheyServe || "",
 
-      address: "",
-      city: "",
+      address:
+        org.address || "",
 
-      latitude: null,
-      longitude: null,
+      city:
+        org.city || "",
+
+      latitude:
+        finite(org.latitude),
+
+      longitude:
+        finite(org.longitude),
 
       logo:
-        org.logo ||
-        null,
+        normalizeLogo(org.logo),
 
-      serviceAreas: [],
+      serviceAreas:
+        Array.isArray(org.serviceAreas)
+          ? org.serviceAreas
+          : [],
 
       needs:
-        org.needs ||
-        [],
+        Array.isArray(org.needs)
+          ? org.needs
+          : [],
 
       opportunities:
-        org.opportunities ||
-        [],
+        Array.isArray(org.opportunities)
+          ? org.opportunities
+          : [],
 
-      events: [],
+      events:
+        Array.isArray(org.events)
+          ? org.events
+          : [],
 
       verified:
-        org.active === true &&
         org.verificationStatus ===
-          "official-site-verified",
+        "official-site-verified",
 
-      locatedInServiceArea: null,
-      servesServiceArea: true
+      verificationStatus:
+        org.verificationStatus || "",
+
+      locatedInServiceArea:
+        null,
+
+      servesServiceArea:
+        true
     };
+  }
+
+
+  /*
+   * IMPORTANT:
+   * Database data supplements the current LINK registry.
+   * Blank API fields must NOT erase existing logos,
+   * coordinates, missions, needs or opportunities.
+   */
+  function mergeOrganization(
+    legacy,
+    database
+  ) {
+    if (!legacy) {
+      return database;
+    }
+
+    if (!database) {
+      return legacy;
+    }
+
+    return {
+      source: "merged",
+
+      id:
+        database.id ||
+        legacy.id,
+
+      name:
+        database.name ||
+        legacy.name,
+
+      website:
+        database.website ||
+        legacy.website,
+
+      publicEmail:
+        database.publicEmail ||
+        legacy.publicEmail,
+
+      publicPhone:
+        database.publicPhone ||
+        legacy.publicPhone,
+
+      mission:
+        database.mission ||
+        legacy.mission,
+
+      category:
+        database.category ||
+        legacy.category,
+
+      whoTheyServe:
+        database.whoTheyServe ||
+        legacy.whoTheyServe,
+
+      address:
+        database.address ||
+        legacy.address,
+
+      city:
+        database.city ||
+        legacy.city,
+
+      latitude:
+        Number.isFinite(
+          database.latitude
+        )
+          ? database.latitude
+          : legacy.latitude,
+
+      longitude:
+        Number.isFinite(
+          database.longitude
+        )
+          ? database.longitude
+          : legacy.longitude,
+
+      logo:
+        database.logo ||
+        legacy.logo,
+
+      serviceAreas:
+        database.serviceAreas.length
+          ? database.serviceAreas
+          : legacy.serviceAreas,
+
+      needs:
+        database.needs.length
+          ? database.needs
+          : legacy.needs,
+
+      opportunities:
+        database.opportunities.length
+          ? database.opportunities
+          : legacy.opportunities,
+
+      events:
+        database.events.length
+          ? database.events
+          : legacy.events,
+
+      verified:
+        database.verified ||
+        legacy.verified,
+
+      verificationStatus:
+        database.verificationStatus ||
+        legacy.verificationStatus,
+
+      locatedInServiceArea:
+        database.locatedInServiceArea,
+
+      servesServiceArea:
+        database.servesServiceArea !== false
+    };
+  }
+
+
+  /*
+   * LINK REGISTRY ENRICHMENT
+   *
+   * The Lake Norman registry remains authoritative for
+   * established organization logos, needs/opportunities
+   * and verified map coordinates.
+   *
+   * Database/API information can supplement these records
+   * but must not erase richer existing public information.
+   */
+
+  function registryMap() {
+    var registry =
+      Array.isArray(
+        window.LINK_ORGANIZATIONS
+      )
+        ? window.LINK_ORGANIZATIONS
+        : [];
+
+    var map = new Map();
+
+    registry
+      .filter(
+        function (org) {
+          return org.active === true;
+        }
+      )
+      .forEach(
+        function (org) {
+          map.set(
+            String(org.name || "")
+              .toLowerCase()
+              .trim(),
+            org
+          );
+        }
+      );
+
+    return map;
+  }
+
+
+  function enrichFromRegistry(org) {
+    var registry =
+      registryMap();
+
+    var legacy =
+      registry.get(
+        String(org.name || "")
+          .toLowerCase()
+          .trim()
+      );
+
+    if (!legacy) {
+      return org;
+    }
+
+
+    /*
+     * FORCE known LINK logo whenever registry has one.
+     */
+    if (legacy.logo) {
+      org.logo =
+        normalizeLogo(
+          legacy.logo
+        );
+    }
+
+
+    /*
+     * FORCE verified stored coordinates whenever present.
+     */
+    var lat =
+      finite(
+        legacy.latitude
+      );
+
+    var lng =
+      finite(
+        legacy.longitude
+      );
+
+    if (
+      Number.isFinite(lat) &&
+      Number.isFinite(lng)
+    ) {
+      org.latitude = lat;
+      org.longitude = lng;
+
+      org.address =
+        legacy.address ||
+        org.address ||
+        "";
+
+      org.city =
+        legacy.city ||
+        org.city ||
+        "";
+    }
+
+
+    /*
+     * Preserve established mission/category.
+     */
+    if (legacy.mission) {
+      org.mission =
+        legacy.mission;
+    }
+
+    if (legacy.category) {
+      org.category =
+        legacy.category;
+    }
+
+
+    /*
+     * Preserve ALL registry needs/opportunities.
+     */
+    if (
+      Array.isArray(
+        legacy.needs
+      ) &&
+      legacy.needs.length
+    ) {
+      org.needs =
+        legacy.needs;
+    }
+
+    if (
+      Array.isArray(
+        legacy.opportunities
+      ) &&
+      legacy.opportunities.length
+    ) {
+      org.opportunities =
+        legacy.opportunities;
+    }
+
+
+    return org;
   }
 
 
@@ -218,11 +521,7 @@
     return registry
       .filter(
         function (org) {
-          return (
-            org.active === true &&
-            org.verificationStatus ===
-              "official-site-verified"
-          );
+          return org.active === true;
         }
       )
       .map(normalizeLegacyOrg);
@@ -230,39 +529,57 @@
 
 
   async function loadOrganizations() {
+    var legacy =
+      legacyFallback();
+
     var databaseRows = [];
 
     try {
       var response =
         await fetch(
-          "/api/nonprofits/public"
+          "/api/nonprofits/public",
+          {
+            headers: {
+              Accept: "application/json"
+            }
+          }
         );
 
-      if (response.ok) {
+      var contentType =
+        response.headers.get(
+          "content-type"
+        ) || "";
+
+      if (
+        response.ok &&
+        contentType.includes(
+          "application/json"
+        )
+      ) {
         var data =
           await response.json();
 
         databaseRows =
-          (
-            data.organizations ||
-            []
-          ).map(
-            normalizeDatabaseOrg
-          );
+          Array.isArray(
+            data.organizations
+          )
+            ? data.organizations.map(
+                normalizeDatabaseOrg
+              )
+            : [];
       }
 
     } catch (error) {
       console.warn(
-        "LINK directory API unavailable:",
+        "LINK directory API unavailable; using registry.",
         error
       );
     }
 
-    var legacy =
-      legacyFallback();
 
     var byName =
       new Map();
+
 
     legacy.forEach(
       function (org) {
@@ -275,27 +592,49 @@
       }
     );
 
+
     databaseRows.forEach(
-      function (org) {
-        byName.set(
-          org.name
+      function (databaseOrg) {
+        var key =
+          databaseOrg.name
             .toLowerCase()
-            .trim(),
-          org
+            .trim();
+
+        var legacyOrg =
+          byName.get(key);
+
+        byName.set(
+          key,
+          mergeOrganization(
+            legacyOrg,
+            databaseOrg
+          )
         );
       }
     );
 
+
     state.organizations =
       Array.from(
         byName.values()
-      ).sort(
-        function (a, b) {
-          return a.name.localeCompare(
-            b.name
-          );
-        }
-      );
+      )
+        .map(
+          enrichFromRegistry
+        )
+        .filter(
+          function (org) {
+            return Boolean(
+              org.name
+            );
+          }
+        )
+        .sort(
+          function (a, b) {
+            return a.name.localeCompare(
+              b.name
+            );
+          }
+        );
 
     applyFilters();
   }
@@ -323,6 +662,7 @@
         org.category,
         org.whoTheyServe,
         org.city,
+        org.address,
         org.serviceAreas.join(" ")
       ]
         .join(" ")
@@ -333,27 +673,20 @@
       }
     }
 
+
     if (selectedArea) {
-      var areas =
-        org.serviceAreas.map(
-          function (name) {
-            return String(name)
-              .toLowerCase();
-          }
-        );
+      var locationText = [
+        org.city,
+        org.address,
+        org.serviceAreas.join(" ")
+      ]
+        .join(" ")
+        .toLowerCase();
 
       if (
-        areas.length &&
-        !areas.includes(
+        !locationText.includes(
           selectedArea
         )
-      ) {
-        return false;
-      }
-
-      if (
-        !areas.length &&
-        org.source === "database"
       ) {
         return false;
       }
@@ -374,29 +707,6 @@
   }
 
 
-  function chips(items) {
-    if (!items.length) {
-      return "";
-    }
-
-    return (
-      '<div class="directory-chips">' +
-      items
-        .map(
-          function (item) {
-            return (
-              "<span>" +
-              esc(item) +
-              "</span>"
-            );
-          }
-        )
-        .join("") +
-      "</div>"
-    );
-  }
-
-
   function actionCount(org) {
     return (
       org.needs.length +
@@ -406,65 +716,200 @@
   }
 
 
-  function card(org) {
-    var locationLabel = "";
+  function itemLink(item) {
+    return (
+      item.url ||
+      item.link ||
+      item.actionUrl ||
+      item.action_url ||
+      item.sourceUrl ||
+      item.source_url ||
+      ""
+    );
+  }
 
-    if (
-      org.source === "database"
-    ) {
-      locationLabel =
-        org.locatedInServiceArea
-          ? "Located + Serving Lake Norman"
-          : "Verified Lake Norman Service";
-    } else {
-      locationLabel =
-        "Verified LINK Organization";
+
+  function actionItem(
+    item,
+    label
+  ) {
+    var title =
+      item.title ||
+      item.name ||
+      label;
+
+    var description =
+      item.description ||
+      item.details ||
+      "";
+
+    var link =
+      itemLink(item);
+
+    return (
+      '<div class="directory-action-item">' +
+
+        '<span class="directory-action-type">' +
+          esc(label) +
+        "</span>" +
+
+        "<strong>" +
+          esc(title) +
+        "</strong>" +
+
+        (
+          description
+            ? (
+                "<p>" +
+                  esc(description) +
+                "</p>"
+              )
+            : ""
+        ) +
+
+        (
+          link
+            ? (
+                '<a href="' +
+                esc(link) +
+                '" target="_blank" ' +
+                'rel="noopener noreferrer">' +
+                "LEARN MORE →" +
+                "</a>"
+              )
+            : ""
+        ) +
+
+      "</div>"
+    );
+  }
+
+
+  function actionDetails(org) {
+    var items = [];
+
+    org.needs.forEach(
+      function (item) {
+        items.push(
+          actionItem(
+            item,
+            "NEED"
+          )
+        );
+      }
+    );
+
+    org.opportunities.forEach(
+      function (item) {
+        items.push(
+          actionItem(
+            item,
+            "OPPORTUNITY"
+          )
+        );
+      }
+    );
+
+    org.events.forEach(
+      function (item) {
+        items.push(
+          actionItem(
+            item,
+            "EVENT"
+          )
+        );
+      }
+    );
+
+
+    if (!items.length) {
+      return (
+        '<div class="directory-no-actions">' +
+        "Current needs and opportunities are being updated." +
+        "</div>"
+      );
     }
 
-    var websiteAction =
-      org.website
-        ? (
-            '<a class="directory-primary" ' +
-            'href="' +
-            esc(org.website) +
-            '" target="_blank" ' +
-            'rel="noopener noreferrer">' +
-            "VISIT WEBSITE →" +
-            "</a>"
-          )
-        : "";
 
-    var logo =
-      org.logo
-        ? (
-            '<img src="' +
-            esc(org.logo) +
-            '" alt="' +
-            esc(org.name) +
-            ' logo">'
-          )
-        : (
-            '<div class="directory-logo-fallback">' +
-            esc(
-              org.name
-                .charAt(0)
-                .toUpperCase()
-            ) +
-            "</div>"
-          );
+    return (
+      '<details class="directory-actions-detail">' +
+
+        "<summary>" +
+          '<span>VIEW NEEDS &amp; OPPORTUNITIES</span>' +
+          "<b>" +
+            items.length +
+          "</b>" +
+        "</summary>" +
+
+        '<div class="directory-action-list">' +
+          items.join("") +
+        "</div>" +
+
+      "</details>"
+    );
+  }
+
+
+  function logoMarkup(org) {
+
+    /*
+     * REAL LOGO:
+     * render the nonprofit logo only.
+     * No initial circle is generated beside it.
+     */
+    if (org.logo) {
+      return (
+        '<img ' +
+          'src="' +
+          esc(org.logo) +
+          '" ' +
+          'alt="' +
+          esc(org.name) +
+          ' logo" ' +
+          'loading="lazy">' 
+      );
+    }
+
+
+    /*
+     * NO LOGO:
+     * use a simple text placeholder.
+     * Never use the circular initial treatment.
+     */
+    return (
+      '<div class="directory-logo-name-fallback">' +
+        esc(org.name) +
+      "</div>"
+    );
+  }
+
+
+  function statusLabel(org) {
+    if (org.verified) {
+      return "✓ Verified LINK Organization";
+    }
+
+    return "LINK Community Organization";
+  }
+
+
+  function card(org) {
+    var actions =
+      actionCount(org);
 
     return (
       '<article class="directory-card">' +
 
         '<div class="directory-card-logo">' +
-          logo +
+          logoMarkup(org) +
         "</div>" +
 
         '<div class="directory-card-body">' +
 
           '<span class="directory-verified">' +
-            "✓ " +
-            esc(locationLabel) +
+            esc(
+              statusLabel(org)
+            ) +
           "</span>" +
 
           "<h3>" +
@@ -484,38 +929,69 @@
           (
             org.mission
               ? (
-                  "<p>" +
+                  '<p class="directory-mission">' +
                     esc(org.mission) +
                   "</p>"
                 )
-              : ""
-          ) +
-
-          chips(
-            org.serviceAreas
+              : (
+                  '<p class="directory-mission directory-mission-muted">' +
+                  "Organization profile details are being updated." +
+                  "</p>"
+                )
           ) +
 
           (
-            actionCount(org)
+            org.address
               ? (
-                  '<div class="directory-action-count">' +
-                    actionCount(org) +
-                    " active need" +
-                    (
-                      actionCount(org) === 1
-                        ? ""
-                        : "s"
-                    ) +
-                    " / opportunity records" +
+                  '<div class="directory-location">' +
+                    "⌖ " +
+                    esc(org.address) +
                   "</div>"
                 )
               : ""
           ) +
 
+          (
+            actions
+              ? (
+                  '<div class="directory-action-count">' +
+                    actions +
+                    " CURRENT NEED" +
+                    (
+                      actions === 1
+                        ? ""
+                        : "S"
+                    ) +
+                    " / OPPORTUNITIES" +
+                  "</div>"
+                )
+              : ""
+          ) +
+
+          actionDetails(org) +
+
         "</div>" +
 
         '<div class="directory-card-footer">' +
-          websiteAction +
+
+          (
+            org.website
+              ? (
+                  '<a class="directory-primary" ' +
+                  'href="' +
+                  esc(org.website) +
+                  '" target="_blank" ' +
+                  'rel="noopener noreferrer">' +
+                    "VISIT WEBSITE →" +
+                  "</a>"
+                )
+              : (
+                  '<span class="directory-site-unavailable">' +
+                    "Website update in progress" +
+                  "</span>"
+                )
+          ) +
+
         "</div>" +
 
       "</article>"
@@ -528,10 +1004,13 @@
       return;
     }
 
-    count.textContent =
-      String(
-        state.filtered.length
-      );
+    if (count) {
+      count.textContent =
+        String(
+          state.filtered.length
+        );
+    }
+
 
     var mappedCount =
       state.filtered.filter(
@@ -547,20 +1026,29 @@
         }
       ).length;
 
-    mapped.textContent =
-      String(mappedCount);
+
+    if (mapped) {
+      mapped.textContent =
+        String(mappedCount);
+    }
+
 
     if (!state.filtered.length) {
-      status.hidden = false;
-
-      status.textContent =
-        "No organizations match those filters.";
+      if (status) {
+        status.hidden = false;
+        status.textContent =
+          "No organizations match those filters.";
+      }
 
       grid.innerHTML = "";
       return;
     }
 
-    status.hidden = true;
+
+    if (status) {
+      status.hidden = true;
+    }
+
 
     grid.innerHTML =
       state.filtered
@@ -577,26 +1065,49 @@
       return;
     }
 
+
+    var element =
+      document.getElementById(
+        "nonprofitMap"
+      );
+
+    if (!element) {
+      return;
+    }
+
+
     state.map =
       L.map(
-        "nonprofitMap",
+        element,
         {
           scrollWheelZoom: false
         }
-      ).setView(
-        [35.4804, -80.8660],
-        10
-      );
+      )
+        .setView(
+          [35.4804, -80.8660],
+          10
+        );
+
 
     L.tileLayer(
       "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
       {
         maxZoom: 19,
-
         attribution:
           "&copy; OpenStreetMap contributors"
       }
-    ).addTo(state.map);
+    )
+      .addTo(
+        state.map
+      );
+
+
+    setTimeout(
+      function () {
+        state.map.invalidateSize();
+      },
+      100
+    );
   }
 
 
@@ -607,6 +1118,7 @@
       return;
     }
 
+
     state.markers.forEach(
       function (marker) {
         marker.remove();
@@ -616,6 +1128,7 @@
     state.markers = [];
 
     var bounds = [];
+
 
     state.filtered.forEach(
       function (org) {
@@ -630,34 +1143,76 @@
           return;
         }
 
+
+        var popupLogo =
+          org.logo
+            ? (
+                '<img src="' +
+                esc(org.logo) +
+                '" alt="" ' +
+                'style="' +
+                  "display:block;" +
+                  "max-width:100px;" +
+                  "max-height:42px;" +
+                  "object-fit:contain;" +
+                  "margin:0 0 8px;" +
+                '">' 
+              )
+            : "";
+
+
+        var popup =
+          popupLogo +
+
+          "<strong>" +
+            esc(org.name) +
+          "</strong>" +
+
+          (
+            org.category
+              ? (
+                  "<br>" +
+                  esc(org.category)
+                )
+              : ""
+          ) +
+
+          (
+            org.address
+              ? (
+                  "<br><small>" +
+                    esc(org.address) +
+                  "</small>"
+                )
+              : ""
+          ) +
+
+          (
+            org.website
+              ? (
+                  '<br><a href="' +
+                  esc(org.website) +
+                  '" target="_blank" ' +
+                  'rel="noopener noreferrer">' +
+                    "Visit website" +
+                  "</a>"
+                )
+              : ""
+          );
+
+
         var marker =
           L.marker([
             org.latitude,
             org.longitude
           ])
-            .addTo(state.map)
+            .addTo(
+              state.map
+            )
             .bindPopup(
-              "<strong>" +
-              esc(org.name) +
-              "</strong>" +
-              (
-                org.category
-                  ? (
-                      "<br>" +
-                      esc(org.category)
-                    )
-                  : ""
-              ) +
-              (
-                org.website
-                  ? (
-                      '<br><a href="' +
-                      esc(org.website) +
-                      '" target="_blank" rel="noopener noreferrer">Website</a>'
-                    )
-                  : ""
-              )
+              popup
             );
+
 
         state.markers.push(
           marker
@@ -670,6 +1225,7 @@
       }
     );
 
+
     if (bounds.length === 1) {
       state.map.setView(
         bounds[0],
@@ -677,6 +1233,7 @@
       );
 
     } else if (bounds.length > 1) {
+
       state.map.fitBounds(
         bounds,
         {
@@ -686,11 +1243,20 @@
       );
 
     } else {
+
       state.map.setView(
         [35.4804, -80.8660],
         10
       );
     }
+
+
+    setTimeout(
+      function () {
+        state.map.invalidateSize();
+      },
+      100
+    );
   }
 
 
@@ -701,6 +1267,7 @@
     );
   }
 
+
   if (area) {
     area.addEventListener(
       "change",
@@ -708,5 +1275,17 @@
     );
   }
 
+
+  window.addEventListener(
+    "resize",
+    function () {
+      if (state.map) {
+        state.map.invalidateSize();
+      }
+    }
+  );
+
+
   loadOrganizations();
+
 })();

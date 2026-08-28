@@ -18,9 +18,9 @@ function cookie(req){for(const p of String(req.headers.cookie||'').split(';')){c
 export function setCookie(res,value){res.setHeader('Set-Cookie',`${COOKIE}=${encodeURIComponent(value)}; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=2592000`);}
 export function clearCookie(res){res.setHeader('Set-Cookie',`${COOKIE}=; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=0`);}
 export async function session(req,res){if(!process.env.DATABASE_URL){fail(res,503,'LINK nonprofit services are temporarily unavailable.');return null;}const raw=cookie(req);if(!raw){fail(res,401,'Please sign in to your nonprofit account.');return null;}const db=sql();const rows=await db`
-SELECT s.organization_id,s.contact_id,o.display_name,o.slug,o.approval_status,o.public_status,o.active,o.service_area_verified,c.full_name,c.email,c.phone
+SELECT s.organization_id,s.contact_id,o.display_name,o.slug,o.approval_status,o.claim_status,o.public_status,o.active,o.service_area_verified,c.full_name,c.email,c.phone
 FROM hub_nonprofit_portal_sessions s
 JOIN organizations o ON o.id=s.organization_id
 JOIN organization_contacts c ON c.id=s.contact_id
-WHERE s.token_hash=${hash(raw)} AND s.expires_at>now() AND o.active=true AND o.approval_status='approved' AND o.service_area_verified=true LIMIT 1`;
+WHERE s.token_hash=${hash(raw)} AND s.expires_at>now() AND o.active=true AND o.approval_status='approved' AND o.claim_status='approved' AND o.service_area_verified=true LIMIT 1`;
 if(!rows.length){clearCookie(res);fail(res,401,'Your LINK nonprofit session has expired.');return null;}return {db,org:rows[0]};}

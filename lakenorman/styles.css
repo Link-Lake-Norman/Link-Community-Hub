@@ -350,9 +350,7 @@
 
 .hero-bg {
   position: absolute !important;
-
   inset: 0 !important;
-
   display: block !important;
 
   background-image:
@@ -371,7 +369,14 @@
   background-position:
     center 54% !important;
 
-  transform: none !important;
+  transform:
+    none !important;
+
+  filter:
+    brightness(1.12)
+    saturate(1.04)
+    contrast(.99)
+    !important;
 }
 
 
@@ -385,22 +390,19 @@
 
 .hero-shade {
   position: absolute !important;
-
   inset: 0 !important;
-
   display: block !important;
-
   z-index: 1 !important;
 
   background:
     linear-gradient(
       90deg,
-      rgba(3,17,35,.94) 0%,
-      rgba(3,17,35,.89) 23%,
-      rgba(3,17,35,.67) 39%,
-      rgba(3,17,35,.28) 55%,
-      rgba(3,17,35,.06) 72%,
-      rgba(3,17,35,.02) 100%
+      rgba(3,17,35,.76) 0%,
+      rgba(3,17,35,.66) 23%,
+      rgba(3,17,35,.40) 39%,
+      rgba(3,17,35,.14) 55%,
+      rgba(3,17,35,.025) 72%,
+      rgba(3,17,35,0) 100%
     ) !important;
 }
 
@@ -5338,3 +5340,1553 @@ main,
 }
 
 /* LINK — END NONPROFIT INTAKE + ADMIN */
+
+
+/* ===== APPROVED LINK BRAND ASSETS — 2026-08-26 ===== */
+
+/*
+   Surgical brand correction only.
+   No homepage redesign.
+*/
+
+.brand.brand-logo {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+  margin-right: auto;
+  text-decoration: none;
+}
+
+.brand.brand-logo img {
+  display: block;
+  height: 62px;
+  width: auto;
+  max-width: 240px;
+  object-fit: contain;
+}
+
+.participation-recognition .recognition-badge img[src$="LINK-Community-Partner.png"] {
+  display: block;
+  width: 180px;
+  height: 180px;
+  max-width: 100%;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+@media (max-width: 1000px) {
+  .brand.brand-logo img {
+    height: 56px;
+    max-width: 215px;
+  }
+}
+
+@media (max-width: 650px) {
+  .brand.brand-logo img {
+    height: 46px;
+    max-width: 175px;
+  }
+}
+
+/* ===== END APPROVED LINK BRAND ASSETS ===== */
+
+
+/* ===== LINK SECOND PASS — 2026-08-26 ===== */
+
+/* Make approved logo visible on dark hero */
+.brand.brand-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.96);
+  padding: 10px 14px;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(6, 23, 46, 0.18);
+  border: 1px solid rgba(11, 35, 68, 0.08);
+}
+
+.brand.brand-logo img {
+  display: block;
+  height: 56px;
+  width: auto;
+  max-width: 240px;
+  object-fit: contain;
+}
+
+/* one centered badge card only */
+.participation-recognition .recognition-grid {
+  grid-template-columns: minmax(280px, 420px);
+  justify-content: center;
+}
+
+.participation-recognition .recognition-card-single {
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.participation-recognition .recognition-badge img {
+  width: 190px;
+  height: 190px;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Make the photo cards feel more like strong stock-image cards */
+.engage-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.engage-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.need-card img {
+  width: 100%;
+  height: 125px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.flow-row article img {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* tighten card body spacing slightly */
+.engage-card h3 {
+  margin-top: 10px;
+}
+
+.engage-card p {
+  padding: 0 10px;
+}
+
+@media (max-width: 1000px) {
+  .brand.brand-logo img {
+    height: 50px;
+    max-width: 210px;
+  }
+
+  .engage-card img {
+    height: 140px;
+  }
+
+  .need-card img,
+  .flow-row article img {
+    height: 110px;
+  }
+}
+
+@media (max-width: 650px) {
+  .brand.brand-logo {
+    padding: 8px 10px;
+    border-radius: 12px;
+  }
+
+  .brand.brand-logo img {
+    height: 42px;
+    max-width: 170px;
+  }
+
+  .engage-card img,
+  .need-card img,
+  .flow-row article img {
+    height: 180px;
+  }
+}
+
+/* ===== END LINK SECOND PASS ===== */
+
+
+/* ===== LINK COMMUNITY PARTNER PROGRAM — 2026-08-26 ===== */
+
+.participation-recognition {
+  background: #f7f3eb;
+  padding: 48px 34px;
+}
+
+.link-partner-program {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+  gap: 56px;
+  align-items: center;
+}
+
+.link-partner-kicker {
+  margin-bottom: 10px;
+  color: var(--gold2);
+  font: 900 10px Montserrat, sans-serif;
+  letter-spacing: .14em;
+}
+
+.link-partner-copy h2 {
+  margin: 0 0 16px;
+  color: var(--navy);
+  font: 700 38px/1.08 "Libre Baskerville", serif;
+}
+
+.link-partner-lead {
+  max-width: 680px;
+  margin: 0 0 25px;
+  color: #435064;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.link-partner-includes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.link-partner-includes > div {
+  padding: 18px;
+  background: #fff;
+  border: 1px solid rgba(11,35,68,.12);
+  border-radius: 10px;
+}
+
+.link-partner-includes strong {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--navy);
+  font: 800 13px Montserrat, sans-serif;
+}
+
+.link-partner-includes span {
+  display: block;
+  color: #566070;
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+.link-partner-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.link-partner-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0 18px;
+  border-radius: 5px;
+  text-decoration: none;
+  font: 900 9px Montserrat, sans-serif;
+  letter-spacing: .03em;
+}
+
+.link-partner-button.primary {
+  background: var(--gold);
+  color: var(--navy);
+}
+
+.link-partner-button.secondary {
+  background: var(--navy);
+  color: #fff;
+}
+
+.link-partner-note {
+  margin: 15px 0 0;
+  color: #6a7280;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.link-partner-badge-wrap {
+  padding: 28px;
+  text-align: center;
+  background: #fff;
+  border: 1px solid rgba(11,35,68,.11);
+  border-radius: 18px;
+  box-shadow: 0 14px 36px rgba(6,23,46,.08);
+}
+
+.link-partner-badge {
+  display: block;
+  width: min(290px, 100%);
+  height: auto;
+  margin: 0 auto 18px;
+}
+
+.link-partner-badge-wrap strong {
+  display: block;
+  color: var(--navy);
+  font: 900 14px Montserrat, sans-serif;
+}
+
+.link-partner-badge-wrap span {
+  display: block;
+  margin-top: 7px;
+  color: #667080;
+  font-size: 9px;
+}
+
+@media (max-width: 850px) {
+
+  .link-partner-program {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .link-partner-badge-wrap {
+    max-width: 420px;
+    width: 100%;
+    margin: auto;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .participation-recognition {
+    padding: 38px 20px;
+  }
+
+  .link-partner-copy h2 {
+    font-size: 30px;
+  }
+
+  .link-partner-includes {
+    grid-template-columns: 1fr;
+  }
+
+  .link-partner-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .link-partner-button {
+    width: 100%;
+  }
+
+}
+
+/* ===== END LINK COMMUNITY PARTNER PROGRAM ===== */
+
+/* ===== RESTORE REAL ACTION CARD PHOTOS — 2026-08-26 ===== */
+/*
+   Removes temporary blank image placeholders.
+   Keeps existing card structure, sizing, icons and actions.
+*/
+
+.engage-card::before {
+  content: none !important;
+  display: none !important;
+}
+
+.engage-card img {
+  display: block !important;
+  width: 100% !important;
+  height: 150px !important;
+  min-height: 150px !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  position: relative !important;
+  z-index: 1 !important;
+  background: none !important;
+}
+
+.engage-card .ico {
+  position: relative !important;
+  z-index: 3 !important;
+}
+
+@media (max-width: 650px) {
+  .engage-card img {
+    height: 180px !important;
+    min-height: 180px !important;
+  }
+}
+
+/* ===== END RESTORE REAL ACTION CARD PHOTOS ===== */
+
+
+/* ===== RESTORE V3 ECOSYSTEM PHOTOS — 2026-08-26 ===== */
+
+.v3-ecosystem-photo {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 180px !important;
+  object-fit: cover !important;
+  object-position: center !important;
+}
+
+/*
+  Photos occupy the existing image area.
+  No ecosystem structure or copy changed.
+*/
+.v3-ecosystem img.v3-ecosystem-photo {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* ===== END RESTORE V3 ECOSYSTEM PHOTOS ===== */
+
+
+/* ===== CLEAN ECOSYSTEM IMAGE CARDS — 2026-08-26 ===== */
+
+/* Hide text attached to the six ecosystem photo cards */
+.v3-ecosystem .ecosystem-card h3,
+.v3-ecosystem .ecosystem-card p,
+.v3-ecosystem .flow-row article span,
+.v3-ecosystem .ecosystem-process .ecosystem-card h3,
+.v3-ecosystem .ecosystem-process .ecosystem-card p,
+.v3-ecosystem .ecosystem-process .ecosystem-card span {
+  display: none !important;
+}
+
+/* Make sure the image area is clear and sharp */
+.v3-ecosystem .ecosystem-card,
+.v3-ecosystem .ecosystem-process .ecosystem-card,
+.v3-ecosystem .flow-row article {
+  overflow: hidden !important;
+}
+
+.v3-ecosystem .ecosystem-card img,
+.v3-ecosystem .ecosystem-process .ecosystem-card img,
+.v3-ecosystem .flow-row article img,
+.v3-ecosystem img.v3-ecosystem-photo {
+  display: block !important;
+  width: 100% !important;
+  height: 210px !important;
+  min-height: 210px !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  filter: none !important;
+}
+
+/* Remove extra spacing left behind by hidden captions */
+.v3-ecosystem .ecosystem-card,
+.v3-ecosystem .ecosystem-process .ecosystem-card,
+.v3-ecosystem .flow-row article {
+  padding-bottom: 0 !important;
+}
+
+@media (max-width: 700px) {
+  .v3-ecosystem .ecosystem-card img,
+  .v3-ecosystem .ecosystem-process .ecosystem-card img,
+  .v3-ecosystem .flow-row article img,
+  .v3-ecosystem img.v3-ecosystem-photo {
+    height: 180px !important;
+    min-height: 180px !important;
+  }
+}
+
+/* ===== END CLEAN ECOSYSTEM IMAGE CARDS ===== */
+
+
+/* =========================================================
+   LINK PUBLIC ECOSYSTEM — 2026-08-27
+   ========================================================= */
+
+.link-ecosystem-nav {
+  width:min(1460px,calc(100% - 36px));
+  margin:14px auto;
+  padding:10px;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:7px;
+  border:1px solid rgba(11,35,68,.12);
+  border-radius:10px;
+  background:#fff;
+  box-shadow:0 5px 18px rgba(6,23,46,.06);
+}
+
+.link-ecosystem-nav a {
+  padding:9px 13px;
+  color:#0b2344;
+  text-decoration:none;
+  border-radius:6px;
+  font:800 8px Montserrat,sans-serif;
+  letter-spacing:.02em;
+}
+
+.link-ecosystem-nav a:hover {
+  background:#f3eee4;
+}
+
+.link-ecosystem-nav span {
+  margin-left:4px;
+  color:#c88616;
+  font-size:6px;
+}
+
+.link-role-section {
+  padding:36px 30px 38px;
+  background:#f7f3eb;
+}
+
+.link-role-heading {
+  width:min(900px,100%);
+  margin:0 auto 24px;
+  text-align:center;
+}
+
+.link-role-kicker {
+  color:#c88616;
+  font:900 8px Montserrat,sans-serif;
+  letter-spacing:.12em;
+}
+
+.link-role-heading h2 {
+  margin:6px 0 9px;
+  color:#0b2344;
+  font:700 34px/1.05 "Libre Baskerville",serif;
+}
+
+.link-role-heading p {
+  margin:0 auto;
+  max-width:760px;
+  color:#566070;
+  font-size:12px;
+  line-height:1.6;
+}
+
+.link-role-grid {
+  width:min(1400px,100%);
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px;
+}
+
+.link-role-card {
+  min-height:205px;
+  padding:20px;
+  display:flex;
+  flex-direction:column;
+  border:1px solid rgba(11,35,68,.13);
+  border-radius:10px;
+  background:#fff;
+  color:#0b2344;
+  text-decoration:none;
+  box-shadow:0 5px 18px rgba(6,23,46,.05);
+}
+
+.link-role-card:hover {
+  transform:translateY(-2px);
+  box-shadow:0 10px 24px rgba(6,23,46,.1);
+}
+
+.link-role-icon {
+  width:43px;
+  height:43px;
+  margin-bottom:12px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  background:#0b2344;
+  color:#e0a52f;
+  font:900 9px Montserrat,sans-serif;
+}
+
+.link-role-card strong {
+  font:900 12px Montserrat,sans-serif;
+}
+
+.link-role-card p {
+  flex:1;
+  margin:8px 0 13px;
+  color:#566070;
+  font-size:10px;
+  line-height:1.55;
+}
+
+.link-role-card b {
+  color:#c88616;
+  font:900 8px Montserrat,sans-serif;
+}
+
+.link-role-card em {
+  width:max-content;
+  margin:0 0 8px;
+  padding:4px 7px;
+  border-radius:4px;
+  background:#e0a52f;
+  color:#0b2344;
+  font:900 7px Montserrat,sans-serif;
+  font-style:normal;
+}
+
+.link-role-card.featured {
+  background:#0b2344;
+  color:#fff;
+}
+
+.link-role-card.featured p {
+  color:rgba(255,255,255,.82);
+}
+
+.link-role-card.featured .link-role-icon {
+  background:#e0a52f;
+  color:#0b2344;
+}
+
+.link-role-card.coming {
+  border:2px solid #e0a52f;
+}
+
+.link-fomo-panel {
+  width:min(1400px,100%);
+  margin:22px auto 0;
+  padding:24px;
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:24px;
+  align-items:center;
+  border-radius:12px;
+  background:#0b2344;
+  color:#fff;
+}
+
+.link-fomo-panel span {
+  color:#e0a52f;
+  font:900 8px Montserrat,sans-serif;
+  letter-spacing:.1em;
+}
+
+.link-fomo-panel h3 {
+  margin:6px 0;
+  font:700 23px/1.15 "Libre Baskerville",serif;
+}
+
+.link-fomo-panel p {
+  max-width:760px;
+  margin:0;
+  color:rgba(255,255,255,.8);
+  font-size:10px;
+  line-height:1.55;
+}
+
+.link-fomo-actions {
+  display:grid;
+  gap:8px;
+}
+
+.link-fomo-actions a {
+  padding:11px 15px;
+  border-radius:5px;
+  background:#e0a52f;
+  color:#0b2344;
+  text-align:center;
+  text-decoration:none;
+  font:900 8px Montserrat,sans-serif;
+}
+
+/* Public Resource Exchange explanation */
+
+.link-resource-public-intro {
+  width:min(1180px,calc(100% - 36px));
+  margin:20px auto;
+  padding:24px;
+  border-radius:12px;
+  background:#fff;
+  border:1px solid rgba(11,35,68,.13);
+  color:#0b2344;
+  box-shadow:0 6px 20px rgba(6,23,46,.06);
+}
+
+.link-resource-public-intro h2 {
+  margin:4px 0 8px;
+  font:700 27px/1.1 "Libre Baskerville",serif;
+}
+
+.link-resource-public-intro p,
+.link-resource-public-intro li {
+  font-size:11px;
+  line-height:1.6;
+}
+
+.link-resource-public-intro .resource-rule {
+  margin-top:16px;
+  padding:14px;
+  border-left:4px solid #e0a52f;
+  background:#f7f3eb;
+}
+
+.link-resource-actions {
+  margin-top:16px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+
+.link-resource-actions a {
+  padding:10px 13px;
+  border-radius:5px;
+  background:#0b2344;
+  color:#fff;
+  text-decoration:none;
+  font:900 8px Montserrat,sans-serif;
+}
+
+.link-resource-actions a.secondary {
+  background:#e0a52f;
+  color:#0b2344;
+}
+
+/* Community + Support Local pages */
+
+.link-public-page {
+  min-height:100vh;
+  background:#f7f3eb;
+}
+
+.link-public-header {
+  padding:18px 28px;
+  background:#0b2344;
+}
+
+.link-public-header img {
+  display:block;
+  width:min(320px,75vw);
+  height:auto;
+  padding:7px 12px;
+  border-radius:8px;
+  background:#fff;
+}
+
+.link-public-hero {
+  padding:46px 28px;
+  text-align:center;
+  background:#0b2344;
+  color:#fff;
+}
+
+.link-public-hero .eyebrow {
+  color:#e0a52f;
+  font:900 8px Montserrat,sans-serif;
+  letter-spacing:.12em;
+}
+
+.link-public-hero h1 {
+  max-width:900px;
+  margin:8px auto;
+  font:700 40px/1.08 "Libre Baskerville",serif;
+}
+
+.link-public-hero p {
+  max-width:760px;
+  margin:0 auto;
+  color:rgba(255,255,255,.82);
+  font-size:12px;
+  line-height:1.65;
+}
+
+.link-public-content {
+  width:min(1280px,calc(100% - 36px));
+  margin:28px auto 50px;
+}
+
+.link-public-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
+
+.link-public-card {
+  padding:22px;
+  border:1px solid rgba(11,35,68,.13);
+  border-radius:10px;
+  background:#fff;
+  box-shadow:0 5px 18px rgba(6,23,46,.05);
+}
+
+.link-public-card h2,
+.link-public-card h3 {
+  margin:4px 0 8px;
+  color:#0b2344;
+}
+
+.link-public-card p,
+.link-public-card li {
+  color:#566070;
+  font-size:10px;
+  line-height:1.6;
+}
+
+.link-public-card a,
+.link-public-cta a {
+  display:inline-block;
+  margin-top:10px;
+  padding:10px 13px;
+  border-radius:5px;
+  background:#0b2344;
+  color:#fff;
+  text-decoration:none;
+  font:900 8px Montserrat,sans-serif;
+}
+
+.link-public-cta {
+  margin-top:20px;
+  padding:26px;
+  border-radius:12px;
+  background:#e0a52f;
+  color:#0b2344;
+  text-align:center;
+}
+
+.link-coming-badge {
+  display:inline-block;
+  margin-bottom:8px;
+  padding:5px 8px;
+  border-radius:4px;
+  background:#e0a52f;
+  color:#0b2344;
+  font:900 7px Montserrat,sans-serif;
+}
+
+@media (max-width:1000px) {
+  .link-role-grid {
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .link-public-grid {
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .link-fomo-panel {
+    grid-template-columns:1fr;
+  }
+}
+
+@media (max-width:650px) {
+  .link-role-grid,
+  .link-public-grid {
+    grid-template-columns:1fr;
+  }
+
+  .link-role-section {
+    padding:28px 16px;
+  }
+
+  .link-role-heading h2,
+  .link-public-hero h1 {
+    font-size:29px;
+  }
+
+  .link-ecosystem-nav {
+    justify-content:flex-start;
+    overflow-x:auto;
+    flex-wrap:nowrap;
+  }
+
+  .link-ecosystem-nav a {
+    white-space:nowrap;
+  }
+}
+
+/* ===== END LINK PUBLIC ECOSYSTEM ===== */
+
+
+/* =========================================================
+   LINK HOMEPAGE ECOSYSTEM — FULL BRAND COLOR OVERRIDE
+   2026-08-27
+   ========================================================= */
+
+#find-your-place {
+  background:
+    radial-gradient(
+      circle at 12% 15%,
+      rgba(45,119,119,.06),
+      transparent 24%
+    ),
+    radial-gradient(
+      circle at 90% 20%,
+      rgba(224,165,47,.08),
+      transparent 25%
+    ),
+    #f7f3eb;
+}
+
+#find-your-place
+.link-role-card:nth-child(1) {
+  border-top:5px solid #9b3a38;
+}
+
+#find-your-place
+.link-role-card:nth-child(1)
+.link-role-icon {
+  background:#9b3a38;
+  color:#fff;
+}
+
+#find-your-place
+.link-role-card:nth-child(2) {
+  border-top:5px solid #2d7777;
+}
+
+#find-your-place
+.link-role-card:nth-child(2)
+.link-role-icon {
+  background:#2d7777;
+  color:#fff;
+}
+
+#find-your-place
+.link-role-card:nth-child(3) {
+  border-top:5px solid #e0a52f;
+}
+
+#find-your-place
+.link-role-card:nth-child(4) {
+  border-top:5px solid #577c42;
+}
+
+#find-your-place
+.link-role-card:nth-child(4)
+.link-role-icon {
+  background:#577c42;
+  color:#fff;
+}
+
+#find-your-place
+.link-role-card:nth-child(5) {
+  border-top:5px solid #d18c28;
+}
+
+#find-your-place
+.link-role-card:nth-child(5)
+.link-role-icon {
+  background:#d18c28;
+  color:#fff;
+}
+
+#find-your-place
+.link-role-card:nth-child(6) {
+  border-top:5px solid #0b2344;
+}
+
+#find-your-place
+.link-role-card:nth-child(7) {
+  border-top:5px solid #2d7777;
+  background:
+    linear-gradient(
+      145deg,
+      #174d57,
+      #0b3546
+    );
+}
+
+#find-your-place
+.link-role-card:nth-child(8) {
+  border-top:5px solid #9b3a38;
+  background:
+    linear-gradient(
+      145deg,
+      #fff,
+      #fbefef
+    );
+}
+
+/* ===== END HOMEPAGE FULL BRAND COLOR OVERRIDE ===== */
+
+
+
+/* =========================================================
+   LINK HERO HEADLINE + COMMUNITY NEED RIBBON
+   Surgical homepage adjustment.
+   ========================================================= */
+
+.hero-copy h1 {
+  max-width:390px !important;
+
+  font-family:
+    Montserrat,
+    Arial,
+    sans-serif !important;
+
+  font-size:54px !important;
+  font-weight:700 !important;
+  line-height:.93 !important;
+
+  letter-spacing:-1.35px !important;
+}
+
+
+/* Keep the ribbon compact — no giant number treatment. */
+
+.community-need-ribbon .impact {
+  min-width:0;
+
+  gap:11px;
+
+  padding:
+    8px 20px;
+}
+
+
+.community-need-ribbon
+.impact b {
+  width:30px;
+  height:30px;
+
+  flex:0 0 30px;
+
+  display:grid;
+  place-items:center;
+
+  border-radius:50%;
+
+  background:
+    rgba(255,255,255,.08);
+
+  color:var(--gold);
+
+  font-size:17px;
+}
+
+
+.community-need-ribbon
+.impact strong {
+  color:var(--gold);
+
+  font:
+    800 11px/1.1
+    Montserrat,
+    Arial,
+    sans-serif;
+
+  letter-spacing:.06em;
+}
+
+
+.community-need-ribbon
+.impact span {
+  max-width:185px;
+
+  margin-top:4px;
+
+  color:
+    rgba(255,255,255,.82);
+
+  font-size:8px;
+  line-height:1.35;
+}
+
+
+@media(max-width:650px) {
+
+  .hero-copy h1 {
+    max-width:300px !important;
+
+    font-size:41px !important;
+    font-weight:700 !important;
+
+    letter-spacing:-1px !important;
+  }
+
+}
+
+
+/* ===== END HERO + COMMUNITY NEED RIBBON ===== */
+
+
+
+/* =========================================================
+   LINK OPPORTUNITY CARDS
+   Neutral at rest — interactive highlight on hover.
+   ========================================================= */
+
+/*
+  Prevent global accent classes such as .green from
+  turning an entire opportunity card into a dark block.
+*/
+
+.verified-opportunity-grid .need-card,
+.verified-opportunity-grid .need-card.green,
+.verified-opportunity-grid .need-card.red,
+.verified-opportunity-grid .need-card.gold,
+.verified-opportunity-grid .need-card.teal,
+.verified-opportunity-grid .need-card.navy,
+.needs-grid .need-card,
+.needs-grid .need-card.green,
+.needs-grid .need-card.red,
+.needs-grid .need-card.gold,
+.needs-grid .need-card.teal,
+.needs-grid .need-card.navy {
+  background:#ffffff !important;
+  color:var(--ink) !important;
+
+  border:
+    1px solid var(--border) !important;
+
+  box-shadow:
+    0 4px 14px rgba(6,23,46,.05) !important;
+
+  transform:none;
+
+  transition:
+    transform .20s ease,
+    box-shadow .20s ease,
+    border-color .20s ease,
+    background .20s ease;
+}
+
+
+/* Keep text readable on every card. */
+
+.verified-opportunity-grid .need-card h3,
+.needs-grid .need-card h3 {
+  color:var(--navy) !important;
+}
+
+.verified-opportunity-grid .need-card p,
+.needs-grid .need-card p {
+  color:#364252 !important;
+}
+
+
+/* The card being viewed gets the emphasis. */
+
+.verified-opportunity-grid .need-card:hover,
+.needs-grid .need-card:hover {
+  transform:
+    translateY(-4px);
+
+  border-color:
+    var(--gold) !important;
+
+  background:
+    #fffdf7 !important;
+
+  box-shadow:
+    0 12px 26px rgba(6,23,46,.13) !important;
+}
+
+
+/* Slight image movement gives the hover state more life. */
+
+.verified-opportunity-grid .need-card img,
+.needs-grid .need-card img {
+  transition:
+    transform .25s ease;
+}
+
+.verified-opportunity-grid .need-card:hover img,
+.needs-grid .need-card:hover img {
+  transform:
+    scale(1.035);
+}
+
+
+/* Button responds with the card. */
+
+.verified-opportunity-grid .need-card button,
+.needs-grid .need-card button {
+  transition:
+    background .18s ease,
+    color .18s ease,
+    border-color .18s ease;
+}
+
+.verified-opportunity-grid .need-card:hover button,
+.needs-grid .need-card:hover button {
+  border-color:
+    var(--navy) !important;
+
+  background:
+    var(--navy) !important;
+
+  color:#ffffff !important;
+}
+
+
+/*
+  Category tags KEEP their individual colors.
+  Only the full card background is normalized.
+*/
+
+.verified-opportunity-grid .goldtag,
+.needs-grid .goldtag {
+  background:#d49a25 !important;
+  color:#fff !important;
+}
+
+.verified-opportunity-grid .tealtag,
+.needs-grid .tealtag {
+  background:#257778 !important;
+  color:#fff !important;
+}
+
+.verified-opportunity-grid .redtag,
+.needs-grid .redtag {
+  background:#963937 !important;
+  color:#fff !important;
+}
+
+.verified-opportunity-grid .greentag,
+.needs-grid .greentag {
+  background:#527d43 !important;
+  color:#fff !important;
+}
+
+
+@media (prefers-reduced-motion:reduce) {
+
+  .verified-opportunity-grid .need-card,
+  .verified-opportunity-grid .need-card img,
+  .needs-grid .need-card,
+  .needs-grid .need-card img {
+    transition:none !important;
+  }
+
+  .verified-opportunity-grid .need-card:hover,
+  .needs-grid .need-card:hover {
+    transform:none;
+  }
+
+}
+
+
+/* ===== END LINK OPPORTUNITY CARD HOVER ===== */
+
+/* LINK HOME LAUNCH LOCK START */
+
+/*
+ * APPROVED HOME ONLY
+ * Our Community. Connected.
+ *
+ * Do not use this block as the linked-page header system.
+ */
+
+html,
+body {
+  background: #ffffff !important;
+}
+
+
+/* ---------------------------------------------------------
+   HOME HEADER / NAV
+   --------------------------------------------------------- */
+
+.site-header {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  right: auto !important;
+  z-index: 30 !important;
+
+  background: #06172e !important;
+
+  border-bottom:
+    1px solid rgba(255,255,255,.14) !important;
+}
+
+.site-header .nav-shell {
+  width:
+    min(1500px, calc(100% - 62px)) !important;
+
+  height:
+    auto !important;
+
+  min-height:
+    82px !important;
+
+  margin:
+    0 auto !important;
+
+  padding:
+    10px 0 !important;
+
+  display:
+    flex !important;
+
+  align-items:
+    center !important;
+
+  gap:
+    38px !important;
+}
+
+.site-header .brand-logo {
+  margin-right:
+    auto !important;
+}
+
+.site-header .brand-logo img {
+  display:
+    block !important;
+
+  width:
+    auto !important;
+
+  max-width:
+    255px !important;
+
+  max-height:
+    62px !important;
+
+  object-fit:
+    contain !important;
+}
+
+.site-header .main-nav {
+  display:
+    flex !important;
+
+  align-items:
+    center !important;
+
+  gap:
+    38px !important;
+}
+
+.site-header .main-nav a {
+  color:
+    #ffffff !important;
+
+  text-decoration:
+    none !important;
+}
+
+.site-header .main-nav strong {
+  color:
+    #ffffff !important;
+}
+
+.site-header .main-nav span {
+  color:
+    rgba(255,255,255,.76) !important;
+}
+
+.site-header .get-involved {
+  background:
+    #577c42 !important;
+
+  color:
+    #ffffff !important;
+
+  box-shadow:
+    none !important;
+}
+
+
+/* ---------------------------------------------------------
+   APPROVED HERO GRAPHIC
+   --------------------------------------------------------- */
+
+.hero.link-locked-home-hero {
+  position:
+    relative !important;
+
+  width:
+    100% !important;
+
+  height:
+    auto !important;
+
+  min-height:
+    0 !important;
+
+  margin:
+    0 !important;
+
+  padding:
+    0 !important;
+
+  display:
+    flex !important;
+
+  align-items:
+    flex-start !important;
+
+  justify-content:
+    center !important;
+
+  overflow:
+    hidden !important;
+
+  background:
+    #ffffff !important;
+
+  color:
+    #0b2344 !important;
+}
+
+.link-locked-home-hero-image {
+  display:
+    block !important;
+
+  width:
+    min(100%, 1250px) !important;
+
+  height:
+    auto !important;
+
+  margin:
+    0 auto !important;
+
+  object-fit:
+    contain !important;
+}
+
+
+/* ---------------------------------------------------------
+   WHITE HOME CANVAS
+   --------------------------------------------------------- */
+
+.engage-section,
+.needs-section,
+.participation-recognition {
+  background:
+    #ffffff !important;
+}
+
+.engage-card,
+.need-card,
+.partners-panel,
+.partner {
+  background:
+    #ffffff !important;
+}
+
+
+/* Preserve core LINK bands */
+
+.impact-band,
+.ecosystem {
+  background:
+    #0b2344 !important;
+}
+
+.footer-cta {
+  background:
+    #e0a52f !important;
+}
+
+
+/* ---------------------------------------------------------
+   TABLET — NAV MUST NOT DISAPPEAR
+   --------------------------------------------------------- */
+
+@media (max-width: 1000px) {
+
+  .site-header .nav-shell {
+    width:
+      calc(100% - 30px) !important;
+
+    flex-wrap:
+      wrap !important;
+
+    gap:
+      10px 20px !important;
+  }
+
+  .site-header .brand-logo img {
+    max-width:
+      220px !important;
+  }
+
+  .site-header .main-nav {
+    order:
+      3 !important;
+
+    width:
+      100% !important;
+
+    display:
+      flex !important;
+
+    justify-content:
+      center !important;
+
+    flex-wrap:
+      wrap !important;
+
+    gap:
+      10px 24px !important;
+
+    padding:
+      5px 0 3px !important;
+  }
+
+  .site-header .main-nav span {
+    display:
+      none !important;
+  }
+
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE
+   --------------------------------------------------------- */
+
+@media (max-width: 650px) {
+
+  .site-header .nav-shell {
+    width:
+      calc(100% - 22px) !important;
+  }
+
+  .site-header .brand-logo img {
+    max-width:
+      175px !important;
+  }
+
+  .site-header .get-involved {
+    padding:
+      9px 10px !important;
+
+    font-size:
+      7px !important;
+  }
+
+  .site-header .main-nav {
+    display:
+      flex !important;
+
+    flex-wrap:
+      nowrap !important;
+
+    justify-content:
+      flex-start !important;
+
+    gap:
+      18px !important;
+
+    overflow-x:
+      auto !important;
+
+    -webkit-overflow-scrolling:
+      touch !important;
+  }
+
+  .site-header .main-nav a {
+    flex:
+      0 0 auto !important;
+  }
+
+  .site-header .main-nav strong {
+    font-size:
+      8px !important;
+  }
+
+}
+
+/* LINK HOME LAUNCH LOCK END */
+

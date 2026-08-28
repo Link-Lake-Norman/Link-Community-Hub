@@ -517,3 +517,414 @@
     height: 390px;
   }
 }
+
+
+/* =========================================================
+   LINK NONPROFIT DIRECTORY — COMPACT DIRECTORY CONTENT ONLY
+   Shared header/nav remain controlled by link-public-shell.css
+   ========================================================= */
+
+.link-directory-page .directory-hero {
+  padding:32px 40px 28px !important;
+}
+
+.link-directory-page .directory-hero h1 {
+  max-width:900px !important;
+  margin:8px 0 12px !important;
+  font-size:clamp(34px,4vw,46px) !important;
+  line-height:1.02 !important;
+}
+
+.link-directory-page .directory-hero p {
+  max-width:900px !important;
+  font-size:13px !important;
+  line-height:1.55 !important;
+}
+
+.link-directory-page .directory-grid {
+  grid-template-columns:
+    repeat(3,minmax(0,1fr)) !important;
+  gap:16px !important;
+}
+
+.link-directory-page .directory-card {
+  min-height:0 !important;
+}
+
+.link-directory-page .directory-card-logo {
+  min-height:70px !important;
+  height:70px !important;
+  padding:9px 16px !important;
+  background:#fff !important;
+}
+
+.link-directory-page .directory-card-logo img {
+  width:auto !important;
+  height:auto !important;
+  max-width:150px !important;
+  max-height:50px !important;
+  object-fit:contain !important;
+}
+
+.link-directory-page .directory-logo-fallback {
+  width:42px !important;
+  height:42px !important;
+  min-width:42px !important;
+  min-height:42px !important;
+  font-size:14px !important;
+}
+
+.link-directory-page .nonprofit-map {
+  min-height:360px !important;
+  height:360px !important;
+}
+
+@media(max-width:950px) {
+  .link-directory-page .directory-grid {
+    grid-template-columns:
+      repeat(2,minmax(0,1fr)) !important;
+  }
+}
+
+@media(max-width:650px) {
+  .link-directory-page .directory-hero {
+    padding:26px 20px 22px !important;
+  }
+
+  .link-directory-page .directory-grid {
+    grid-template-columns:1fr !important;
+  }
+
+  .link-directory-page .nonprofit-map {
+    height:320px !important;
+    min-height:320px !important;
+  }
+}
+
+/* ===== END LINK NONPROFIT DIRECTORY COMPACT ===== */
+
+
+
+
+
+
+
+/* LINK DIRECTORY ACTION VISIBILITY START */
+
+.link-directory-page .directory-card {
+  overflow:hidden !important;
+  background:#fff !important;
+  border:1px solid rgba(11,35,68,.13) !important;
+  border-radius:8px !important;
+  box-shadow:0 5px 18px rgba(6,23,46,.06) !important;
+}
+
+.link-directory-page .directory-card-logo {
+  height:78px !important;
+  min-height:78px !important;
+  padding:10px 16px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  background:#fff !important;
+}
+
+.link-directory-page .directory-card-logo img {
+  display:block !important;
+  width:auto !important;
+  height:auto !important;
+  max-width:165px !important;
+  max-height:56px !important;
+  object-fit:contain !important;
+}
+
+.link-directory-page .directory-logo-fallback {
+  width:42px !important;
+  height:42px !important;
+  min-width:42px !important;
+  min-height:42px !important;
+  border-radius:50% !important;
+  display:grid !important;
+  place-items:center !important;
+  background:#eef1f4 !important;
+  color:#0b2344 !important;
+  font-size:14px !important;
+  font-weight:800 !important;
+}
+
+.link-directory-page .directory-card-body {
+  padding:14px 16px 12px !important;
+}
+
+.link-directory-page .directory-card h3 {
+  margin:7px 0 5px !important;
+  color:#0b2344 !important;
+  font-size:17px !important;
+  line-height:1.15 !important;
+}
+
+.link-directory-page .directory-category {
+  color:#2d7777 !important;
+  font-size:10px !important;
+  font-weight:800 !important;
+}
+
+.link-directory-page .directory-mission {
+  min-height:0 !important;
+  margin:8px 0 !important;
+  color:#455165 !important;
+  font-size:11px !important;
+  line-height:1.5 !important;
+}
+
+.link-directory-page .directory-mission-muted {
+  color:#7a8390 !important;
+  font-style:italic;
+}
+
+.link-directory-page .directory-location {
+  margin:8px 0 !important;
+  color:#566070 !important;
+  font-size:9px !important;
+  line-height:1.4 !important;
+}
+
+.link-directory-page .directory-action-count {
+  margin:10px 0 8px !important;
+  color:#0b2344 !important;
+  font-size:9px !important;
+  font-weight:900 !important;
+  letter-spacing:.03em !important;
+}
+
+.link-directory-page .directory-actions-detail {
+  margin-top:8px !important;
+  border:1px solid rgba(11,35,68,.16) !important;
+  border-radius:5px !important;
+  background:#fbfaf7 !important;
+}
+
+.link-directory-page .directory-actions-detail summary {
+  min-height:36px !important;
+  padding:9px 10px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:space-between !important;
+  gap:10px !important;
+  cursor:pointer !important;
+  list-style:none !important;
+  color:#0b2344 !important;
+  font-size:9px !important;
+  font-weight:900 !important;
+}
+
+.link-directory-page .directory-actions-detail summary::-webkit-details-marker {
+  display:none;
+}
+
+.link-directory-page .directory-actions-detail summary b {
+  width:22px !important;
+  height:22px !important;
+  display:grid !important;
+  place-items:center !important;
+  border-radius:50% !important;
+  background:#e0a52f !important;
+  color:#0b2344 !important;
+  font-size:9px !important;
+}
+
+.link-directory-page .directory-action-list {
+  display:grid !important;
+  gap:0 !important;
+  border-top:1px solid rgba(11,35,68,.10) !important;
+}
+
+.link-directory-page .directory-action-item {
+  padding:10px !important;
+  border-bottom:1px solid rgba(11,35,68,.08) !important;
+}
+
+.link-directory-page .directory-action-item:last-child {
+  border-bottom:0 !important;
+}
+
+.link-directory-page .directory-action-type {
+  display:inline-block !important;
+  margin-bottom:4px !important;
+  color:#9b3a38 !important;
+  font-size:7px !important;
+  font-weight:900 !important;
+  letter-spacing:.08em !important;
+}
+
+.link-directory-page .directory-action-item strong {
+  display:block !important;
+  color:#0b2344 !important;
+  font-size:11px !important;
+}
+
+.link-directory-page .directory-action-item p {
+  margin:4px 0 !important;
+  min-height:0 !important;
+  color:#566070 !important;
+  font-size:9px !important;
+  line-height:1.45 !important;
+}
+
+.link-directory-page .directory-action-item a {
+  display:inline-block !important;
+  margin-top:4px !important;
+  color:#2d7777 !important;
+  font-size:8px !important;
+  font-weight:900 !important;
+  text-decoration:none !important;
+}
+
+.link-directory-page .directory-no-actions {
+  margin-top:8px !important;
+  padding:10px !important;
+  border-radius:5px !important;
+  background:#f7f3eb !important;
+  color:#566070 !important;
+  font-size:9px !important;
+}
+
+.link-directory-page .directory-card-footer {
+  padding:0 16px 15px !important;
+}
+
+.link-directory-page .directory-primary {
+  width:100% !important;
+  min-height:38px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  padding:10px 12px !important;
+  border-radius:4px !important;
+  background:#0b2344 !important;
+  color:#fff !important;
+  font-size:9px !important;
+  font-weight:900 !important;
+  text-decoration:none !important;
+  letter-spacing:.03em !important;
+}
+
+.link-directory-page .directory-primary:hover {
+  background:#e0a52f !important;
+  color:#0b2344 !important;
+}
+
+.link-directory-page .directory-site-unavailable {
+  display:block !important;
+  padding:9px !important;
+  color:#7a8390 !important;
+  font-size:8px !important;
+  text-align:center !important;
+}
+
+.link-directory-page .nonprofit-map {
+  height:380px !important;
+  min-height:380px !important;
+}
+
+@media(max-width:650px) {
+  .link-directory-page .nonprofit-map {
+    height:320px !important;
+    min-height:320px !important;
+  }
+}
+
+/* LINK DIRECTORY ACTION VISIBILITY END */
+
+
+
+/* LINK DIRECTORY NO CIRCLE FALLBACK START */
+
+/*
+ * Absolutely suppress every previous initial-circle version.
+ */
+
+.link-directory-page .directory-logo-fallback,
+.link-directory-page .directory-logo-fallback[hidden],
+.link-directory-page
+.directory-card-logo
+.directory-logo-fallback {
+  display:none !important;
+
+  visibility:hidden !important;
+  opacity:0 !important;
+
+  width:0 !important;
+  height:0 !important;
+
+  min-width:0 !important;
+  min-height:0 !important;
+
+  margin:0 !important;
+  padding:0 !important;
+
+  border:0 !important;
+}
+
+
+/*
+ * Also remove old circle pseudo-elements.
+ */
+
+.link-directory-page
+.directory-card-logo::before,
+
+.link-directory-page
+.directory-card-logo::after {
+  content:none !important;
+  display:none !important;
+}
+
+
+/*
+ * Real nonprofit logo only.
+ */
+
+.link-directory-page
+.directory-card-logo img {
+  display:block !important;
+
+  width:auto !important;
+  height:auto !important;
+
+  max-width:175px !important;
+  max-height:58px !important;
+
+  margin:0 auto !important;
+
+  object-fit:contain !important;
+}
+
+
+/*
+ * Plain fallback only when no logo exists.
+ */
+
+.link-directory-page
+.directory-logo-name-fallback {
+  width:100% !important;
+
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+
+  color:#0b2344 !important;
+
+  background:transparent !important;
+
+  border:0 !important;
+  border-radius:0 !important;
+
+  font-size:11px !important;
+  font-weight:800 !important;
+
+  text-align:center !important;
+}
+
+/* LINK DIRECTORY NO CIRCLE FALLBACK END */
+

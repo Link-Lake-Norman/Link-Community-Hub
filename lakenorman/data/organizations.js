@@ -7,8 +7,8 @@ window.LINK_ORGANIZATIONS = [
     website: "https://www.alongsidefamilies.org",
     category: "Family Preservation & Crisis Support",
 
-    logo: null,
-    logoStatus: "needed",
+    logo: "./assets/logos/alongside-families-original.png",
+    logoStatus: "uploaded",
 
     active: true,
 
@@ -90,10 +90,14 @@ window.LINK_ORGANIZATIONS = [
     website: "https://angelsandsparrows.org",
     category: "Food Security & Education",
 
-    logo: null,
+    logo: "./assets/logos/angels-and-sparrows.png",
     logoStatus: "needed",
 
     active: true,
+    address: "15016 N Old Statesville Rd, Huntersville, NC 28078",
+    city: "Huntersville",
+    latitude: 35.4182698,
+    longitude: -80.8421172,
 
     mission:
       "Empowers families to reach their potential by providing access to food security and educational opportunities that lead to a fresh start.",
@@ -158,7 +162,7 @@ window.LINK_ORGANIZATIONS = [
     website: "https://bagsofhopelkn.com",
     category: "Youth Food Security",
 
-    logo: null,
+    logo: "./assets/logos/bags-of-hope.png",
     logoStatus: "needed",
 
     active: true,
@@ -263,7 +267,7 @@ window.LINK_ORGANIZATIONS = [
     website: "https://brownicity.com",
     category: "Education, Cultural Competence & Belonging",
 
-    logo: null,
+    logo: "./assets/logos/brownicity.png",
     logoStatus: "needed",
 
     active: true,
@@ -339,6 +343,10 @@ window.LINK_ORGANIZATIONS = [
     logoStatus: "uploaded",
 
     active: true,
+    address: "12001 Cimmaron Rd, Huntersville, NC 28078",
+    city: "Huntersville",
+    latitude: 35.3865216,
+    longitude: -80.8805033,
 
     mission:
       "Empowers the people of Huntington Green to build a secure and vibrant community by fostering faith, advocacy and learning.",
@@ -396,10 +404,14 @@ window.LINK_ORGANIZATIONS = [
     website: "https://cookcommunityclinic.org",
     category: "Healthcare",
 
-    logo: null,
+    logo: "./assets/logos/cook-community-clinic.png",
     logoStatus: "needed",
 
     active: true,
+    address: "14230 Hunters Rd, Huntersville, NC 28078",
+    city: "Huntersville",
+    latitude: 35.4184318,
+    longitude: -80.8553401,
 
     mission:
       "Provides high-quality professional healthcare to uninsured residents of Mecklenburg and southern Iredell counties.",
@@ -461,6 +473,10 @@ window.LINK_ORGANIZATIONS = [
     logoStatus: "uploaded",
 
     active: true,
+    address: "2220 Milton Rd, Charlotte, NC 28215",
+    city: "Charlotte",
+    latitude: 35.2412692,
+    longitude: -80.7505266,
 
     mission:
       "Advocates for the caregiver as a whole person by providing resources for physical, emotional and spiritual well-being through programs, resources and services.",
@@ -585,6 +601,10 @@ window.LINK_ORGANIZATIONS = [
     logoStatus: "uploaded",
 
     active: true,
+    address: "212 Gamble St, Davidson, NC 28036",
+    city: "Davidson",
+    latitude: 35.4994762,
+    longitude: -80.8528488,
 
     mission:
       "Advances economic mobility for local families through affordable homeownership and home preservation.",
@@ -841,6 +861,10 @@ window.LINK_ORGANIZATIONS = [
     logoStatus: "uploaded",
 
     active: true,
+    address: "17748 Kings Point Dr, Cornelius, NC 28031",
+    city: "Cornelius",
+    latitude: 35.4584146,
+    longitude: -80.8897573,
 
     mission:
       "Helps kids be kids during difficult times by bringing joy to children impacted by serious illness, homelessness or tragedy.",
@@ -902,10 +926,14 @@ window.LINK_ORGANIZATIONS = [
     website: "https://www.ncyo.com",
     category: "Youth Music Education & Performing Arts",
 
-    logo: null,
+    logo: "./assets/logos/north-carolina-youth-orchestra.png",
     logoStatus: "needed",
 
     active: true,
+    address: "19701 Bethel Church Rd, Cornelius, NC 28031",
+    city: "Cornelius",
+    latitude: 35.4792807,
+    longitude: -80.8880465,
 
     mission:
       "Provides youth music education and orchestral performing opportunities while serving the community through concerts, live music and other performing-arts events.",
@@ -1000,10 +1028,14 @@ window.LINK_ORGANIZATIONS = [
     website: "https://ruralhill.net",
     category: "History, Education, Nature & Agriculture",
 
-    logo: null,
+    logo: "./assets/logos/rural-hill.png",
     logoStatus: "needed",
 
     active: true,
+    address: "4431 Neck Rd, Huntersville, NC 28078",
+    city: "Huntersville",
+    latitude: 35.3839551,
+    longitude: -80.9451174,
 
     mission:
       "Operates a historic site, working farm, nature preserve, educational destination and cultural-event venue while preserving local history and providing community-oriented programming.",
@@ -1087,6 +1119,10 @@ window.LINK_ORGANIZATIONS = [
     logoStatus: "uploaded",
 
     active: true,
+    address: "601 E 5th St, Charlotte, NC 28202",
+    city: "Charlotte",
+    latitude: 35.2236149,
+    longitude: -80.8363317,
 
     mission:
       "Provides hope and healing to those impacted by domestic violence, sexual assault and human trafficking.",
@@ -1153,7 +1189,7 @@ window.LINK_ORGANIZATIONS = [
     name: "She Built This City",
     website: "https://shebuiltthiscity.org",
     category: "Women & Workforce",
-    logo: null,
+    logo: "./assets/logos/she-built-this-city.png",
     logoStatus: "needed",
     active: true,
     mission: null,
@@ -1166,14 +1202,14 @@ window.LINK_ORGANIZATIONS = [
   {
     id: "soul-to-sole-connection",
     name: "Soul to Sole Connection",
-    website: null,
-    category: "Military, First Responders & Mental Health",
+    website: "https://www.healingwithhorseslkn.org/soul-to-sole",
+    publicPhone: "704-237-0644",
+    category: "Veterans & First Responders Mental Health",
     logo: "./assets/logos/soul-to-sole-connection.jpeg",
     logoStatus: "uploaded",
     active: true,
 
-    mission:
-      "Provides free counseling and wellness services to veterans, service members, first responders and their families, focused on healing from trauma.",
+    mission: "Provides ground-based counseling and wellness services with horses for veterans, service members, first responders and their families, focused on healing from trauma.",
 
     missionSource:
       "https://lakenormanfondo.com/giving-back/",
@@ -1183,7 +1219,7 @@ window.LINK_ORGANIZATIONS = [
     opportunities: [],
 
     verificationStatus: "identity-verified-needs-review-needed",
-    lastVerified: "2026-08-20"
+    lastVerified: "2026-08-27"
   }
 
 ];

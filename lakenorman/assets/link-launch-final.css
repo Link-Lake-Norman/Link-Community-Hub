@@ -1,0 +1,353 @@
+/* =========================================================
+   LINK COMMUNITY HUB™ — LAUNCH FINAL PUBLIC ADDITIONS
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   ASSIGNED HERO GRAPHICS
+   --------------------------------------------------------- */
+
+.link-assigned-graphic-hero {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background: #ffffff;
+}
+
+.link-assigned-graphic-hero img {
+  display: block;
+
+  width: min(100%, 1250px);
+  height: auto;
+
+  margin: 0 auto;
+
+  object-fit: contain;
+}
+
+
+/* ---------------------------------------------------------
+   HOME LIVE NONPROFITS
+   --------------------------------------------------------- */
+
+#partnerRail {
+  display: grid !important;
+
+  grid-template-columns:
+    repeat(6, minmax(0, 1fr)) !important;
+
+  gap: 12px !important;
+
+  overflow: visible !important;
+
+  background: transparent !important;
+  border: 0 !important;
+}
+
+#partnerRail .link-home-live-nonprofit {
+  min-height: 98px !important;
+
+  padding: 11px 9px !important;
+
+  display: flex !important;
+  flex-direction: column !important;
+
+  align-items: center !important;
+  justify-content: center !important;
+
+  gap: 7px !important;
+
+  background: #ffffff !important;
+
+  border:
+    1px solid rgba(11,35,68,.11) !important;
+
+  border-radius: 8px !important;
+
+  color: #0b2344 !important;
+
+  text-decoration: none !important;
+}
+
+#partnerRail .link-home-live-nonprofit img {
+  display: block !important;
+
+  width: auto !important;
+  height: auto !important;
+
+  max-width: 150px !important;
+  max-height: 62px !important;
+
+  object-fit: contain !important;
+}
+
+.link-home-nonprofit-name,
+.link-home-nonprofit-name-only {
+  display: block;
+
+  color: #0b2344;
+
+  text-align: center;
+
+  font-family:
+    Montserrat,
+    Arial,
+    sans-serif;
+
+  font-size: 8px;
+  font-weight: 800;
+
+  line-height: 1.25;
+}
+
+
+/* ---------------------------------------------------------
+   STANDARD PUBLIC FOOTER
+   --------------------------------------------------------- */
+
+.link-launch-footer {
+  width: 100%;
+
+  margin: 0;
+
+  padding:
+    30px 24px 22px;
+
+  background:
+    #06172e;
+
+  color:
+    #ffffff;
+
+  border-top:
+    5px solid #577c42;
+}
+
+.link-launch-footer-inner {
+  width:
+    min(1180px, 100%);
+
+  margin:
+    0 auto;
+}
+
+.link-launch-footer-main {
+  display:
+    grid;
+
+  grid-template-columns:
+    minmax(260px, 1.5fr)
+    minmax(170px, .8fr)
+    minmax(220px, 1fr);
+
+  gap:
+    30px;
+
+  align-items:
+    start;
+}
+
+.link-launch-footer h3 {
+  margin:
+    0 0 8px;
+
+  color:
+    #ffffff;
+
+  font-family:
+    Montserrat,
+    Arial,
+    sans-serif;
+
+  font-size:
+    13px;
+
+  font-weight:
+    900;
+}
+
+.link-launch-footer p {
+  margin:
+    0;
+
+  color:
+    rgba(255,255,255,.74);
+
+  font-size:
+    11px;
+
+  line-height:
+    1.6;
+}
+
+.link-launch-footer a {
+  color:
+    #ffffff;
+
+  text-decoration:
+    none;
+}
+
+.link-launch-footer a:hover,
+.link-launch-footer a:focus-visible {
+  color:
+    #9bc53d;
+
+  text-decoration:
+    underline;
+}
+
+.link-launch-footer-email {
+  display:
+    inline-flex;
+
+  margin-top:
+    11px;
+
+  padding:
+    9px 13px;
+
+  border-radius:
+    999px;
+
+  background:
+    #577c42;
+
+  font-family:
+    Montserrat,
+    Arial,
+    sans-serif;
+
+  font-size:
+    9px;
+
+  font-weight:
+    900;
+}
+
+.link-launch-footer-column {
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  gap:
+    8px;
+}
+
+.link-launch-footer-column a {
+  font-family:
+    Montserrat,
+    Arial,
+    sans-serif;
+
+  font-size:
+    9px;
+
+  font-weight:
+    800;
+}
+
+.link-launch-footer-bottom {
+  margin-top:
+    25px;
+
+  padding-top:
+    17px;
+
+  border-top:
+    1px solid rgba(255,255,255,.15);
+
+  display:
+    flex;
+
+  align-items:
+    flex-start;
+
+  justify-content:
+    space-between;
+
+  gap:
+    20px;
+
+  flex-wrap:
+    wrap;
+}
+
+.link-launch-footer-copyright {
+  max-width:
+    700px;
+
+  color:
+    rgba(255,255,255,.67);
+
+  font-size:
+    9px;
+
+  line-height:
+    1.55;
+}
+
+.link-launch-footer-legal {
+  display:
+    flex;
+
+  gap:
+    14px;
+
+  flex-wrap:
+    wrap;
+}
+
+.link-launch-footer-legal a {
+  font-family:
+    Montserrat,
+    Arial,
+    sans-serif;
+
+  font-size:
+    8px;
+
+  font-weight:
+    800;
+}
+
+
+/* ---------------------------------------------------------
+   RESPONSIVE
+   --------------------------------------------------------- */
+
+@media (max-width: 1100px) {
+
+  #partnerRail {
+    grid-template-columns:
+      repeat(4, minmax(0, 1fr)) !important;
+  }
+
+}
+
+@media (max-width: 760px) {
+
+  .link-launch-footer-main {
+    grid-template-columns:
+      1fr;
+  }
+
+}
+
+@media (max-width: 700px) {
+
+  #partnerRail {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr)) !important;
+  }
+
+}

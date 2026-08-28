@@ -1,0 +1,500 @@
+/* =========================================================
+   LINK COMMUNITY HUB™
+   COMMUNITY + OPPORTUNITIES + REVENUE
+   ========================================================= */
+
+:root {
+  --link-navy:#0b2344;
+  --link-deep:#06172e;
+  --link-green:#577c42;
+  --link-bright-green:#69be28;
+  --link-teal:#2d7777;
+  --link-aqua:#24aeb1;
+  --link-gold:#e0a52f;
+  --link-white:#ffffff;
+  --link-soft:#f5f9f7;
+  --link-muted:#566070;
+  --link-border:rgba(11,35,68,.13);
+}
+
+
+body {
+  background:#ffffff !important;
+  color:var(--link-navy) !important;
+}
+
+
+/* =========================================================
+   APPROVED IMAGE HERO
+   ========================================================= */
+
+.link-community-impact-hero {
+  width:100%;
+
+  margin:0 !important;
+  padding:0 !important;
+
+  overflow:hidden;
+
+  background:#ffffff !important;
+}
+
+.link-community-impact-hero-inner {
+  width:min(100%,1280px);
+
+  margin:0 auto;
+}
+
+.link-community-impact-hero img {
+  display:block;
+
+  width:100%;
+  height:auto;
+
+  margin:0 auto;
+
+  object-fit:contain;
+}
+
+
+/* =========================================================
+   STANDARD NAV — LINK BRAND
+   ========================================================= */
+
+.link-standard-nav {
+  background:
+    var(--link-navy) !important;
+
+  border-bottom:
+    4px solid var(--link-bright-green) !important;
+}
+
+.link-standard-nav a {
+  color:#ffffff !important;
+}
+
+.link-standard-nav a:hover,
+.link-standard-nav a:focus {
+  background:
+    var(--link-green) !important;
+
+  color:#ffffff !important;
+}
+
+
+/* =========================================================
+   REVENUE CONVERSION STRIP
+   ========================================================= */
+
+.link-revenue-alignment {
+  padding:
+    42px 24px;
+
+  background:
+    var(--link-navy);
+
+  color:#ffffff;
+}
+
+.link-revenue-alignment-shell {
+  width:
+    min(1120px,100%);
+
+  margin:
+    0 auto;
+
+  display:grid;
+
+  grid-template-columns:
+    1fr auto;
+
+  gap:
+    38px;
+
+  align-items:center;
+}
+
+.link-revenue-kicker {
+  margin-bottom:
+    7px;
+
+  color:
+    var(--link-bright-green);
+
+  font-family:
+    Montserrat,
+    Arial,
+    sans-serif;
+
+  font-size:
+    10px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    .12em;
+}
+
+.link-revenue-alignment h2 {
+  max-width:
+    790px;
+
+  margin:
+    0 0 10px;
+
+  color:#ffffff !important;
+
+  font-family:
+    Montserrat,
+    Arial,
+    sans-serif;
+
+  font-size:
+    clamp(28px,4vw,47px);
+
+  line-height:
+    1.02;
+
+  font-weight:
+    900;
+}
+
+.link-revenue-alignment h2 strong {
+  color:
+    var(--link-bright-green);
+}
+
+.link-revenue-alignment p {
+  max-width:
+    780px;
+
+  margin:
+    0;
+
+  color:
+    rgba(255,255,255,.82);
+
+  font-size:
+    14px;
+
+  line-height:
+    1.65;
+}
+
+.link-revenue-buttons {
+  display:flex;
+
+  flex-direction:column;
+
+  gap:
+    9px;
+}
+
+.link-revenue-primary,
+.link-revenue-secondary {
+  min-width:
+    175px;
+
+  padding:
+    13px 17px;
+
+  display:inline-flex;
+
+  align-items:center;
+  justify-content:center;
+
+  border-radius:
+    5px;
+
+  font-family:
+    Montserrat,
+    Arial,
+    sans-serif;
+
+  font-size:
+    9px;
+
+  font-weight:
+    900;
+
+  text-decoration:
+    none;
+
+  white-space:
+    nowrap;
+}
+
+.link-revenue-primary {
+  background:
+    var(--link-bright-green);
+
+  color:
+    var(--link-navy) !important;
+}
+
+.link-revenue-primary:hover {
+  background:#ffffff;
+
+  color:
+    var(--link-navy) !important;
+}
+
+.link-revenue-secondary {
+  border:
+    1px solid rgba(255,255,255,.45);
+
+  background:
+    transparent;
+
+  color:#ffffff !important;
+}
+
+.link-revenue-secondary:hover {
+  border-color:
+    var(--link-aqua);
+
+  background:
+    var(--link-teal);
+}
+
+
+/* =========================================================
+   OPPORTUNITY SEARCH AREA
+   ========================================================= */
+
+.opportunity-hero {
+  margin:0 !important;
+  padding:0 !important;
+
+  background:#ffffff !important;
+}
+
+.opportunity-controls {
+  background:#ffffff !important;
+
+  border-bottom:
+    1px solid var(--link-border) !important;
+}
+
+.opportunity-controls label {
+  color:
+    var(--link-navy) !important;
+}
+
+.opportunity-controls input,
+.opportunity-controls select {
+  background:#ffffff !important;
+
+  color:
+    var(--link-navy) !important;
+
+  border:
+    1px solid var(--link-border) !important;
+}
+
+.opportunity-controls input:focus,
+.opportunity-controls select:focus {
+  outline:
+    2px solid rgba(45,119,119,.20);
+
+  border-color:
+    var(--link-teal) !important;
+}
+
+
+/* =========================================================
+   MEMBER OPPORTUNITY DROPDOWNS
+   ========================================================= */
+
+.member-opportunities {
+  background:#ffffff !important;
+}
+
+.member-opportunities-heading > div > span {
+  color:
+    var(--link-green) !important;
+}
+
+.member-opportunities-heading h2 {
+  color:
+    var(--link-navy) !important;
+}
+
+.opportunity-count {
+  color:
+    var(--link-teal) !important;
+}
+
+.member-org {
+  background:#ffffff !important;
+
+  border:
+    1px solid var(--link-border) !important;
+
+  border-left:
+    5px solid var(--link-green) !important;
+
+  box-shadow:
+    0 4px 14px rgba(6,23,46,.05) !important;
+}
+
+.member-org:nth-child(even) {
+  border-left-color:
+    var(--link-teal) !important;
+}
+
+.member-org summary {
+  background:#ffffff !important;
+}
+
+.member-org[open] summary {
+  background:
+    var(--link-soft) !important;
+}
+
+.member-org-name strong {
+  color:
+    var(--link-navy) !important;
+}
+
+.member-org-name span {
+  color:
+    var(--link-muted) !important;
+}
+
+.member-org-total {
+  color:
+    var(--link-green) !important;
+}
+
+.member-org-plus {
+  color:
+    var(--link-teal) !important;
+}
+
+.member-group-title {
+  color:
+    var(--link-teal) !important;
+}
+
+.opportunity-item h3 {
+  color:
+    var(--link-navy) !important;
+}
+
+.opportunity-item p {
+  color:
+    var(--link-muted) !important;
+}
+
+.opportunity-item a {
+  color:
+    var(--link-teal) !important;
+}
+
+.opportunity-item a:hover {
+  color:
+    var(--link-green) !important;
+}
+
+
+/* =========================================================
+   OPPORTUNITY TAGS
+   ========================================================= */
+
+.item-type {
+  background:#eef3f6 !important;
+  color:var(--link-navy) !important;
+}
+
+.item-type.volunteer {
+  background:#edf5e9 !important;
+  color:var(--link-green) !important;
+}
+
+.item-type.donation {
+  background:#eef8e9 !important;
+  color:var(--link-green) !important;
+}
+
+.item-type.mentor {
+  background:#e9f6f6 !important;
+  color:var(--link-teal) !important;
+}
+
+.item-type.event {
+  background:#eef3f6 !important;
+  color:var(--link-navy) !important;
+}
+
+.item-type.business {
+  background:#e9f6f6 !important;
+  color:var(--link-teal) !important;
+}
+
+
+/* =========================================================
+   COMMUNITY PAGE NORMALIZATION
+   ========================================================= */
+
+.community-real-page h1,
+.community-real-page h2,
+.community-real-page h3,
+.community-page h1,
+.community-page h2,
+.community-page h3 {
+  color:
+    var(--link-navy);
+}
+
+.community-real-page button,
+.community-page button,
+.community-real-page .primary,
+.community-page .primary {
+  border-color:
+    var(--link-navy) !important;
+
+  background:
+    var(--link-navy) !important;
+
+  color:#ffffff !important;
+}
+
+.community-real-page button:hover,
+.community-page button:hover,
+.community-real-page .primary:hover,
+.community-page .primary:hover {
+  background:
+    var(--link-green) !important;
+
+  border-color:
+    var(--link-green) !important;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.opportunity-footer {
+  background:
+    var(--link-deep) !important;
+
+  border-top:
+    5px solid var(--link-green) !important;
+}
+
+
+@media(max-width:760px) {
+
+  .link-revenue-alignment-shell {
+    grid-template-columns:
+      1fr;
+  }
+
+  .link-revenue-buttons {
+    align-items:flex-start;
+  }
+
+}

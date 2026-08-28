@@ -2093,6 +2093,237 @@ a.early-supporter-logo-box:hover {
 }
 
 
+
+/* LINK APPROVED HOMEPAGE ART HERO */
+
+.homepage-art-hero{
+  width:100%;
+  max-width:1180px;
+  margin:0 auto 32px;
+  padding:0;
+  animation:gatewayEnter .7s ease both;
+}
+
+.homepage-art-hero img{
+  display:block;
+  width:100%;
+  height:auto;
+  margin:0;
+  border-radius:20px;
+  box-shadow:
+    0 28px 70px rgba(0,0,0,.22);
+}
+
+.homepage-art-hero-title{
+  position:absolute !important;
+  width:1px !important;
+  height:1px !important;
+  padding:0 !important;
+  margin:-1px !important;
+  overflow:hidden !important;
+  clip:rect(0,0,0,0) !important;
+  white-space:nowrap !important;
+  border:0 !important;
+}
+
+@media(max-width:800px){
+
+  .homepage-art-hero{
+    margin-bottom:24px;
+  }
+
+  .homepage-art-hero img{
+    border-radius:14px;
+  }
+
+}
+
+
+/* LINK CURRENT HOMEPAGE FINISHED NAV */
+
+.home-launch-header{
+  position:relative;
+  z-index:5;
+  width:min(1180px,calc(100% - 40px));
+  margin:0 auto;
+  padding:22px 0 0;
+  display:block;
+}
+
+.home-launch-brand-row{
+  min-height:58px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+  padding-bottom:17px;
+}
+
+.home-launch-brand{
+  display:inline-flex;
+  flex-direction:column;
+  margin:0;
+  color:#fff;
+  text-decoration:none;
+}
+
+.home-launch-brand strong{
+  display:block;
+  color:#fff;
+  font-size:32px;
+  line-height:.9;
+  letter-spacing:-.04em;
+}
+
+.home-launch-brand span{
+  display:block;
+  margin-top:7px;
+  color:#e0a52f;
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+
+.home-launch-location{
+  color:rgba(255,255,255,.66);
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+}
+
+.home-launch-nav-row{
+  min-height:58px;
+  display:flex;
+  align-items:center;
+  gap:28px;
+  border-top:1px solid rgba(255,255,255,.12);
+  border-bottom:1px solid rgba(255,255,255,.12);
+}
+
+.home-launch-nav{
+  flex:1;
+  display:flex;
+  align-items:center;
+  gap:34px;
+}
+
+.home-launch-nav a{
+  position:relative;
+  padding:14px 0 13px;
+  color:#fff;
+  text-decoration:none;
+}
+
+.home-launch-nav a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:100%;
+  bottom:-1px;
+  height:2px;
+  background:#e0a52f;
+  transition:right .18s ease;
+}
+
+.home-launch-nav a:hover::after,
+.home-launch-nav a:focus-visible::after{
+  right:0;
+}
+
+.home-launch-nav strong{
+  display:block;
+  color:#fff;
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:.08em;
+}
+
+.home-launch-nav span{
+  display:block;
+  margin-top:4px;
+  color:rgba(255,255,255,.62);
+  font-size:7px;
+  line-height:1.2;
+}
+
+.home-launch-cta{
+  flex:0 0 auto;
+  padding:11px 16px;
+  border-radius:5px;
+  background:#e0a52f;
+  color:#071b33;
+  text-decoration:none;
+  font-size:8px;
+  font-weight:900;
+  letter-spacing:.07em;
+}
+
+.home-launch-cta:hover,
+.home-launch-cta:focus-visible{
+  background:#edb746;
+}
+
+#launch-participation,
+#about-link-hub{
+  scroll-margin-top:24px;
+}
+
+@media(max-width:900px){
+
+  .home-launch-nav-row{
+    align-items:flex-start;
+    flex-direction:column;
+    gap:14px;
+    padding:14px 0 16px;
+  }
+
+  .home-launch-nav{
+    width:100%;
+    flex-wrap:wrap;
+    gap:8px 22px;
+  }
+
+  .home-launch-cta{
+    align-self:flex-start;
+  }
+
+}
+
+@media(max-width:650px){
+
+  .home-launch-header{
+    width:calc(100% - 30px);
+    padding-top:16px;
+  }
+
+  .home-launch-brand-row{
+    align-items:flex-start;
+    flex-direction:column;
+    gap:10px;
+  }
+
+  .home-launch-location{
+    display:none;
+  }
+
+  .home-launch-nav{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+
+  .home-launch-nav a{
+    padding:9px 0;
+  }
+
+  .home-launch-cta{
+    width:100%;
+    text-align:center;
+  }
+
+}
+
 </style>
 </head>
 
@@ -2100,15 +2331,66 @@ a.early-supporter-logo-box:hover {
 
 <div class="preview-shell">
 
-  <header>
+  <header class="home-launch-header">
 
-    <div class="brand">
-      <strong>LINK</strong>
-      <span>Community Hub™</span>
+    <div class="home-launch-brand-row">
+
+      <a
+        class="home-launch-brand"
+        href="/"
+        aria-label="LINK Community Hub — Lake Norman"
+      >
+        <strong>LINK</strong>
+        <span>Community Hub™ · Lake Norman</span>
+      </a>
+
+      <div class="home-launch-location">
+        OUR COMMUNITY. CONNECTED.
+      </div>
+
     </div>
 
-    <div class="preview-label">
-      Lake Norman · Early Preview
+    <div class="home-launch-nav-row">
+
+      <nav
+        class="home-launch-nav"
+        aria-label="LINK Community Hub homepage navigation"
+      >
+
+        <a href="/lakenorman/nonprofits/">
+          <strong>DISCOVER</strong>
+          <span>Resources & Needs</span>
+        </a>
+
+        <a href="/lakenorman/community/">
+          <strong>CONNECT</strong>
+          <span>People & Partners</span>
+        </a>
+
+        <a href="#launch-participation">
+          <strong>ACTIVATE</strong>
+          <span>Get Involved</span>
+        </a>
+
+        <a href="/lakenorman/resources/">
+          <strong>RESOURCES</strong>
+          <span>Tools & Support</span>
+        </a>
+
+        <a href="#about-link-hub">
+          <strong>ABOUT</strong>
+          <span>Our Story</span>
+        </a>
+
+      </nav>
+
+      <a
+        class="home-launch-cta"
+        href="#launch-participation"
+      >
+        GET INVOLVED
+      </a>
+
     </div>
 
   </header>
@@ -2137,29 +2419,19 @@ a.early-supporter-logo-box:hover {
            PRE-LAUNCH HERO
            ============================================== -->
 
-      <div class="gateway-hero">
+      <div class="homepage-art-hero">
 
-        <div class="gateway-brand">
-          LINK COMMUNITY HUB™
-          <span>·</span>
-          LAKE NORMAN
-        </div>
-
-        <h1 id="gatewayTitle">
-          Our Community.<br>
-          Connected.
+        <h1
+          id="gatewayTitle"
+          class="homepage-art-hero-title"
+        >
+          Our Community. Connected.
         </h1>
 
-        <p class="gateway-subhead">
-          A community ecosystem connecting the people,
-          organizations, resources, needs and opportunities
-          that strengthen the Lake Norman region.
-        </p>
-
-        <div class="coming-soon">
-          <span class="coming-dot"></span>
-          COMING SOON
-        </div>
+        <img
+          src="/lakenorman/assets/page-panels/link-home-community-connected.png"
+          alt="LINK Community Hub™ — Our Community. Connected. Lake Norman community connection ecosystem."
+        >
 
       </div>
 
@@ -2168,7 +2440,7 @@ a.early-supporter-logo-box:hover {
            PRIMARY PRE-LAUNCH ACTION
            ============================================== -->
 
-      <div class="gateway-nonprofit gateway-reveal">
+      <div id="launch-participation" class="gateway-nonprofit gateway-reveal">
 
         <div class="gateway-kicker">
           HELP US BUILD IT BEFORE WE LAUNCH
@@ -2235,7 +2507,7 @@ a.early-supporter-logo-box:hover {
            WHAT IS COMING
            ============================================== -->
 
-      <div class="gateway-preview gateway-reveal">
+      <div id="about-link-hub" class="gateway-preview gateway-reveal">
 
         <div class="gateway-mantra">
           CONNECT · COLLABORATE · ENGAGE · IMPACT

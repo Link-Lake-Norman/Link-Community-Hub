@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <meta
+    name="robots"
+    content="noindex,nofollow"
+  >
+
+  <title>
+    Nonprofit Messaging | LINK Admin
+  </title>
+
+  <link
+    rel="stylesheet"
+    href="/lakenorman/styles.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="/lakenorman/assets/link-public-shell.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="/lakenorman/assets/link-standard-header.css?v=20260827-104156"
+  >
+
+  <link
+    rel="stylesheet"
+    href="/lakenorman/nonprofits/admin-system.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="/lakenorman/nonprofits/communications.css"
+  >
+
+</head>
+
+<body>
+
+<header class="link-standard-header">
+  <div class="link-standard-header-inner">
+    <a
+      class="link-standard-brand"
+      href="/lakenorman/"
+      aria-label="LINK Community Hub — Lake Norman"
+    >
+      <img
+        src="/lakenorman/assets/brand/link-horizontal-logo.png"
+        alt="LINK Community Hub™ · Lake Norman"
+      >
+    </a>
+  </div>
+</header>
+<nav
+  class="link-standard-nav"
+  aria-label="LINK Community Hub navigation"
+>
+  <a href="/lakenorman/">Home</a>
+  <a href="/lakenorman/nonprofits/">Nonprofits</a>
+  <a href="/business/">Businesses</a>
+  <a href="/lakenorman/community/">Community</a>
+  <a href="/lakenorman/resources/">Resource Exchange</a>
+  <a href="/lakenorman/support-local/">
+    Support Local
+    <span class="link-standard-coming-soon">
+      COMING SOON
+    </span>
+  </a>
+</nav>
+
+<section class="link-admin-topbar">
+
+  <div class="link-admin-topbar-inner">
+
+    <div class="link-admin-topbar-label">
+
+      <span>
+        LINK ADMIN
+      </span>
+
+      <strong>
+        Command Center
+      </strong>
+
+    </div>
+
+    <div class="link-admin-topbar-links">
+
+      <a
+        href="/lakenorman/nonprofits/admin.html"
+      >
+        Operations
+      </a>
+
+      <a
+        href="/lakenorman/nonprofits/ecosystem-admin.html"
+      >
+        Ecosystem Records
+      </a>
+
+      <a
+        class="is-active"
+        href="/lakenorman/nonprofits/communications.html"
+      >
+        Messaging
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<main class="comm-admin">
+
+  <section class="comm-heading">
+
+    <div>
+
+      <p class="comm-eyebrow">
+        NONPROFIT COMMUNICATIONS
+      </p>
+
+      <h1>
+        Messaging & Profile Invitations
+      </h1>
+
+      <p>
+        Message nonprofits individually or in bulk,
+        send secure claim/update links, and keep
+        communication history attached to each
+        organization.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <section
+    id="comm-login"
+    class="comm-login"
+  >
+
+    <h2>
+      Admin Access
+    </h2>
+
+    <form id="comm-login-form">
+
+      <label for="comm-password">
+        LINK Admin Password
+      </label>
+
+      <input
+        id="comm-password"
+        type="password"
+        autocomplete="current-password"
+        required
+      >
+
+      <button type="submit">
+        Open Messaging Center
+      </button>
+
+    </form>
+
+    <p
+      id="comm-login-error"
+      class="comm-error"
+      hidden
+    ></p>
+
+  </section>
+
+
+  <section
+    id="comm-app"
+    hidden
+  >
+
+    <div class="comm-summary">
+
+      <div>
+        <strong id="comm-total">
+          0
+        </strong>
+        <span>
+          Nonprofits
+        </span>
+      </div>
+
+      <div>
+        <strong id="comm-claimed">
+          0
+        </strong>
+        <span>
+          Approved / Portal Ready
+        </span>
+      </div>
+
+      <div>
+        <strong id="comm-unclaimed">
+          0
+        </strong>
+        <span>
+          Unclaimed / Needs Claim
+        </span>
+      </div>
+
+      <div>
+        <strong id="comm-unread">
+          0
+        </strong>
+        <span>
+          Unread Replies
+        </span>
+      </div>
+
+    </div>
+
+
+    <div
+      id="comm-provider"
+      class="comm-provider"
+    ></div>
+
+
+    <div class="comm-layout">
+
+      <section class="comm-panel">
+
+        <div class="comm-panel-head">
+
+          <div>
+
+            <p class="comm-eyebrow">
+              RECIPIENTS
+            </p>
+
+            <h2>
+              Nonprofits
+            </h2>
+
+          </div>
+
+          <input
+            id="comm-search"
+            type="search"
+            placeholder="Search…"
+          >
+
+        </div>
+
+
+        <div class="comm-select-actions">
+
+          <button
+            id="comm-select-all"
+            type="button"
+          >
+            Select All
+          </button>
+
+          <button
+            id="comm-select-unclaimed"
+            type="button"
+          >
+            Select Unclaimed
+          </button>
+
+          <button
+            id="comm-clear"
+            type="button"
+          >
+            Clear
+          </button>
+
+        </div>
+
+
+        <div
+          id="comm-organizations"
+          class="comm-organizations"
+        ></div>
+
+      </section>
+
+
+      <section class="comm-panel">
+
+        <p class="comm-eyebrow">
+          SEND
+        </p>
+
+        <h2>
+          Message Selected Nonprofits
+        </h2>
+
+        <p id="comm-selected-label">
+          No nonprofits selected.
+        </p>
+
+
+        <label>
+          Subject
+
+          <input
+            id="comm-subject"
+            type="text"
+            maxlength="240"
+          >
+        </label>
+
+
+        <label>
+          Message
+
+          <textarea
+            id="comm-body"
+            rows="10"
+          ></textarea>
+        </label>
+
+
+        <div class="comm-send-actions">
+
+          <button
+            id="comm-send-message"
+            type="button"
+          >
+            Send Message
+          </button>
+
+          <button
+            id="comm-send-claim"
+            type="button"
+            class="comm-secondary"
+          >
+            Send Claim / Update Link
+          </button>
+
+          <button
+            id="comm-approve-claim"
+            type="button"
+            class="comm-secondary"
+          >
+            Approve Pending Claim
+          </button>
+
+        </div>
+
+
+        <p
+          id="comm-result"
+          class="comm-result"
+        ></p>
+
+      </section>
+
+    </div>
+
+
+    <section class="comm-panel comm-history-panel">
+
+      <div class="comm-panel-head">
+
+        <div>
+
+          <p class="comm-eyebrow">
+            COMMUNICATION HISTORY
+          </p>
+
+          <h2>
+            Messages
+          </h2>
+
+        </div>
+
+        <button
+          id="comm-refresh"
+          type="button"
+        >
+          Refresh
+        </button>
+
+      </div>
+
+      <div
+        id="comm-history"
+        class="comm-history"
+      ></div>
+
+    </section>
+
+  </section>
+
+</main>
+
+
+<script
+  src="/lakenorman/nonprofits/communications.js"
+  defer
+></script>
+
+</body>
+</html>

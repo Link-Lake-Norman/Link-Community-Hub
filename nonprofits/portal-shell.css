@@ -1,0 +1,185 @@
+/* =========================================================
+   LINK COMMUNITY HUB™
+   NONPROFIT PORTAL SHELL
+   ========================================================= */
+
+.nonprofit-portal-shell{
+  width:100%;
+  min-height:calc(100vh - 180px);
+  background:#f5f7f9;
+}
+
+.nonprofit-portal-main{
+  width:100%;
+  margin:0;
+  padding:0 0 72px;
+}
+
+
+/* ---------------------------------------------------------
+   PORTAL IDENTITY
+   --------------------------------------------------------- */
+
+.nonprofit-portal-intro{
+  background:#ffffff;
+  border-bottom:1px solid #dce3e8;
+}
+
+.nonprofit-portal-intro-inner{
+  width:min(1180px,calc(100% - 48px));
+  margin:0 auto;
+  padding:38px 0 28px;
+}
+
+.nonprofit-portal-intro-top{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:24px;
+}
+
+.nonprofit-portal-kicker{
+  margin:0 0 8px;
+  color:#d59a28;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+
+.nonprofit-portal-title{
+  margin:0;
+  color:#0b2344;
+  font-family:"Libre Baskerville",Georgia,serif;
+  font-size:clamp(30px,4vw,46px);
+  line-height:1.08;
+}
+
+.nonprofit-portal-description{
+  max-width:700px;
+  margin:12px 0 0;
+  color:#566070;
+  font-size:15px;
+  line-height:1.65;
+}
+
+
+/* ---------------------------------------------------------
+   SIGN OUT
+   --------------------------------------------------------- */
+
+.nonprofit-portal-signout{
+  flex:0 0 auto;
+  min-width:auto;
+  width:auto;
+  margin:0;
+  padding:10px 16px;
+  border:1px solid #cbd5df;
+  border-radius:9px;
+  background:#ffffff;
+  color:#0b2344;
+  font:inherit;
+  font-size:12px;
+  font-weight:800;
+  cursor:pointer;
+}
+
+.nonprofit-portal-signout:hover,
+.nonprofit-portal-signout:focus-visible{
+  border-color:#0b2344;
+}
+
+
+/* ---------------------------------------------------------
+   PORTAL NAVIGATION
+   --------------------------------------------------------- */
+
+.nonprofit-portal-tabs{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:28px;
+  padding-top:20px;
+  border-top:1px solid #e5e9ed;
+}
+
+.nonprofit-portal-tabs .nav-button{
+  width:auto;
+  min-width:auto;
+  margin:0;
+  padding:10px 15px;
+  border:1px solid #d6dee6;
+  border-radius:9px;
+  background:#ffffff;
+  color:#0b2344;
+  font:inherit;
+  font-size:12px;
+  font-weight:800;
+  line-height:1.2;
+  cursor:pointer;
+}
+
+.nonprofit-portal-tabs .nav-button:hover,
+.nonprofit-portal-tabs .nav-button:focus-visible{
+  border-color:#0b2344;
+}
+
+.nonprofit-portal-tabs .nav-button.active{
+  border-color:#0b2344;
+  background:#0b2344;
+  color:#ffffff;
+}
+
+
+/* ---------------------------------------------------------
+   STATUS + CONTENT
+   --------------------------------------------------------- */
+
+.nonprofit-portal-global{
+  width:min(1180px,calc(100% - 48px));
+  margin:18px auto 0;
+}
+
+.nonprofit-portal-main > .view{
+  width:min(1180px,calc(100% - 48px));
+  margin:0 auto;
+  padding-top:34px;
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE
+   --------------------------------------------------------- */
+
+@media (max-width:760px){
+
+  .nonprofit-portal-intro-inner,
+  .nonprofit-portal-global,
+  .nonprofit-portal-main > .view{
+    width:min(100% - 30px,1180px);
+  }
+
+  .nonprofit-portal-intro-inner{
+    padding:28px 0 22px;
+  }
+
+  .nonprofit-portal-intro-top{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+
+  .nonprofit-portal-signout{
+    align-self:flex-start;
+  }
+
+  .nonprofit-portal-tabs{
+    display:grid;
+    grid-template-columns:1fr;
+  }
+
+  .nonprofit-portal-tabs .nav-button{
+    width:100%;
+    text-align:left;
+  }
+
+}

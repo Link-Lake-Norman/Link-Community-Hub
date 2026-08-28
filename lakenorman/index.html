@@ -9,59 +9,257 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:wght@400;600;700&family=Yellowtail&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="/lakenorman/assets/link-launch-final.css?v=20260828-122514">
+  <link rel="stylesheet" href="/lakenorman/assets/current-launch.css?v=20260828">
 </head>
 <body>
 
 <header class="site-header">
   <div class="nav-shell">
-    <a class="brand" href="#top">
-      <div class="brand-main">LINK<span>⛓</span></div><div class="brand-place">LAKE NORMAN</div>
-      <div class="brand-sub">COMMUNITY HUB™</div>
+    <a class="brand brand-logo" href="#top" aria-label="LINK Community Hub — Lake Norman">
+      <img
+        src="./assets/brand/link-horizontal-logo.png"
+        alt="LINK Community Hub — Lake Norman"
+      >
     </a>
-    <nav class="main-nav">
-      <a href="#discover"><strong>DISCOVER</strong><span>Resources & Needs</span></a>
-      <a href="#partners"><strong>CONNECT</strong><span>People & Partners</span></a>
-      <a href="#get-involved"><strong>ACTIVATE</strong><span>Get Involved</span></a>
-      <a href="#ecosystem"><strong>RESOURCES</strong><span>Tools & Support</span></a>
-      <a href="#ecosystem"><strong>ABOUT</strong><span>Our Story</span></a>
-    </nav>
+    <nav class="main-nav" aria-label="LINK Community Hub navigation">
+
+  <a href="/lakenorman/nonprofits/">
+    <strong>NONPROFITS</strong>
+    <span>Organizations & Needs</span>
+  </a>
+
+  <a href="/lakenorman/opportunities/">
+    <strong>OPPORTUNITIES</strong>
+    <span>Needs & Ways to Help</span>
+  </a>
+
+  <a href="/business/">
+    <strong>BUSINESSES</strong>
+    <span>Partner & Resource</span>
+  </a>
+
+  <a href="/lakenorman/community/">
+    <strong>COMMUNITY</strong>
+    <span>Schools, Clubs & Teams</span>
+  </a>
+
+  <a href="/lakenorman/resources/">
+    <strong>RESOURCE EXCHANGE</strong>
+    <span>Items & Donations</span>
+  </a>
+
+  <a href="/lakenorman/events/">
+    <strong>EVENTS</strong>
+    <span>What's Happening</span>
+  </a>
+
+</nav>
     <a class="get-involved" href="#get-involved">GET INVOLVED ♥</a>
   </div>
 </header>
 
 <main>
-<section id="top" class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-shade"></div>
-  <div class="hero-copy">
-    <h1>TOGETHER,<br>WE CAN DO</h1>
-    <div class="script">Extraordinary Things</div>
-    <p>Real people. Real needs.<br>Real impact across Lake Norman.</p>
-    <a class="impact-link" href="#ecosystem"><span>▶</span> SEE OUR IMPACT STORY</a>
-  </div>
+<section
+  id="top"
+  class="hero link-locked-home-hero"
+  aria-label="Our Community. Connected. Stronger nonprofits. Stronger connections. Stronger Lake Norman."
+>
+  <img
+    class="link-locked-home-hero-image"
+    src="./assets/page-panels/link-home-community-connected.png"
+    alt="Our Community. Connected. Stronger nonprofits, stronger connections and stronger Lake Norman through LINK Community Hub."
+  >
 </section>
 
 <section class="impact-band">
   <div class="wave"></div>
-  <div class="impact-grid">
-    <div class="impact"><b>♡</b><div><strong id="nonprofitCount">—</strong><span>Verified Organizations</span></div></div>
-    <div class="impact"><b>◷</b><div><strong>340+</strong><span>Volunteer Hours This Month</span></div></div>
-    <div class="impact"><b>♙</b><div><strong>1,250+</strong><span>People Engaged</span></div></div>
-    <div class="impact"><b>▣</b><div><strong>100+</strong><span>Local Businesses Supporting</span></div></div>
-    <div class="impact"><b>♡</b><div><strong class="countless">Countless</strong><span>Lives Impacted</span></div></div>
+
+  <div
+    class="impact-grid"
+    aria-label="Latest published Lake Norman regional indicators"
+  >
+
+    <div class="impact">
+      <b>♥</b>
+      <div>
+        <strong>13.2%</strong>
+        <span>
+          FOOD INSECURITY<br>
+          Mecklenburg + Iredell
+        </span>
+      </div>
+    </div>
+
+    <div class="impact">
+      <b>⌂</b>
+      <div>
+        <strong>24–33%</strong>
+        <span>
+          HOUSING COST BURDEN<br>
+          Households spending 30%+ on housing
+        </span>
+      </div>
+    </div>
+
+    <div class="impact">
+      <b>★</b>
+      <div>
+        <strong>90.8–91.5%</strong>
+        <span>
+          EDUCATION<br>
+          High school graduate or higher
+        </span>
+      </div>
+    </div>
+
+    <div class="impact">
+      <b>+</b>
+      <div>
+        <strong>9.6–10.6%</strong>
+        <span>
+          POVERTY<br>
+          Residents below poverty level
+        </span>
+      </div>
+    </div>
+
+    <div class="impact">
+      <b>♡</b>
+      <div>
+        <strong>10.7–12.3%</strong>
+        <span>
+          WELL-BEING<br>
+          Under 65 without health insurance
+        </span>
+      </div>
+    </div>
+
   </div>
 </section>
 
 <section id="get-involved" class="engage-section">
   <div class="section-title">EXPLORE WAYS TO GET INVOLVED</div>
   <div class="engage-grid">
-    <article class="engage-card"><img src="./assets/volunteer.jpg" alt=""><i class="ico gold">♡</i><h3>VOLUNTEER</h3><p>Your time<br>makes a difference.</p><button onclick="scrollNeeds()">LEARN MORE →</button></article>
-    <article class="engage-card"><img src="./assets/donate.jpg" alt=""><i class="ico teal">$</i><h3>DONATE</h3><p>Support local<br>organizations and families.</p><button onclick="scrollNeeds()">LEARN MORE →</button></article>
-    <article class="engage-card"><img src="./assets/mentor.jpg" alt=""><i class="ico navy">♙</i><h3>MENTOR</h3><p>Guide the next<br>generation.</p><button onclick="openStudentModal()">LEARN MORE →</button></article>
-    <article class="engage-card"><img src="./assets/partner.jpg" alt=""><i class="ico green">🤝</i><h3>PARTNER</h3><p>Build a stronger<br>community together.</p><button onclick="openBusinessModal()">LEARN MORE →</button></article>
-    <article class="engage-card"><img src="./assets/engage.jpg" alt=""><i class="ico red">🎓</i><h3>ENGAGE</h3><p>Students, schools &<br>teams unite.</p><button onclick="openStudentModal()">LEARN MORE →</button></article>
-    <article class="engage-card"><img src="./assets/attend.jpg" alt=""><i class="ico amber">▦</i><h3>ATTEND</h3><p>Join events that<br>bring us together.</p><button onclick="openEventsModal()">LEARN MORE →</button></article>
+    <article class="engage-card"><img src="./assets/volunteer.jpg?v=20260826-2" alt=""><i class="ico gold">♡</i><h3>VOLUNTEER</h3><p>Your time<br>makes a difference.</p><a class="launch-card-link" href="/lakenorman/opportunities/">LEARN MORE →</a></article>
+    <article class="engage-card"><img src="./assets/donate.jpg?v=20260826-2" alt=""><i class="ico teal">$</i><h3>DONATE</h3><p>Support local<br>organizations and families.</p><a class="launch-card-link" href="/lakenorman/opportunities/">LEARN MORE →</a></article>
+    <article class="engage-card"><img src="./assets/mentor.jpg?v=20260826-2" alt=""><i class="ico navy">♙</i><h3>MENTOR</h3><p>Guide the next<br>generation.</p><a class="launch-card-link" href="/lakenorman/opportunities/?type=mentor">LEARN MORE →</a></article>
+    <article class="engage-card"><img src="./assets/partner.jpg?v=20260826-2" alt=""><i class="ico green">🤝</i><h3>PARTNER</h3><p>Build a stronger<br>community together.</p><a class="launch-card-link" href="/business/">LEARN MORE →</a></article>
+    <article class="engage-card"><img src="./assets/engage.jpg?v=20260826-2" alt=""><i class="ico red">🎓</i><h3>ENGAGE</h3><p>Students, schools &<br>teams unite.</p><a class="launch-card-link" href="/lakenorman/community/">LEARN MORE →</a></article>
+    <article class="engage-card"><img src="./assets/attend.jpg?v=20260826-2" alt=""><i class="ico amber">▦</i><h3>ATTEND</h3><p>Join events that<br>bring us together.</p><a class="launch-card-link" href="/lakenorman/events/">LEARN MORE →</a></article>
   </div>
+</section>
+
+
+<section id="find-your-place" class="link-role-section">
+
+  <div class="link-role-heading">
+    <div class="link-role-kicker">THE LINK ECOSYSTEM</div>
+    <h2>Find Your Place in LINK</h2>
+    <p>
+      LINK Community Hub™ connects local people, organizations,
+      resources and opportunities so businesses, nonprofits,
+      students and community groups can strengthen Lake Norman together.
+    </p>
+  </div>
+
+  <div class="link-role-grid">
+
+    <a class="link-role-card" href="/lakenorman/nonprofits/">
+      <span class="link-role-icon">♥</span>
+      <strong>NONPROFITS</strong>
+      <p>Share needs, opportunities, events and impact.</p>
+      <b>EXPLORE NONPROFITS →</b>
+    </a>
+
+    <a class="link-role-card" href="/business/">
+      <span class="link-role-icon">◆</span>
+      <strong>BUSINESSES</strong>
+      <p>
+        Strengthen your business, engage your workforce
+        and create local impact.
+      </p>
+      <b>BUSINESS HUB →</b>
+    </a>
+
+    <a class="link-role-card" href="/lakenorman/community/#students">
+      <span class="link-role-icon">★</span>
+      <strong>STUDENTS &amp; YOUTH</strong>
+      <p>Serve, connect, gain experience and make an impact.</p>
+      <b>GET INVOLVED →</b>
+    </a>
+
+    <a class="link-role-card" href="/lakenorman/community/#groups">
+      <span class="link-role-icon">●</span>
+      <strong>CLUBS &amp; TEAMS</strong>
+      <p>Turn group energy into meaningful local service.</p>
+      <b>EXPLORE GROUP SERVICE →</b>
+    </a>
+
+    <a class="link-role-card" href="/lakenorman/community/#organizations">
+      <span class="link-role-icon">+</span>
+      <strong>COMMUNITY ORGANIZATIONS</strong>
+      <p>
+        Churches, civic groups, neighborhoods and organizations
+        can connect people and resources.
+      </p>
+      <b>CONNECT WITH LINK →</b>
+    </a>
+
+    <a class="link-role-card" href="/lakenorman/community/#ambassadors">
+      <span class="link-role-icon">✦</span>
+      <strong>LINK AMBASSADORS</strong>
+      <p>
+        Help surface needs, connect people and grow local participation.
+      </p>
+      <b>LEARN MORE →</b>
+    </a>
+
+    <a class="link-role-card featured" href="/lakenorman/resources/">
+      <span class="link-role-icon">↔</span>
+      <strong>RESOURCE EXCHANGE</strong>
+      <p>
+        Turn useful business resources into nonprofit impact
+        instead of waste.
+      </p>
+      <b>EXPLORE RESOURCES →</b>
+    </a>
+
+    <a class="link-role-card coming" href="/lakenorman/support-local/">
+      <span class="link-role-icon">SHOP</span>
+      <strong>SUPPORT LOCAL</strong>
+      <p>
+        Shop nonprofit merchandise and local businesses
+        supporting community impact.
+      </p>
+      <em>COMING SOON</em>
+      <b>SEE WHAT'S COMING →</b>
+    </a>
+
+  </div>
+
+  <div class="link-fomo-panel">
+    <div>
+      <span>ARE YOU REPRESENTED IN LINK?</span>
+      <h3>Be Visible. Be Connected. Be Part of What Happens Next.</h3>
+      <p>
+        Participating organizations can be connected to resources,
+        recognition, partnerships, community opportunities and new
+        LINK features as the ecosystem grows.
+      </p>
+    </div>
+
+    <div class="link-fomo-actions">
+      <a href="/lakenorman/nonprofits/register.html">
+        CLAIM / UPDATE NONPROFIT PROFILE →
+      </a>
+
+      <a href="/business/">
+        JOIN AS A BUSINESS →
+      </a>
+    </div>
+  </div>
+
 </section>
 
 <section id="discover" class="needs-section">
@@ -85,13 +283,7 @@
         creates lasting change.
       </p>
 
-      <button
-        class="gold-btn"
-        onclick="openAllNeeds()"
-      >
-        VIEW ALL NEEDS &<br>
-        OPPORTUNITIES →
-      </button>
+      <a class="launch-card-link" href="/lakenorman/opportunities/">VIEW ALL NEEDS &amp;<br>OPPORTUNITIES →</a>
 
     </div>
 
@@ -108,15 +300,9 @@
   >
 
     <div class="partners-head">
+      <strong>OUR NONPROFIT PARTNERS</strong>
 
-      <strong>
-        OUR COMMUNITY PARTNERS
-      </strong>
-
-      <button onclick="openPartnerModal()">
-        VIEW ALL PARTNERS →
-      </button>
-
+      <a class="launch-card-link" href="/lakenorman/nonprofits/">VIEW ALL NONPROFITS →</a>
     </div>
 
     <div
@@ -133,102 +319,87 @@
 
 
 
+
 <section class="participation-recognition" id="recognition">
 
-  <div class="recognition-shell">
+  <div class="link-partner-program">
 
-    <div class="recognition-copy">
+    <div class="link-partner-copy">
 
-      <div class="small-label">
-        PARTICIPATION & RECOGNITION
+      <div class="link-partner-kicker">
+        LINK COMMUNITY PARTNER
       </div>
 
       <h2>
-        Show That You Are Part
-        of the Community.
+        Show You’re Connected<br>
+        to Your Community.
       </h2>
 
-      <p>
-        LINK Community Hub™ recognizes the organizations
-        actively participating in the local ecosystem.
+      <p class="link-partner-lead">
+        Participating businesses can become official LINK Community Partners and receive a Partner Kit that shows their connection to local needs, resources and opportunities through LINK Community Hub™.
       </p>
 
-      <p>
-        These marks represent participation and community
-        connection — not simply placement in a directory.
+      <div class="link-partner-includes">
+
+        <div>
+          <strong>Physical Partner Sticker</strong>
+          <span>
+            Display your QR-enabled LINK Community Partner sticker
+            on a door, window, register, office or community space.
+          </span>
+        </div>
+
+        <div>
+          <strong>Digital Partner Badge</strong>
+          <span>
+            Receive the no-QR digital badge for your website,
+            email signature, LinkedIn, Facebook and social channels.
+          </span>
+        </div>
+
+      </div>
+
+      <div class="link-partner-actions">
+
+        <a class="link-partner-button primary"
+           href="/business/">
+          BUSINESS PARTNER KIT →
+        </a>
+
+        <a class="link-partner-button secondary"
+           href="/lakenorman/nonprofits/register.html">
+          NONPROFIT PARTICIPATION →
+        </a>
+
+      </div>
+
+      <p class="link-partner-note">
+        Already participating? Approved LINK Community Partners receive
+        access to their official digital badge files and partner-use assets.
       </p>
 
     </div>
 
+    <div class="link-partner-badge-wrap">
 
-    <div class="recognition-grid">
+      <img
+        src="./assets/badges/LINK-Community-Hub-Lake-Norman-Digital-Badge.png"
+        alt="LINK Community Hub Lake Norman digital badge"
+        class="link-partner-badge"
+      >
 
+      <strong>LINK Community Partner</strong>
 
-      <!-- BUSINESS / COMMUNITY PARTNER -->
-
-      <article class="recognition-card">
-
-        <div class="recognition-badge">
-
-          <img
-            src="./assets/badges/LINK-Certified-Community-Partner-2026.svg"
-            alt="LINK Certified Community Partner 2026 badge"
-          >
-
-        </div>
-
-        <div class="recognition-type">
-          BUSINESSES & COMMUNITY PARTNERS
-        </div>
-
-        <h3>
-          Certified Community Partner
-        </h3>
-
-        <p>
-          For businesses and community partners
-          actively investing time, talent, resources,
-          expertise and relationships locally.
-        </p>
-
-      </article>
-
-
-      <!-- NONPROFIT -->
-
-      <article class="recognition-card">
-
-        <div class="recognition-badge">
-
-          <img
-            src="./assets/badges/LINK-Proudly-Served-Community-2026.svg"
-            alt="Proudly Served by My LINK LKN Community badge"
-          >
-
-        </div>
-
-        <div class="recognition-type">
-          PARTICIPATING NONPROFITS
-        </div>
-
-        <h3>
-          Proudly Served by My Community
-        </h3>
-
-        <p>
-          For participating nonprofits connected through
-          LINK Community Hub™ to local people, partners,
-          resources and opportunities.
-        </p>
-
-      </article>
-
+      <span>
+        Businesses · Nonprofits · Community Organizations
+      </span>
 
     </div>
 
   </div>
 
 </section>
+
 
 
 
@@ -266,7 +437,7 @@
     <div class="v3-flow-grid">
 
       <article class="v3-flow-card">
-        <div class="v3-image-slot">IMAGE</div>
+        <div class="v3-image-slot"><img src="./assets/eco1.jpg?v=20260826-eco2" alt="Real community needs" class="v3-ecosystem-photo"></div>
         <div class="v3-flow-icon gold">♡</div>
         <h3>REAL NEEDS</h3>
         <p>We identify what matters most.</p>
@@ -275,7 +446,7 @@
       <div class="v3-arrow">→</div>
 
       <article class="v3-flow-card">
-        <div class="v3-image-slot">IMAGE</div>
+        <div class="v3-image-slot"><img src="./assets/eco2.jpg?v=20260826-eco2" alt="Residents volunteers students mentors and professionals" class="v3-ecosystem-photo"></div>
         <div class="v3-flow-icon teal">◎</div>
         <h3>RIGHT PEOPLE</h3>
         <p>
@@ -287,7 +458,7 @@
       <div class="v3-arrow">→</div>
 
       <article class="v3-flow-card">
-        <div class="v3-image-slot">IMAGE</div>
+        <div class="v3-image-slot"><img src="./assets/eco3.jpg?v=20260826-eco2" alt="Community partners working together" class="v3-ecosystem-photo"></div>
         <div class="v3-flow-icon blue">◇</div>
         <h3>RIGHT PARTNERS</h3>
         <p>
@@ -297,7 +468,7 @@
       </article>
 
       <article class="v3-flow-card">
-        <div class="v3-image-slot">IMAGE</div>
+        <div class="v3-image-slot"><img src="./assets/eco4.jpg?v=20260826-eco2" alt="People taking action in the community" class="v3-ecosystem-photo"></div>
         <div class="v3-flow-icon green">✓</div>
         <h3>ACTION TAKEN</h3>
         <p>
@@ -309,7 +480,7 @@
       <div class="v3-arrow reverse">←</div>
 
       <article class="v3-flow-card">
-        <div class="v3-image-slot">IMAGE</div>
+        <div class="v3-image-slot"><img src="./assets/eco5.jpg?v=20260826-eco2" alt="Community impact" class="v3-ecosystem-photo"></div>
         <div class="v3-flow-icon red">↗</div>
         <h3>COMMUNITY IMPACT</h3>
         <p>
@@ -321,7 +492,7 @@
       <div class="v3-arrow reverse">←</div>
 
       <article class="v3-flow-card">
-        <div class="v3-image-slot">IMAGE</div>
+        <div class="v3-image-slot"><img src="./assets/eco6.jpg?v=20260826-eco2" alt="Stronger community connections" class="v3-ecosystem-photo"></div>
         <div class="v3-flow-icon amber">∞</div>
         <h3>STRONGER CONNECTIONS</h3>
         <p>
@@ -367,5 +538,128 @@
 <script src="./data/organizations.js"></script>
 <script src="./app.js"></script>
 
+<!-- LINK STANDARD LAUNCH FOOTER START -->
+<footer
+  class="link-launch-footer"
+  aria-label="LINK Community Hub footer"
+>
+  <div class="link-launch-footer-inner">
+
+    <div class="link-launch-footer-main">
+
+      <div>
+        <h3>
+          LINK Community Hub™ · Lake Norman
+        </h3>
+
+        <p>
+          Connecting people, organizations,
+          resources, needs and opportunities
+          across our community.
+        </p>
+
+        <a
+          class="link-launch-footer-email"
+          href="mailto:info@linkcommunityhub.com"
+        >
+          info@linkcommunityhub.com
+        </a>
+      </div>
+
+      <div class="link-launch-footer-column">
+
+        <h3>Connect With LINK</h3>
+
+        <a
+          href="https://www.facebook.com/profile.php?id=61589327911858"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Facebook
+        </a>
+
+        <a
+          href="https://www.instagram.com/linklkncommunityhub/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Instagram
+        </a>
+
+        <a
+          href="https://www.linkedin.com/showcase/143558228/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn
+        </a>
+
+      </div>
+
+      <div class="link-launch-footer-column">
+
+        <h3>
+          Information & Protection
+        </h3>
+
+        <a
+          href="/legal.html"
+        >
+          Privacy & Data Protection
+        </a>
+
+        <a
+          href="/legal.html"
+        >
+          Terms & Platform Use
+        </a>
+
+        <a
+          href="/legal.html#intellectual-property"
+        >
+          Intellectual Property & Content
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="link-launch-footer-bottom">
+
+      <div class="link-launch-footer-copyright">
+        © 2026 Link Holdings Group, LLC —
+        All Rights Reserved.
+        LINK Community Hub™ and associated
+        brand, platform, designs, content,
+        systems and materials are proprietary.
+      </div>
+
+      <div class="link-launch-footer-legal">
+
+        <a href="/legal.html">
+          Privacy
+        </a>
+
+        <a href="/legal.html">
+          Terms
+        </a>
+
+        <a href="/legal.html#intellectual-property">
+          IP Protection
+        </a>
+
+        <a href="mailto:info@linkcommunityhub.com">
+          Contact
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+</footer>
+<!-- LINK STANDARD LAUNCH FOOTER END -->
+  <script src="/lakenorman/assets/home-nonprofit-partners.js?v=20260828"></script>
+  <script src="/lakenorman/assets/current-launch.js?v=20260828"></script>
 </body>
 </html>

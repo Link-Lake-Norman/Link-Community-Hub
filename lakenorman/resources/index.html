@@ -1,5 +1,1124 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Community Resources | LINK Community Hub™</title><meta name="description" content="Available local business resources for approved Lake Norman nonprofits through LINK Community Hub™."><link rel="stylesheet" href="/lakenorman/resources/resources.css"></head>
-<body><header class="resource-header"><a href="/" class="brand"><strong>LINK</strong><span>Community Hub™ · Lake Norman</span></a><a class="back-link" href="/lakenorman/nonprofits/">Nonprofit Directory</a></header><main class="page"><section class="hero"><div class="eyebrow">BUSINESS RESOURCE EXCHANGE</div><h1>Available local resources.</h1><p>Approved local nonprofits can request available resources posted by participating businesses. LINK makes the introduction; the business and nonprofit handle the transfer directly.</p></section><div id="pageStatus" class="page-status" aria-live="polite"></div><section id="resourceGrid" class="resource-grid"></section><section class="disclosure"><strong>How it works</strong><p>LINK Community Hub™ connects businesses with approved local nonprofits. LINK does not collect funds, hold donations, store inventory, arrange delivery, determine tax deductibility, issue donation receipts or take possession of donated property. Resource availability is controlled by the participating business.</p></section></main>
-<div id="requestModal" class="modal" aria-hidden="true"><div class="modal-card"><div class="modal-head"><div><div class="eyebrow">REQUEST RESOURCE</div><h2 id="requestTitle">Request This Item</h2></div><button id="closeModal" type="button" class="close-button" aria-label="Close">×</button></div><form id="requestForm"><input id="requestItemId" type="hidden"><label>Approved nonprofit *<select id="nonprofitSelect" required><option value="">Select your organization</option></select></label><label>Your name *<input id="contactName" required maxlength="140" autocomplete="name"></label><label>Nonprofit email *<input id="contactEmail" type="email" required maxlength="180" autocomplete="email"></label><label>Message to the business<textarea id="message" maxlength="2000"></textarea></label><label class="check-row"><input id="disclaimerAccepted" type="checkbox" required><span>I understand this request does not reserve or guarantee the item. LINK only makes the connection. The business and nonprofit handle approval, transfer, pickup/delivery, receipts and valuation directly.</span></label><button class="primary" type="submit">Send Request to Business</button><p id="requestStatus" class="status" aria-live="polite"></p></form></div></div>
-<script type="module" src="/lakenorman/resources/resources.js"></script></body></html>
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+
+<meta
+  name="viewport"
+  content="width=device-width,initial-scale=1"
+>
+
+<title>
+  Resource Exchange | LINK Community Hub™ — Lake Norman
+</title>
+
+<meta
+  name="description"
+  content="LINK Community Resource Exchange connects useful business resources with approved local nonprofits across Lake Norman."
+>
+
+<link
+  rel="preconnect"
+  href="https://fonts.googleapis.com"
+>
+
+<link
+  rel="preconnect"
+  href="https://fonts.gstatic.com"
+  crossorigin
+>
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:wght@400;600;700&family=Yellowtail&family=Libre+Baskerville:wght@700&display=swap"
+  rel="stylesheet"
+>
+
+<!-- EXACT HOMEPAGE DESIGN SYSTEM -->
+<link
+  rel="stylesheet"
+  href="/lakenorman/styles.css"
+>
+
+<!-- ONLY RESOURCE-SPECIFIC ADJUSTMENTS -->
+<link
+  rel="stylesheet"
+  href="/lakenorman/resources/resources.css?v=20260826221302"
+>
+
+<link rel="stylesheet" href="/lakenorman/assets/link-public-shell.css">
+<link rel="stylesheet" href="/lakenorman/assets/link-standard-header.css?v=20260827-094954">
+  <link rel="stylesheet" href="/lakenorman/assets/link-branded-graphic-panels.css?v=20260828">
+  <link rel="stylesheet" href="/lakenorman/assets/link-launch-final.css?v=20260828-122514">
+  <link rel="stylesheet" href="/lakenorman/assets/current-launch.css?v=20260828">
+</head>
+
+
+<body class="resource-page">
+
+<header class="link-standard-header">
+  <div class="link-standard-header-inner">
+    <a
+      class="link-standard-brand"
+      href="/lakenorman/"
+      aria-label="LINK Community Hub — Lake Norman"
+    >
+      <img
+        src="/lakenorman/assets/brand/link-horizontal-logo.png"
+        alt="LINK Community Hub™ · Lake Norman"
+      >
+    </a>
+  </div>
+</header>
+
+<nav
+  class="link-standard-nav"
+  aria-label="LINK Community Hub navigation"
+>
+  <a href="/lakenorman/">Home</a>
+  <a href="/lakenorman/nonprofits/">Nonprofits</a>
+  <a href="/business/">Businesses</a>
+  <a href="/lakenorman/community/">Community</a>
+  <a href="/lakenorman/resources/">Resource Exchange</a>
+  <a href="/lakenorman/support-local/">
+    Support Local
+    <span class="link-standard-coming-soon">
+      COMING SOON
+    </span>
+  </a>
+</nav>
+
+
+
+
+<!-- ======================================================
+     EXACT HOMEPAGE HEADER FORMAT
+     ====================================================== -->
+
+<main>
+
+
+<!-- ======================================================
+     EXACT HOMEPAGE HERO FORMAT
+     ====================================================== -->
+
+<section
+  class="launch-image-hero"
+  aria-label="LINK Community Resource Exchange"
+>
+  <img
+    src="/lakenorman/assets/partner-graphics/find-items-donations.png"
+    alt="Find our items and donations to support your next fundraiser through LINK Community Hub."
+  >
+</section>
+
+
+
+<!-- ======================================================
+     EXACT HOMEPAGE IMPACT-RIBBON FORMAT
+     ====================================================== -->
+
+<section class="impact-band">
+
+  <div class="wave"></div>
+
+
+  <div class="impact-grid">
+
+
+    <div class="impact">
+
+      <b>
+        ◉
+      </b>
+
+      <div>
+
+        <strong>
+          PUBLIC
+        </strong>
+
+        <span>
+          Resources Are Visible
+        </span>
+
+      </div>
+
+    </div>
+
+
+
+    <div class="impact">
+
+      <b>
+        ♡
+      </b>
+
+      <div>
+
+        <strong>
+          APPROVED
+        </strong>
+
+        <span>
+          Nonprofits Can Request
+        </span>
+
+      </div>
+
+    </div>
+
+
+
+    <div class="impact">
+
+      <b>
+        ◷
+      </b>
+
+      <div>
+
+        <strong>
+          30 DAYS
+        </strong>
+
+        <span>
+          Mission-Use Listings
+        </span>
+
+      </div>
+
+    </div>
+
+
+
+    <div class="impact">
+
+      <b>
+        ↔
+      </b>
+
+      <div>
+
+        <strong>
+          DIRECT
+        </strong>
+
+        <span>
+          Business + Nonprofit Transfer
+        </span>
+
+      </div>
+
+    </div>
+
+
+
+    <div class="impact">
+
+      <b>
+        ♡
+      </b>
+
+      <div>
+
+        <strong>
+          LOCAL
+        </strong>
+
+        <span>
+          Resources Stay in Community
+        </span>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- ======================================================
+     SAME SIX-CARD HOMEPAGE FORMAT
+     ====================================================== -->
+
+<section class="engage-section resource-share-section">
+
+  <div class="section-title">
+    WHAT BUSINESSES CAN SHARE
+  </div>
+
+
+  <div class="engage-grid">
+
+
+    <article class="engage-card">
+
+      <img
+        src="/lakenorman/assets/editorial/resource-office.jpg"
+        alt="Office furniture and equipment"
+      >
+
+      <i class="ico teal">
+        ↔
+      </i>
+
+      <h3>
+        MISSION USE
+      </h3>
+
+      <p>
+        Furniture, equipment,<br>
+        technology &amp; supplies.
+      </p>
+
+      <button
+        onclick="document.getElementById('available-resources').scrollIntoView()"
+      >
+        BROWSE →
+      </button>
+
+    </article>
+
+
+
+    <article class="engage-card">
+
+      <img
+        src="/lakenorman/assets/donate.jpg?v=20260826-2"
+        alt=""
+      >
+
+      <i class="ico green">
+        +
+      </i>
+
+      <h3>
+        SURPLUS
+      </h3>
+
+      <p>
+        Useful inventory<br>
+        instead of waste.
+      </p>
+
+      <button
+        onclick="location.href='/business/'"
+      >
+        POST RESOURCE →
+      </button>
+
+    </article>
+
+
+
+    <article class="engage-card">
+
+      <img
+        src="/lakenorman/assets/attend.jpg?v=20260826-2"
+        alt=""
+      >
+
+      <i class="ico red">
+        ★
+      </i>
+
+      <h3>
+        FUNDRAISERS
+      </h3>
+
+      <p>
+        Auction items,<br>
+        raffle prizes &amp; giveaways.
+      </p>
+
+      <button
+        onclick="location.href='/business/'"
+      >
+        SHARE ITEM →
+      </button>
+
+    </article>
+
+
+
+    <article class="engage-card">
+
+      <img
+        src="/lakenorman/assets/partner.jpg?v=20260826-2"
+        alt=""
+      >
+
+      <i class="ico gold">
+        $
+      </i>
+
+      <h3>
+        GIFT CARDS
+      </h3>
+
+      <p>
+        Certificates, offers<br>
+        &amp; business gifts.
+      </p>
+
+      <button
+        onclick="location.href='/business/'"
+      >
+        SHARE →
+      </button>
+
+    </article>
+
+
+
+    <article class="engage-card">
+
+      <img
+        src="/lakenorman/assets/engage.jpg?v=20260826-2"
+        alt=""
+      >
+
+      <i class="ico amber">
+        ✦
+      </i>
+
+      <h3>
+        EXPERIENCES
+      </h3>
+
+      <p>
+        Tickets, memberships<br>
+        &amp; local experiences.
+      </p>
+
+      <button
+        onclick="location.href='/business/'"
+      >
+        SHARE →
+      </button>
+
+    </article>
+
+
+
+    <article class="engage-card">
+
+      <img
+        src="/lakenorman/assets/mentor.jpg?v=20260826-2"
+        alt=""
+      >
+
+      <i class="ico navy">
+        ♙
+      </i>
+
+      <h3>
+        EXPERTISE
+      </h3>
+
+      <p>
+        Professional skills,<br>
+        services &amp; support.
+      </p>
+
+      <button
+        onclick="location.href='/business/services.html'"
+      >
+        LEARN MORE →
+      </button>
+
+    </article>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- ======================================================
+     LIVE RESOURCES — HOMEPAGE "REAL NEEDS" FORMAT
+     ====================================================== -->
+
+<section
+  id="available-resources"
+  class="needs-section resource-live-section"
+>
+
+  <div class="needs-grid">
+
+
+    <div class="needs-intro">
+
+      <h2>
+        Available.<br>
+        Useful.<br>
+        Local.
+      </h2>
+
+
+      <p>
+        Explore resources currently
+        available from participating businesses.
+      </p>
+
+
+      <p>
+        Anyone can browse.
+        Approved LINK nonprofits can request.
+      </p>
+
+
+      <button
+        class="gold-btn"
+        onclick="location.href='/business/'"
+      >
+        BUSINESS:<br>
+        POST A RESOURCE →
+      </button>
+
+
+      <button
+        class="resource-secondary-button"
+        onclick="location.href='/nonprofits/'"
+      >
+        NONPROFIT SIGN IN →
+      </button>
+
+    </div>
+
+
+    <div class="resource-live-content">
+
+      <div
+        id="pageStatus"
+        class="page-status"
+        aria-live="polite"
+      ></div>
+
+
+      <div
+        id="resourceGrid"
+        class="resource-grid"
+      ></div>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- ======================================================
+     COMPACT RULE PANEL
+     SAME WHITE-PANEL LANGUAGE AS HOMEPAGE PARTNERS
+     ====================================================== -->
+
+<section class="resource-policy-wrap">
+
+  <div class="resource-policy-panel">
+
+
+    <div class="resource-policy-number">
+
+      <strong>
+        30
+      </strong>
+
+      <span>
+        DAYS
+      </span>
+
+    </div>
+
+
+    <div class="resource-policy-copy">
+
+      <div class="resource-policy-kicker">
+        KEEPING THE EXCHANGE CURRENT
+      </div>
+
+      <h2>
+        Mission-use physical resources
+        stay live for up to 30 days.
+      </h2>
+
+      <p>
+        Furniture, equipment, supplies, technology
+        and other physical resources automatically
+        leave the active exchange after 30 days unless
+        the business confirms they are still available.
+      </p>
+
+    </div>
+
+
+    <div class="resource-policy-gate">
+
+      <strong>
+        PUBLIC TO BROWSE.
+        APPROVED NONPROFITS TO REQUEST.
+      </strong>
+
+      <p>
+        Business contact information, pickup details
+        and the actual resource connection are reserved
+        for approved LINK nonprofit partners.
+      </p>
+
+
+      <div class="resource-policy-buttons">
+
+        <a href="/nonprofits/">
+          SIGN IN →
+        </a>
+
+        <a
+          class="outline"
+          href="/lakenorman/nonprofits/register.html"
+        >
+          CLAIM / UPDATE →
+        </a>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- ======================================================
+     EXACT HOMEPAGE NAVY ECOSYSTEM FORMAT
+     ====================================================== -->
+
+<section
+  id="ecosystem"
+  class="ecosystem resource-ecosystem"
+>
+
+  <div class="ecosystem-shell">
+
+
+    <div class="eco-copy">
+
+      <div class="eco-kicker">
+        HOW THE RESOURCE EXCHANGE WORKS
+      </div>
+
+
+      <h2>
+        LINK Makes
+        the Connection.
+      </h2>
+
+
+      <p>
+        LINK makes useful resources visible,
+        verifies nonprofit participation and
+        facilitates the introduction.
+      </p>
+
+
+      <a
+        class="resource-eco-button"
+        href="/business/"
+      >
+        POST A RESOURCE →
+      </a>
+
+    </div>
+
+
+
+    <div class="resource-process-flow">
+
+
+      <article>
+
+        <b>
+          1
+        </b>
+
+        <strong>
+          BUSINESS POSTS
+        </strong>
+
+        <span>
+          A useful local resource
+        </span>
+
+      </article>
+
+
+      <div class="resource-process-arrow">
+        →
+      </div>
+
+
+      <article>
+
+        <b>
+          2
+        </b>
+
+        <strong>
+          NONPROFIT REQUESTS
+        </strong>
+
+        <span>
+          Approved LINK partner
+        </span>
+
+      </article>
+
+
+      <div class="resource-process-arrow">
+        →
+      </div>
+
+
+      <article>
+
+        <b>
+          3
+        </b>
+
+        <strong>
+          LINK CONNECTS
+        </strong>
+
+        <span>
+          Business + nonprofit
+        </span>
+
+      </article>
+
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- ======================================================
+     EXACT HOMEPAGE GOLD CTA FORMAT
+     ====================================================== -->
+
+<section class="footer-cta">
+
+  <div class="footer-shell">
+
+
+    <div class="footer-message">
+
+      <span class="heart">
+        ♡
+      </span>
+
+
+      <div>
+
+        <strong>
+          Have Something Useful to Share?
+        </strong>
+
+        <small>
+          Before you toss it, see if a local nonprofit can use it.
+        </small>
+
+      </div>
+
+    </div>
+
+
+    <button
+      onclick="location.href='/business/'"
+    >
+      POST A RESOURCE →
+    </button>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- ======================================================
+     SMALL LEGAL DISCLOSURE
+     ====================================================== -->
+
+<div class="resource-disclosure">
+
+  LINK Community Hub™ facilitates the connection.
+  LINK does not collect funds, hold donations,
+  store inventory, arrange delivery, determine
+  tax deductibility, issue donation receipts or
+  take possession of donated property.
+
+</div>
+
+
+
+<section
+  id="link-resource-branded-graphics"
+  class="link-branded-section"
+  aria-labelledby="link-resource-graphic-heading"
+>
+  <div class="link-branded-section-heading">
+    <span>RESOURCE EXCHANGE</span>
+
+    <h2 id="link-resource-graphic-heading">
+      Useful Resources. Local Needs. One Connected Community.
+    </h2>
+
+    <p>
+      Businesses can list useful items once.
+      Approved LINK nonprofits can see what is available and
+      request resources that support their mission and fundraising.
+    </p>
+  </div>
+
+  <div class="link-branded-grid">
+
+    <article class="link-branded-card">
+      
+
+      <div class="link-branded-actions">
+        <a
+          class="teal"
+          href="/nonprofits/"
+        >
+          Nonprofit Sign In →
+        </a>
+
+        <a
+          class="secondary"
+          href="/lakenorman/nonprofits/"
+        >
+          Explore Local Nonprofits →
+        </a>
+      </div>
+    </article>
+
+
+    <article class="link-branded-card">
+      <img
+        src="/lakenorman/assets/partner-graphics/business-simpler-local-giving.png"
+        alt="For businesses, LINK makes local giving simpler"
+      >
+
+      <div class="link-branded-actions">
+        <a
+          class="green"
+          href="/business/#business-access"
+        >
+          Join as a Business →
+        </a>
+
+        <a
+          class="secondary"
+          href="/business/"
+        >
+          Business Community Impact →
+        </a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+</main>
+
+
+
+<!-- ======================================================
+     EXISTING LIVE REQUEST HOOKS — UNCHANGED IDS
+     ====================================================== -->
+
+<div
+  id="requestModal"
+  class="resource-modal"
+  aria-hidden="true"
+>
+
+  <div class="resource-modal-card">
+
+
+    <div class="resource-modal-head">
+
+      <div>
+
+        <div class="modal-kicker">
+          APPROVED NONPROFIT REQUEST
+        </div>
+
+        <h2 id="requestTitle">
+          Request This Resource
+        </h2>
+
+      </div>
+
+
+      <button
+        id="closeModal"
+        type="button"
+        class="close-button"
+        aria-label="Close"
+      >
+        ×
+      </button>
+
+    </div>
+
+
+
+    <form id="requestForm">
+
+
+      <input
+        id="requestItemId"
+        type="hidden"
+      >
+
+
+      <label>
+        Approved nonprofit *
+
+        <select
+          id="nonprofitSelect"
+          required
+        >
+
+          <option value="">
+            Select your organization
+          </option>
+
+        </select>
+
+      </label>
+
+
+      <label>
+        Your name *
+
+        <input
+          id="contactName"
+          required
+          maxlength="140"
+          autocomplete="name"
+        >
+
+      </label>
+
+
+      <label>
+        Nonprofit email *
+
+        <input
+          id="contactEmail"
+          type="email"
+          required
+          maxlength="180"
+          autocomplete="email"
+        >
+
+      </label>
+
+
+      <label>
+        Message to the business
+
+        <textarea
+          id="message"
+          maxlength="2000"
+        ></textarea>
+
+      </label>
+
+
+      <label class="check-row">
+
+        <input
+          id="disclaimerAccepted"
+          type="checkbox"
+          required
+        >
+
+        <span>
+          I understand the request does not reserve
+          or guarantee the resource. LINK facilitates
+          the connection; the business and nonprofit
+          handle the transfer directly.
+        </span>
+
+      </label>
+
+
+      <button
+        class="resource-request-button"
+        type="submit"
+      >
+        SEND REQUEST →
+      </button>
+
+
+      <p
+        id="requestStatus"
+        class="status"
+        aria-live="polite"
+      ></p>
+
+
+    </form>
+
+
+  </div>
+
+</div>
+
+
+
+<script
+  type="module"
+  src="/lakenorman/resources/resources.js?v=20260826221302"
+></script>
+
+
+<!-- LINK STANDARD LAUNCH FOOTER START -->
+<footer
+  class="link-launch-footer"
+  aria-label="LINK Community Hub footer"
+>
+  <div class="link-launch-footer-inner">
+
+    <div class="link-launch-footer-main">
+
+      <div>
+        <h3>
+          LINK Community Hub™ · Lake Norman
+        </h3>
+
+        <p>
+          Connecting people, organizations,
+          resources, needs and opportunities
+          across our community.
+        </p>
+
+        <a
+          class="link-launch-footer-email"
+          href="mailto:info@linkcommunityhub.com"
+        >
+          info@linkcommunityhub.com
+        </a>
+      </div>
+
+      <div class="link-launch-footer-column">
+
+        <h3>Connect With LINK</h3>
+
+        <a
+          href="https://www.facebook.com/profile.php?id=61589327911858"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Facebook
+        </a>
+
+        <a
+          href="https://www.instagram.com/linklkncommunityhub/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Instagram
+        </a>
+
+        <a
+          href="https://www.linkedin.com/showcase/143558228/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn
+        </a>
+
+      </div>
+
+      <div class="link-launch-footer-column">
+
+        <h3>
+          Information & Protection
+        </h3>
+
+        <a
+          href="/legal.html"
+        >
+          Privacy & Data Protection
+        </a>
+
+        <a
+          href="/legal.html"
+        >
+          Terms & Platform Use
+        </a>
+
+        <a
+          href="/legal.html#intellectual-property"
+        >
+          Intellectual Property & Content
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="link-launch-footer-bottom">
+
+      <div class="link-launch-footer-copyright">
+        © 2026 Link Holdings Group, LLC —
+        All Rights Reserved.
+        LINK Community Hub™ and associated
+        brand, platform, designs, content,
+        systems and materials are proprietary.
+      </div>
+
+      <div class="link-launch-footer-legal">
+
+        <a href="/legal.html">
+          Privacy
+        </a>
+
+        <a href="/legal.html">
+          Terms
+        </a>
+
+        <a href="/legal.html#intellectual-property">
+          IP Protection
+        </a>
+
+        <a href="mailto:info@linkcommunityhub.com">
+          Contact
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+</footer>
+<!-- LINK STANDARD LAUNCH FOOTER END -->
+</body>
+</html>

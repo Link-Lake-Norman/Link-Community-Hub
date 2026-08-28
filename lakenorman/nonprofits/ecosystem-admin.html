@@ -1,0 +1,577 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <title>
+    LINK Ecosystem Records | Admin
+  </title>
+
+  <meta
+    name="robots"
+    content="noindex,nofollow"
+  >
+
+  <link
+    rel="stylesheet"
+    href="../styles.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="/lakenorman/assets/link-public-shell.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="/lakenorman/assets/link-standard-header.css?v=20260827-104156"
+  >
+
+  <link
+    rel="stylesheet"
+    href="./ecosystem-admin.css"
+  >
+
+  <link rel="stylesheet" href="/lakenorman/nonprofits/admin-system.css">
+</head>
+
+<body>
+
+<header class="link-standard-header">
+  <div class="link-standard-header-inner">
+    <a
+      class="link-standard-brand"
+      href="/lakenorman/"
+      aria-label="LINK Community Hub — Lake Norman"
+    >
+      <img
+        src="/lakenorman/assets/brand/link-horizontal-logo.png"
+        alt="LINK Community Hub™ · Lake Norman"
+      >
+    </a>
+  </div>
+</header>
+<nav
+  class="link-standard-nav"
+  aria-label="LINK Community Hub navigation"
+>
+  <a href="/lakenorman/">Home</a>
+  <a href="/lakenorman/nonprofits/">Nonprofits</a>
+  <a href="/business/">Businesses</a>
+  <a href="/lakenorman/community/">Community</a>
+  <a href="/lakenorman/resources/">Resource Exchange</a>
+  <a href="/lakenorman/support-local/">
+    Support Local
+    <span class="link-standard-coming-soon">
+      COMING SOON
+    </span>
+  </a>
+</nav>
+
+<section class="link-admin-topbar">
+
+  <div class="link-admin-topbar-inner">
+
+    <div class="link-admin-topbar-label">
+
+      <span>
+        LINK ADMIN
+      </span>
+
+      <strong>
+        Command Center
+      </strong>
+
+    </div>
+
+    <div class="link-admin-topbar-links">
+
+      <a
+        class=""
+        href="/lakenorman/nonprofits/admin.html"
+      >
+        Operations
+      </a>
+
+      <a
+        class="is-active"
+        href="/lakenorman/nonprofits/ecosystem-admin.html"
+      >
+        Ecosystem Records
+      </a>
+
+      <a
+        class=""
+        href="/lakenorman/nonprofits/communications.html"
+      >
+        Messaging
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<main class="eco-admin">
+
+  <section class="eco-admin-intro">
+
+    <div>
+
+      <p class="eco-eyebrow">
+        LINK ADMIN
+      </p>
+
+      <h1>
+        Ecosystem Records
+      </h1>
+
+      <p>
+        One administrative view across nonprofits,
+        businesses, community participation,
+        resources, events, media and portal submissions.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <section
+    id="eco-auth"
+    class="eco-auth"
+  >
+
+    <h2>
+      Admin Access
+    </h2>
+
+    <p>
+      Use your existing LINK Admin password.
+    </p>
+
+    <form id="eco-auth-form">
+
+      <label for="eco-password">
+        Admin Password
+      </label>
+
+      <input
+        id="eco-password"
+        type="password"
+        autocomplete="current-password"
+        required
+      >
+
+      <button type="submit">
+        Open Ecosystem Records
+      </button>
+
+    </form>
+
+    <p
+      id="eco-auth-error"
+      class="eco-error"
+      hidden
+    ></p>
+
+  </section>
+
+
+  <section
+    id="eco-app"
+    hidden
+  >
+
+    <div class="eco-toolbar">
+
+      <div
+        id="eco-tabs"
+        class="eco-tabs"
+      >
+
+        <button
+          type="button"
+          data-view="overview"
+          class="is-active"
+        >
+          Overview
+        </button>
+
+        <button
+          type="button"
+          data-view="nonprofits"
+        >
+          Nonprofits
+        </button>
+
+        <button
+          type="button"
+          data-view="businesses"
+        >
+          Businesses
+        </button>
+
+        <button
+          type="button"
+          data-view="community"
+        >
+          Community
+        </button>
+
+        <button
+          type="button"
+          data-view="resources"
+        >
+          Resources
+        </button>
+
+        <button
+          type="button"
+          data-view="events"
+        >
+          Events + Media
+        </button>
+
+        <button
+          type="button"
+          data-view="submissions"
+        >
+          Submissions
+        </button>
+
+      </div>
+
+
+      <div class="eco-toolbar-actions">
+
+        <label class="eco-search">
+
+          <span>
+            Search all records
+          </span>
+
+          <input
+            id="eco-search"
+            type="search"
+            placeholder="Name, email, city, organization…"
+          >
+
+        </label>
+
+        <button
+          id="eco-refresh"
+          type="button"
+        >
+          Refresh
+        </button>
+
+        <button
+          id="eco-lock"
+          type="button"
+        >
+          Lock
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <p
+      id="eco-status"
+      class="eco-status"
+    >
+      Loading…
+    </p>
+
+
+    <section
+      id="view-overview"
+      class="eco-view"
+    >
+
+      <div
+        id="eco-stats"
+        class="eco-stats"
+      ></div>
+
+
+      <div class="eco-notice">
+
+        <strong>
+          Admin-only information:
+        </strong>
+
+        Contact names, direct email addresses,
+        phone numbers and original portal submissions
+        shown here are administrative records.
+        They are not automatically published
+        on the public website.
+
+      </div>
+
+    </section>
+
+
+    <section
+      id="view-nonprofits"
+      class="eco-view"
+      hidden
+    >
+
+      <div class="eco-section-heading">
+
+        <div>
+
+          <p class="eco-eyebrow">
+            ORGANIZATIONS
+          </p>
+
+          <h2>
+            Nonprofit Records
+          </h2>
+
+        </div>
+
+        <p>
+          Organization profile, portal submission,
+          contact information, service areas,
+          needs, opportunities, events and media.
+        </p>
+
+      </div>
+
+      <div
+        id="eco-nonprofits"
+        class="eco-record-grid"
+      ></div>
+
+    </section>
+
+
+    <section
+      id="view-businesses"
+      class="eco-view"
+      hidden
+    >
+
+      <div class="eco-section-heading">
+
+        <div>
+
+          <p class="eco-eyebrow">
+            BUSINESS
+          </p>
+
+          <h2>
+            Business Records
+          </h2>
+
+        </div>
+
+        <p>
+          Portal profile, contacts, membership,
+          impact activity, resources and services.
+        </p>
+
+      </div>
+
+      <div
+        id="eco-businesses"
+        class="eco-record-grid"
+      ></div>
+
+    </section>
+
+
+    <section
+      id="view-community"
+      class="eco-view"
+      hidden
+    >
+
+      <div class="eco-section-heading">
+
+        <div>
+
+          <p class="eco-eyebrow">
+            COMMUNITY
+          </p>
+
+          <h2>
+            Community Participants
+          </h2>
+
+        </div>
+
+        <p>
+          Schools, clubs, teams, churches,
+          neighborhoods and other community
+          profiles appear here as they register.
+        </p>
+
+      </div>
+
+      <div
+        id="eco-community"
+        class="eco-record-grid"
+      ></div>
+
+    </section>
+
+
+    <section
+      id="view-resources"
+      class="eco-view"
+      hidden
+    >
+
+      <div class="eco-section-heading">
+
+        <div>
+
+          <p class="eco-eyebrow">
+            RESOURCE EXCHANGE
+          </p>
+
+          <h2>
+            Resources + Requests
+          </h2>
+
+        </div>
+
+      </div>
+
+      <div
+        id="eco-resources"
+        class="eco-record-grid"
+      ></div>
+
+    </section>
+
+
+    <section
+      id="view-events"
+      class="eco-view"
+      hidden
+    >
+
+      <div class="eco-section-heading">
+
+        <div>
+
+          <p class="eco-eyebrow">
+            COMMUNITY CONTENT
+          </p>
+
+          <h2>
+            Events + Media
+          </h2>
+
+        </div>
+
+      </div>
+
+      <div
+        id="eco-events"
+        class="eco-record-grid"
+      ></div>
+
+    </section>
+
+
+    <section
+      id="view-submissions"
+      class="eco-view"
+      hidden
+    >
+
+      <div class="eco-section-heading">
+
+        <div>
+
+          <p class="eco-eyebrow">
+            ORIGINAL RECORDS
+          </p>
+
+          <h2>
+            Portal Submissions
+          </h2>
+
+        </div>
+
+        <p>
+          Original nonprofit registration information
+          as submitted through the portal.
+        </p>
+
+      </div>
+
+      <div
+        id="eco-submissions"
+        class="eco-record-grid"
+      ></div>
+
+    </section>
+
+  </section>
+
+</main>
+
+
+<dialog
+  id="eco-detail"
+  class="eco-detail"
+>
+
+  <div class="eco-detail-head">
+
+    <div>
+
+      <p
+        id="eco-detail-type"
+        class="eco-eyebrow"
+      ></p>
+
+      <h2 id="eco-detail-title"></h2>
+
+    </div>
+
+    <button
+      id="eco-detail-close"
+      type="button"
+      aria-label="Close record"
+    >
+      ×
+    </button>
+
+  </div>
+
+
+  <div
+    id="eco-detail-content"
+    class="eco-detail-content"
+  ></div>
+
+</dialog>
+
+
+<script
+  src="./ecosystem-admin.js"
+  defer
+></script>
+
+</body>
+
+</html>

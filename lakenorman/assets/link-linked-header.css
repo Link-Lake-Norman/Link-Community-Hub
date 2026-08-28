@@ -1,0 +1,195 @@
+/*
+ * LINK COMMUNITY HUB™
+ * LINKED PUBLIC PAGE HEADER
+ *
+ * Included only on public pages other than the main homepage.
+ *
+ * Purpose:
+ * - one existing header
+ * - one existing navigation
+ * - full-width white brand strip
+ * - no floating white logo card
+ * - no giant navy logo hero
+ */
+
+
+/* ---------------------------------------------------------
+   FULL-WIDTH WHITE BRAND STRIP
+   --------------------------------------------------------- */
+
+.link-public-header,
+.directory-header,
+.resource-header {
+  box-sizing:border-box !important;
+
+  width:100% !important;
+
+  min-height:88px !important;
+  height:auto !important;
+
+  margin:0 !important;
+
+  padding:12px 32px !important;
+
+  display:flex !important;
+  align-items:center !important;
+
+  background:#ffffff !important;
+  background-image:none !important;
+
+  border:0 !important;
+  border-bottom:1px solid rgba(11,35,68,.12) !important;
+
+  border-radius:0 !important;
+
+  box-shadow:none !important;
+
+  overflow:visible !important;
+
+  position:relative !important;
+  inset:auto !important;
+
+  transform:none !important;
+}
+
+
+/*
+ * Kill old decorative/hero layers that were making the
+ * header look like a large navy hero.
+ */
+
+.link-public-header::before,
+.link-public-header::after,
+.directory-header::before,
+.directory-header::after,
+.resource-header::before,
+.resource-header::after {
+  content:none !important;
+  display:none !important;
+}
+
+
+/* ---------------------------------------------------------
+   BRAND LINK — NO SEPARATE WHITE CARD
+   --------------------------------------------------------- */
+
+.link-public-header a:first-child,
+.directory-link-brand,
+.resource-header .brand {
+  display:inline-flex !important;
+  align-items:center !important;
+
+  width:auto !important;
+  height:auto !important;
+
+  max-width:330px !important;
+
+  margin:0 !important;
+  padding:0 !important;
+
+  background:transparent !important;
+
+  border:0 !important;
+  border-radius:0 !important;
+
+  box-shadow:none !important;
+
+  transform:none !important;
+
+  text-decoration:none !important;
+}
+
+
+/* ---------------------------------------------------------
+   HORIZONTAL LINK LOGO
+   --------------------------------------------------------- */
+
+.link-public-header img,
+.directory-link-brand img,
+.resource-header .brand img {
+  display:block !important;
+
+  width:auto !important;
+  height:62px !important;
+
+  max-width:310px !important;
+  max-height:62px !important;
+
+  margin:0 !important;
+  padding:0 !important;
+
+  object-fit:contain !important;
+
+  border:0 !important;
+  border-radius:0 !important;
+
+  box-shadow:none !important;
+
+  transform:none !important;
+}
+
+
+/* ---------------------------------------------------------
+   ANY SMALL HEADER LINKS THAT SHARE THIS ROW
+   --------------------------------------------------------- */
+
+.link-public-header nav,
+.directory-header nav,
+.resource-header nav {
+  margin-left:auto !important;
+
+  display:flex !important;
+  align-items:center !important;
+
+  gap:18px !important;
+}
+
+.link-public-header nav a,
+.directory-header nav a,
+.resource-header nav a,
+.resource-header .back-link {
+  color:#0b2344 !important;
+
+  background:transparent !important;
+
+  font-size:10px !important;
+  font-weight:800 !important;
+
+  text-decoration:none !important;
+}
+
+
+/*
+ * Leave the existing ecosystem navigation BELOW this header
+ * exactly as it is.
+ */
+
+.link-ecosystem-nav {
+  margin-top:0 !important;
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE
+   --------------------------------------------------------- */
+
+@media(max-width:700px) {
+
+  .link-public-header,
+  .directory-header,
+  .resource-header {
+    min-height:72px !important;
+
+    padding:10px 16px !important;
+  }
+
+  .link-public-header img,
+  .directory-link-brand img,
+  .resource-header .brand img {
+    height:48px !important;
+
+    max-height:48px !important;
+    max-width:235px !important;
+  }
+
+}

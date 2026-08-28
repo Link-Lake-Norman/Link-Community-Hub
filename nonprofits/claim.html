@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <title>
+    Claim Your Nonprofit Profile | LINK Community Hub™
+  </title>
+
+  <link
+    rel="stylesheet"
+    href="/lakenorman/styles.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="/lakenorman/assets/link-public-shell.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="/lakenorman/assets/link-standard-header.css?v=20260827-104156"
+  >
+
+  <link
+    rel="stylesheet"
+    href="/nonprofits/claim.css"
+  >
+
+</head>
+
+<body>
+
+<header class="link-standard-header">
+  <div class="link-standard-header-inner">
+    <a
+      class="link-standard-brand"
+      href="/lakenorman/"
+      aria-label="LINK Community Hub — Lake Norman"
+    >
+      <img
+        src="/lakenorman/assets/brand/link-horizontal-logo.png"
+        alt="LINK Community Hub™ · Lake Norman"
+      >
+    </a>
+  </div>
+</header>
+<nav
+  class="link-standard-nav"
+  aria-label="LINK Community Hub navigation"
+>
+  <a href="/lakenorman/">Home</a>
+  <a href="/lakenorman/nonprofits/">Nonprofits</a>
+  <a href="/business/">Businesses</a>
+  <a href="/lakenorman/community/">Community</a>
+  <a href="/lakenorman/resources/">Resource Exchange</a>
+  <a href="/lakenorman/support-local/">
+    Support Local
+    <span class="link-standard-coming-soon">
+      COMING SOON
+    </span>
+  </a>
+</nav>
+
+<main class="claim-page">
+
+  <section
+    id="claim-loading"
+    class="claim-card"
+  >
+
+    <p>
+      Verifying your secure LINK invitation…
+    </p>
+
+  </section>
+
+
+  <section
+    id="claim-card"
+    class="claim-card"
+    hidden
+  >
+
+    <p class="claim-eyebrow">
+      LINK NONPROFIT PORTAL
+    </p>
+
+    <h1>
+      Claim & Update Your Profile
+    </h1>
+
+    <p>
+      Your organization is already part of
+      LINK Community Hub™.
+    </p>
+
+    <div class="claim-org">
+
+      <strong id="claim-org-name"></strong>
+
+      <span id="claim-email"></span>
+
+    </div>
+
+
+    <form id="claim-form">
+
+      <label>
+        Your Name
+
+        <input
+          id="claim-name"
+          type="text"
+          autocomplete="name"
+          required
+        >
+      </label>
+
+      <label>
+        Title / Role
+
+        <input
+          id="claim-title"
+          type="text"
+          autocomplete="organization-title"
+        >
+      </label>
+
+      <label>
+        Phone
+
+        <input
+          id="claim-phone"
+          type="tel"
+          autocomplete="tel"
+        >
+      </label>
+
+
+      <button type="submit">
+        Claim Profile & Continue
+      </button>
+
+    </form>
+
+
+    <p
+      id="claim-result"
+      class="claim-result"
+    ></p>
+
+  </section>
+
+
+  <section
+    id="claim-error"
+    class="claim-card claim-error"
+    hidden
+  >
+
+    <h1>
+      This invitation cannot be used.
+    </h1>
+
+    <p id="claim-error-text"></p>
+
+    <a href="/lakenorman/nonprofits/">
+      Return to Nonprofit Directory
+    </a>
+
+  </section>
+
+</main>
+
+
+<script
+  src="/nonprofits/claim.js"
+  defer
+></script>
+
+</body>
+</html>

@@ -1,1 +1,109 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>LINK Nonprofit Portal™</title><link rel="stylesheet" href="/business/styles.css"></head><body><main class="auth-page"><section class="auth-card"><img src="/lakenorman/assets/brand/link-primary-logo.png" alt="LINK Community Hub" style="max-width:280px;width:80%;display:block;margin:0 auto 24px"><div class="eyebrow">NONPROFIT PORTAL</div><h1>Share needs. Tell your story. Connect locally.</h1><p>Approved LINK nonprofits can manage community photos and stories and connect with participating service providers.</p><form id="login"><label>Authorized nonprofit email<input id="email" type="email" required></label><button class="primary" type="submit">Email My Secure Sign-In Link</button><p id="status" class="status"></p></form></section></main><script>document.querySelector('#login').onsubmit=async e=>{e.preventDefault();const s=document.querySelector('#status');s.textContent='Sending…';try{const r=await fetch('/api/nonprofits/portal/auth/request',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:document.querySelector('#email').value})});const j=await r.json();if(!r.ok)throw new Error(j.error);s.className='status success';s.textContent=j.message;}catch(x){s.className='status error';s.textContent=x.message;}};</script></body></html>
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>LINK Nonprofit Portal™</title><link rel="stylesheet" href="/business/styles.css">  <link rel="stylesheet" href="/lakenorman/assets/link-public-shell.css">
+
+<link rel="stylesheet" href="/lakenorman/assets/link-standard-header.css?v=20260827-094954">
+<link rel="stylesheet" href="/nonprofits/signin.css?v=20260827-114536">
+</head><body>
+
+<header class="link-standard-header">
+  <div class="link-standard-header-inner">
+    <a
+      class="link-standard-brand"
+      href="/lakenorman/"
+      aria-label="LINK Community Hub — Lake Norman"
+    >
+      <img
+        src="/lakenorman/assets/brand/link-horizontal-logo.png"
+        alt="LINK Community Hub™ · Lake Norman"
+      >
+    </a>
+  </div>
+</header>
+
+<nav
+  class="link-standard-nav"
+  aria-label="LINK Community Hub navigation"
+>
+  <a href="/lakenorman/">Home</a>
+  <a href="/lakenorman/nonprofits/">Nonprofits</a>
+  <a href="/business/">Businesses</a>
+  <a href="/lakenorman/community/">Community</a>
+  <a href="/lakenorman/resources/">Resource Exchange</a>
+  <a href="/lakenorman/support-local/">
+    Support Local
+    <span class="link-standard-coming-soon">
+      COMING SOON
+    </span>
+  </a>
+</nav>
+
+<main class="nonprofit-signin-page">
+  <div class="nonprofit-signin-wrap">
+
+    <section class="nonprofit-signin-card">
+
+      <div class="nonprofit-signin-copy">
+        <div class="nonprofit-signin-kicker">
+          NONPROFIT PORTAL
+        </div>
+
+        <h1>
+          Share needs. Tell your story. Connect locally.
+        </h1>
+
+        <p>
+          Approved LINK nonprofit partners can manage their
+          community presence, share stories and events, and
+          connect with local resources through LINK.
+        </p>
+      </div>
+
+      <div class="nonprofit-signin-form-panel">
+
+        <form
+          id="login"
+          class="nonprofit-signin-form"
+        >
+          <h2 class="nonprofit-signin-form-title">
+            Sign in to your nonprofit portal
+          </h2>
+
+          <p class="nonprofit-signin-form-copy">
+            Enter the authorized email associated with your
+            organization.
+          </p>
+
+          <label>
+            Authorized nonprofit email
+            <input
+              id="email"
+              type="email"
+              autocomplete="email"
+              required
+            >
+          </label>
+
+          <button
+            class="primary"
+            type="submit"
+          >
+            Email My Secure Sign-In Link
+          </button>
+
+          <p
+            id="status"
+            class="status"
+          ></p>
+
+          <p class="nonprofit-signin-note">
+            Participation in LINK Community Hub™ is free for
+            approved nonprofit organizations serving the
+            Lake Norman community.
+          </p>
+        </form>
+
+      </div>
+
+    </section>
+
+  </div>
+</main><script>document.querySelector('#login').onsubmit=async e=>{e.preventDefault();const s=document.querySelector('#status');s.textContent='Sending…';try{const r=await fetch('/api/nonprofits/portal/auth/request',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:document.querySelector('#email').value})});const j=await r.json();if(!r.ok)throw new Error(j.error);s.className='status success';s.textContent=j.message;}catch(x){s.className='status error';s.textContent=x.message;}};</script></body></html>

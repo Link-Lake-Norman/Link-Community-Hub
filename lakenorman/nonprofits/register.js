@@ -35,11 +35,18 @@
 
       message.hidden = true;
 
+      var formData =
+        new FormData(form);
+
       var serviceAreas =
-        new FormData(form)
-          .getAll(
-            "serviceAreas"
-          );
+        formData.getAll(
+          "serviceAreas"
+        );
+
+      var submissionType =
+        String(
+          formData.get("submissionType") || ""
+        );
 
       if (!serviceAreas.length) {
         showMessage(
@@ -89,12 +96,29 @@
 
         form.reset();
 
+        var successHtml;
+
+        if (
+          submissionType === "update" ||
+          submissionType === "renewal"
+        ) {
+          successHtml =
+            "<strong>Your LINK nonprofit update has been received.</strong>" +
+            "<br>Your current organization listing remains active while LINK reviews your updates." +
+            "<br>After approval, the authorized contact email you submitted can be used to access the secure LINK Nonprofit Portal." +
+            "<br><strong>Reference:</strong> " +
+            String(data.reference || "");
+        } else {
+          successHtml =
+            "<strong>Submission received.</strong>" +
+            "<br>Your organization has been placed in the LINK review queue." +
+            "<br><strong>Reference:</strong> " +
+            String(data.reference || "");
+        }
+
         showMessage(
           "success",
-          "<strong>Submission received.</strong>" +
-          "<br>Your organization has been placed in the LINK review queue." +
-          "<br><strong>Reference:</strong> " +
-          String(data.reference || "")
+          successHtml
         );
 
         message.scrollIntoView({

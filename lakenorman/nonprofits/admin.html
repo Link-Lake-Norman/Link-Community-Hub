@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
 
@@ -8,8 +9,13 @@
     content="width=device-width,initial-scale=1"
   >
 
+  <meta
+    name="robots"
+    content="noindex,nofollow"
+  >
+
   <title>
-    LINK Nonprofit Review
+    LINK Admin Command Center
   </title>
 
   <link
@@ -19,52 +25,125 @@
 
   <link
     rel="stylesheet"
-    href="./admin.css"
+    href="/lakenorman/assets/link-public-shell.css"
   >
+
+  <link
+    rel="stylesheet"
+    href="../assets/link-standard-header.css?v=20260827-104156"
+  >
+
+  <link
+    rel="stylesheet"
+    href="./admin.css?v=20260827-command-center"
+  >
+  <link rel="stylesheet" href="/lakenorman/nonprofits/admin-system.css">
 </head>
 
-<body class="link-review-page">
+<body class="link-admin-page">
 
-<header class="review-header">
-
-  <div>
-    <strong>LINK</strong>
-    <span>
-      Nonprofit Governance
-    </span>
+<header class="link-standard-header">
+  <div class="link-standard-header-inner">
+    <a
+      class="link-standard-brand"
+      href="/lakenorman/"
+      aria-label="LINK Community Hub — Lake Norman"
+    >
+      <img
+        src="/lakenorman/assets/brand/link-horizontal-logo.png"
+        alt="LINK Community Hub™ · Lake Norman"
+      >
+    </a>
   </div>
-
-  <nav>
-    <a href="./">
-      Directory
-    </a>
-
-    <a href="./register.html">
-      Registration Form
-    </a>
-  </nav>
-
 </header>
 
+<nav
+  class="link-standard-nav"
+  aria-label="LINK Community Hub navigation"
+>
+  <a href="/lakenorman/">Home</a>
+  <a href="/lakenorman/nonprofits/">Nonprofits</a>
+  <a href="/business/">Businesses</a>
+  <a href="/lakenorman/community/">Community</a>
+  <a href="/lakenorman/resources/">Resource Exchange</a>
+  <a href="/lakenorman/support-local/">
+    Support Local
+    <span class="link-standard-coming-soon">
+      COMING SOON
+    </span>
+  </a>
+</nav>
 
-<main class="review-main">
+<section class="link-admin-topbar">
 
-  <section class="review-intro">
+  <div class="link-admin-topbar-inner">
 
-    <div>
+    <div class="link-admin-topbar-label">
+
       <span>
         LINK ADMIN
       </span>
 
+      <strong>
+        Command Center
+      </strong>
+
+    </div>
+
+    <div class="link-admin-topbar-links">
+
+      <a
+        class="is-active"
+        href="/lakenorman/nonprofits/admin.html"
+      >
+        Operations
+      </a>
+
+      <a
+        class=""
+        href="/lakenorman/nonprofits/ecosystem-admin.html"
+      >
+        Ecosystem Records
+      </a>
+
+      <a
+        class=""
+        href="/lakenorman/nonprofits/communications.html"
+      >
+        Messaging
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<main class="admin-shell">
+
+  <section class="admin-hero">
+
+    <div>
+      <span class="admin-eyebrow">
+        LINK ADMIN
+      </span>
+
       <h1>
-        Nonprofit Review Queue
+        Command Center
       </h1>
 
       <p>
-        Verify identity, Lake Norman service,
-        submitted information, authorization,
-        opportunities and publication status.
+        Manage nonprofit approvals, organizations,
+        events, media and LINK publishing tools from
+        one secure workspace.
       </p>
+    </div>
+
+    <div class="admin-hero-status">
+      <span>LAKE NORMAN</span>
+      <strong>Community Operations</strong>
     </div>
 
   </section>
@@ -75,13 +154,16 @@
     class="admin-unlock"
   >
 
+    <span class="admin-eyebrow">
+      SECURE ACCESS
+    </span>
+
     <h2>
-      Admin Access
+      Open Admin Command Center
     </h2>
 
     <p>
-      Enter the LINK admin access key for this
-      staging review system.
+      Enter your LINK administrator access key.
     </p>
 
     <form id="adminUnlockForm">
@@ -90,19 +172,19 @@
         id="adminKey"
         type="password"
         autocomplete="current-password"
-        placeholder="LINK admin key"
+        placeholder="LINK admin access key"
         required
       >
 
       <button type="submit">
-        OPEN REVIEW QUEUE
+        OPEN COMMAND CENTER
       </button>
 
     </form>
 
     <div
       id="unlockError"
-      class="review-error"
+      class="admin-message error"
       hidden
     ></div>
 
@@ -111,77 +193,671 @@
 
   <section
     id="adminWorkspace"
+    class="admin-workspace"
     hidden
   >
 
-    <div class="review-toolbar">
+    <div class="admin-topbar">
+
+      <div>
+        <strong>
+          Admin Connected
+        </strong>
+
+        <span id="lastRefresh">
+          Loading current LINK data...
+        </span>
+      </div>
+
+      <div>
+        <button
+          id="refreshAdmin"
+          type="button"
+        >
+          Refresh
+        </button>
+
+        <button
+          id="lockAdmin"
+          type="button"
+        >
+          Lock
+        </button>
+      </div>
+
+    </div>
+
+
+    <nav
+      class="admin-tabs"
+      aria-label="LINK Admin sections"
+    >
+
+      <button
+        type="button"
+        class="active"
+        data-panel="dashboard"
+      >
+        Dashboard
+      </button>
+
+      <button
+        type="button"
+        data-panel="submissions"
+      >
+        Submissions
+        <span id="submissionTabCount">0</span>
+      </button>
+
+      <button
+        type="button"
+        data-panel="organizations"
+      >
+        Organizations
+      </button>
+
+      <button
+        type="button"
+        data-panel="events"
+      >
+        Events
+        <span id="eventTabCount">0</span>
+      </button>
+
+      <button
+        type="button"
+        data-panel="media"
+      >
+        Media
+        <span id="mediaTabCount">0</span>
+      </button>
+
+      <button
+        type="button"
+        data-panel="site"
+      >
+        Site Content
+      </button>
+
+    </nav>
+
+
+    <div
+      id="adminNotice"
+      class="admin-message"
+      hidden
+    ></div>
+
+
+    <section
+      class="admin-panel active"
+      data-admin-panel="dashboard"
+    >
+
+      <div class="panel-heading">
+        <span class="admin-eyebrow">
+          OVERVIEW
+        </span>
+
+        <h2>
+          LINK at a Glance
+        </h2>
+
+        <p>
+          Current ecosystem activity and items
+          requiring administrative attention.
+        </p>
+      </div>
 
       <div
-        id="reviewCounts"
-        class="review-counts"
+        id="dashboardStats"
+        class="dashboard-stats"
       ></div>
 
-      <div class="review-filters">
+      <div class="dashboard-grid">
+
+        <article>
+          <span>NONPROFIT GOVERNANCE</span>
+          <h3>Review Submissions</h3>
+          <p>
+            Verify organizations before publication.
+          </p>
+          <button
+            type="button"
+            data-go-panel="submissions"
+          >
+            Open Submissions
+          </button>
+        </article>
+
+        <article>
+          <span>ORGANIZATIONS</span>
+          <h3>Manage Nonprofits</h3>
+          <p>
+            Review active database-managed organizations.
+          </p>
+          <button
+            type="button"
+            data-go-panel="organizations"
+          >
+            Open Organizations
+          </button>
+        </article>
+
+        <article>
+          <span>COMMUNITY CALENDAR</span>
+          <h3>Review Events</h3>
+          <p>
+            Approve, feature or archive events.
+          </p>
+          <button
+            type="button"
+            data-go-panel="events"
+          >
+            Open Events
+          </button>
+        </article>
+
+        <article>
+          <span>COMMUNITY STORIES</span>
+          <h3>Review Media</h3>
+          <p>
+            Review nonprofit-submitted photos.
+          </p>
+          <button
+            type="button"
+            data-go-panel="media"
+          >
+            Open Media
+          </button>
+        </article>
+
+        <article>
+          <span>RESOURCE EXCHANGE</span>
+          <h3>Resource Activity</h3>
+          <p>
+            Review the public Resource Exchange.
+          </p>
+          <a
+            href="/lakenorman/resources/"
+            target="_blank"
+            rel="noopener"
+          >
+            View Resource Exchange
+          </a>
+        </article>
+
+        <article>
+          <span>PUBLISHING</span>
+          <h3>Community Brief</h3>
+          <p>
+            Generate and review LINK publishing content.
+          </p>
+          <button
+            type="button"
+            data-go-panel="site"
+          >
+            Open Publishing Tools
+          </button>
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <section
+      class="admin-panel"
+      data-admin-panel="submissions"
+      hidden
+    >
+
+      <div class="panel-heading">
+        <span class="admin-eyebrow">
+          NONPROFIT GOVERNANCE
+        </span>
+
+        <h2>
+          Nonprofit Submissions
+        </h2>
+
+        <p>
+          Registration and review history.
+        </p>
+      </div>
+
+      <div
+        id="submissionCounts"
+        class="mini-stats"
+      ></div>
+
+      <div
+        id="submissionFilters"
+        class="admin-filters"
+      >
 
         <button
           type="button"
-          data-filter="all"
           class="active"
+          data-submission-filter="all"
         >
           All
         </button>
 
         <button
           type="button"
-          data-filter="pending-review"
+          data-submission-filter="pending-review"
         >
           Pending
         </button>
 
         <button
           type="button"
-          data-filter="needs-information"
+          data-submission-filter="needs-information"
         >
           Needs Info
         </button>
 
         <button
           type="button"
-          data-filter="approved"
+          data-submission-filter="approved"
         >
           Approved
         </button>
 
         <button
           type="button"
-          data-filter="rejected"
+          data-submission-filter="rejected"
         >
           Rejected
         </button>
 
       </div>
 
-    </div>
+      <div
+        id="submissionList"
+        class="admin-list"
+      ></div>
 
-
-    <div
-      id="reviewStatus"
-      class="review-status"
-    >
-      Loading submissions...
-    </div>
+    </section>
 
 
     <section
-      id="reviewList"
-      class="review-list"
-    ></section>
+      class="admin-panel"
+      data-admin-panel="organizations"
+      hidden
+    >
+
+      <div class="panel-heading">
+        <span class="admin-eyebrow">
+          DATABASE-MANAGED
+        </span>
+
+        <h2>
+          Organizations
+        </h2>
+
+        <p>
+          Approved organizations managed through
+          the LINK governance system.
+        </p>
+      </div>
+
+      <input
+        id="organizationSearch"
+        class="admin-search"
+        type="search"
+        placeholder="Search organizations..."
+      >
+
+      <div
+        id="organizationList"
+        class="admin-list"
+      ></div>
+
+    </section>
+
+
+    <section
+      class="admin-panel"
+      data-admin-panel="events"
+      hidden
+    >
+
+      <div class="panel-heading">
+        <span class="admin-eyebrow">
+          COMMUNITY CALENDAR
+        </span>
+
+        <h2>
+          Event Review
+        </h2>
+
+        <p>
+          Review submitted events and flyers.
+        </p>
+      </div>
+
+      <div
+        id="eventFilters"
+        class="admin-filters"
+      >
+
+        <button
+          type="button"
+          class="active"
+          data-event-filter="all"
+        >
+          All
+        </button>
+
+        <button
+          type="button"
+          data-event-filter="pending"
+        >
+          Pending
+        </button>
+
+        <button
+          type="button"
+          data-event-filter="approved"
+        >
+          Approved
+        </button>
+
+        <button
+          type="button"
+          data-event-filter="rejected"
+        >
+          Rejected
+        </button>
+
+        <button
+          type="button"
+          data-event-filter="archived"
+        >
+          Archived
+        </button>
+
+      </div>
+
+      <div
+        id="eventList"
+        class="admin-list"
+      ></div>
+
+    </section>
+
+
+    <section
+      class="admin-panel"
+      data-admin-panel="media"
+      hidden
+    >
+
+      <div class="panel-heading">
+        <span class="admin-eyebrow">
+          COMMUNITY MEDIA
+        </span>
+
+        <h2>
+          Photo Review
+        </h2>
+
+        <p>
+          Review authorization and publication
+          permissions for submitted photos.
+        </p>
+      </div>
+
+      <div
+        id="mediaFilters"
+        class="admin-filters"
+      >
+
+        <button
+          type="button"
+          class="active"
+          data-media-filter="all"
+        >
+          All
+        </button>
+
+        <button
+          type="button"
+          data-media-filter="pending"
+        >
+          Pending
+        </button>
+
+        <button
+          type="button"
+          data-media-filter="approved"
+        >
+          Approved
+        </button>
+
+      </div>
+
+      <div
+        id="mediaList"
+        class="media-grid"
+      ></div>
+
+    </section>
+
+
+    <section
+      class="admin-panel"
+      data-admin-panel="site"
+      hidden
+    >
+
+      <div class="panel-heading">
+        <span class="admin-eyebrow">
+          SITE + PUBLISHING
+        </span>
+
+        <h2>
+          Site Content
+        </h2>
+
+        <p>
+          Community Brief tools and direct links
+          to key public LINK pages.
+        </p>
+      </div>
+
+      <div class="site-grid">
+
+        <article>
+
+          <span class="admin-eyebrow">
+            COMMUNITY BRIEF
+          </span>
+
+          <h3>
+            Build an Edition
+          </h3>
+
+          <label>
+            Edition Month
+            <input
+              id="briefMonth"
+              type="month"
+            >
+          </label>
+
+          <label>
+            Subject
+            <input
+              id="briefSubject"
+              type="text"
+              value="LINK Community Brief"
+            >
+          </label>
+
+          <label>
+            Preview Text
+            <input
+              id="briefPreviewText"
+              type="text"
+            >
+          </label>
+
+          <label>
+            Intro Note
+            <textarea
+              id="briefIntroNote"
+              rows="5"
+            ></textarea>
+          </label>
+
+          <div class="admin-actions">
+
+            <button
+              id="generateBrief"
+              type="button"
+            >
+              Generate Draft
+            </button>
+
+            <button
+              id="previewBrief"
+              type="button"
+              disabled
+            >
+              Preview
+            </button>
+
+            <button
+              id="approveBrief"
+              type="button"
+              disabled
+            >
+              Approve
+            </button>
+
+          </div>
+
+          <div id="briefStatus">
+            No edition selected.
+          </div>
+
+          <label>
+            Schedule Approved Edition
+            <input
+              id="briefSchedule"
+              type="datetime-local"
+            >
+          </label>
+
+          <button
+            id="scheduleBrief"
+            type="button"
+            disabled
+          >
+            Schedule Send
+          </button>
+
+          <iframe
+            id="briefPreviewFrame"
+            title="LINK Community Brief preview"
+            hidden
+          ></iframe>
+
+        </article>
+
+
+        <article>
+
+          <span class="admin-eyebrow">
+            PUBLIC SITE
+          </span>
+
+          <h3>
+            Review LINK Pages
+          </h3>
+
+          <div class="page-links">
+
+            <a
+              href="/lakenorman/"
+              target="_blank"
+              rel="noopener"
+            >
+              Homepage
+            </a>
+
+            <a
+              href="/lakenorman/nonprofits/"
+              target="_blank"
+              rel="noopener"
+            >
+              Nonprofit Directory
+            </a>
+
+            <a
+              href="/business/"
+              target="_blank"
+              rel="noopener"
+            >
+              Businesses
+            </a>
+
+            <a
+              href="/lakenorman/community/"
+              target="_blank"
+              rel="noopener"
+            >
+              Community
+            </a>
+
+            <a
+              href="/lakenorman/resources/"
+              target="_blank"
+              rel="noopener"
+            >
+              Resource Exchange
+            </a>
+
+            <a
+              href="/lakenorman/nonprofits/register.html"
+              target="_blank"
+              rel="noopener"
+            >
+              Nonprofit Registration
+            </a>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
 
   </section>
 
 </main>
 
-<script src="./admin.js"></script>
+<footer class="admin-footer">
+  <strong>
+    LINK Community Hub™ · Lake Norman
+  </strong>
+
+  <span>
+    Administrative Operations
+  </span>
+
+  <p>
+    © Link Holdings Group, LLC — All Rights Reserved
+  </p>
+</footer>
+
+<script
+  src="./admin.js?v=20260827-command-center"
+></script>
 
 </body>
 </html>

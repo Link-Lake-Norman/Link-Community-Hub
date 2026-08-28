@@ -1,0 +1,522 @@
+* {
+  box-sizing:border-box;
+}
+
+:root {
+  --navy:#0b2344;
+  --deep:#06172e;
+  --green:#577c42;
+  --teal:#2d7777;
+  --gold:#e0a52f;
+  --amber:#d18c28;
+  --white:#ffffff;
+  --muted:#566070;
+  --border:rgba(11,35,68,.13);
+}
+
+body {
+  margin:0;
+
+  background:#ffffff;
+  color:var(--navy);
+
+  font-family:
+    Arial,
+    sans-serif;
+}
+
+.opportunity-hero {
+  padding:
+    78px 24px 62px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #06172e,
+      #0b2344
+    );
+
+  color:#ffffff;
+}
+
+.opportunity-hero-inner,
+.opportunity-controls-inner,
+.member-opportunities-inner {
+  width:
+    min(1160px,100%);
+
+  margin:
+    0 auto;
+}
+
+.opportunity-kicker {
+  color:var(--gold);
+
+  font-family:
+    Montserrat,
+    Arial,
+    sans-serif;
+
+  font-size:10px;
+  font-weight:900;
+
+  letter-spacing:.12em;
+}
+
+.opportunity-hero h1 {
+  max-width:790px;
+
+  margin:
+    10px 0 14px;
+
+  font-family:
+    Montserrat,
+    Arial,
+    sans-serif;
+
+  font-size:
+    clamp(38px,6vw,72px);
+
+  font-weight:900;
+
+  line-height:.98;
+}
+
+.opportunity-hero h1 span {
+  color:var(--gold);
+}
+
+.opportunity-hero p {
+  max-width:720px;
+
+  margin:0;
+
+  color:
+    rgba(255,255,255,.82);
+
+  font-size:15px;
+  line-height:1.7;
+}
+
+.opportunity-controls {
+  padding:
+    24px;
+
+  border-bottom:
+    1px solid var(--border);
+
+  background:#ffffff;
+
+  position:sticky;
+  top:0;
+
+  z-index:5;
+}
+
+.opportunity-controls-inner {
+  display:grid;
+
+  grid-template-columns:
+    1fr 320px;
+
+  gap:16px;
+}
+
+.opportunity-controls label {
+  display:grid;
+
+  gap:6px;
+
+  color:var(--navy);
+
+  font-family:
+    Montserrat,
+    Arial,
+    sans-serif;
+
+  font-size:9px;
+  font-weight:900;
+}
+
+.opportunity-controls input,
+.opportunity-controls select {
+  width:100%;
+
+  padding:12px 13px;
+
+  border:
+    1px solid var(--border);
+
+  border-radius:6px;
+
+  background:#ffffff;
+
+  color:var(--navy);
+
+  font:inherit;
+}
+
+.member-opportunities {
+  padding:
+    52px 24px 80px;
+
+  background:#ffffff;
+}
+
+.member-opportunities-heading {
+  margin-bottom:25px;
+
+  display:flex;
+
+  align-items:flex-end;
+  justify-content:space-between;
+
+  gap:20px;
+}
+
+.member-opportunities-heading > div > span {
+  color:var(--teal);
+
+  font-family:
+    Montserrat,
+    Arial,
+    sans-serif;
+
+  font-size:9px;
+  font-weight:900;
+
+  letter-spacing:.1em;
+}
+
+.member-opportunities-heading h2 {
+  max-width:670px;
+
+  margin:
+    6px 0 0;
+
+  font-family:
+    Montserrat,
+    Arial,
+    sans-serif;
+
+  font-size:
+    clamp(28px,4vw,46px);
+
+  line-height:1.04;
+}
+
+.opportunity-count {
+  color:var(--green);
+
+  font-family:
+    Montserrat,
+    Arial,
+    sans-serif;
+
+  font-size:11px;
+  font-weight:900;
+}
+
+.member-org {
+  margin-bottom:10px;
+
+  border:
+    1px solid var(--border);
+
+  border-radius:8px;
+
+  overflow:hidden;
+
+  background:#ffffff;
+
+  box-shadow:
+    0 3px 12px rgba(6,23,46,.035);
+}
+
+.member-org summary {
+  min-height:78px;
+
+  padding:
+    12px 18px;
+
+  display:grid;
+
+  grid-template-columns:
+    62px 1fr auto 30px;
+
+  gap:14px;
+
+  align-items:center;
+
+  cursor:pointer;
+
+  list-style:none;
+}
+
+.member-org summary::-webkit-details-marker {
+  display:none;
+}
+
+.member-org[open] summary {
+  border-bottom:
+    1px solid var(--border);
+
+  background:#f9fbfc;
+}
+
+.member-org-logo {
+  width:58px;
+  height:48px;
+
+  display:grid;
+  place-items:center;
+}
+
+.member-org-logo img {
+  max-width:58px;
+  max-height:45px;
+
+  object-fit:contain;
+}
+
+.member-org-placeholder {
+  width:42px;
+  height:42px;
+
+  display:grid;
+  place-items:center;
+
+  border-radius:50%;
+
+  background:var(--navy);
+  color:#ffffff;
+
+  font-family:
+    Montserrat,
+    Arial,
+    sans-serif;
+
+  font-weight:900;
+}
+
+.member-org-name strong {
+  display:block;
+
+  color:var(--navy);
+
+  font-family:
+    Montserrat,
+    Arial,
+    sans-serif;
+
+  font-size:14px;
+  font-weight:900;
+}
+
+.member-org-name span {
+  display:block;
+
+  margin-top:3px;
+
+  color:var(--muted);
+
+  font-size:10px;
+}
+
+.member-org-total {
+  color:var(--green);
+
+  font-family:
+    Montserrat,
+    Arial,
+    sans-serif;
+
+  font-size:9px;
+  font-weight:900;
+}
+
+.member-org-plus {
+  color:var(--navy);
+
+  font-size:20px;
+  font-weight:900;
+
+  text-align:center;
+}
+
+.member-org-body {
+  padding:
+    5px 20px 20px;
+}
+
+.member-group-title {
+  margin:
+    18px 0 4px;
+
+  color:var(--teal);
+
+  font-family:
+    Montserrat,
+    Arial,
+    sans-serif;
+
+  font-size:10px;
+  font-weight:900;
+
+  text-transform:uppercase;
+}
+
+.opportunity-item {
+  padding:
+    15px 0;
+
+  border-bottom:
+    1px solid rgba(11,35,68,.08);
+}
+
+.opportunity-item:last-child {
+  border-bottom:0;
+}
+
+.item-type {
+  display:inline-flex;
+
+  margin-bottom:6px;
+
+  padding:
+    4px 7px;
+
+  border-radius:4px;
+
+  background:#f2f5f7;
+  color:var(--navy);
+
+  font-family:
+    Montserrat,
+    Arial,
+    sans-serif;
+
+  font-size:8px;
+  font-weight:900;
+}
+
+.item-type.volunteer {
+  background:#eef5eb;
+  color:#456d35;
+}
+
+.item-type.donation {
+  background:#fff6df;
+  color:#946610;
+}
+
+.item-type.mentor {
+  background:#edf5f5;
+  color:#246c6c;
+}
+
+.item-type.event {
+  background:#f8eeee;
+  color:#8c3836;
+}
+
+.item-type.business {
+  background:#eef1f6;
+  color:#0b2344;
+}
+
+.opportunity-item h3 {
+  margin:
+    0 0 6px;
+
+  color:var(--navy);
+
+  font-family:
+    Montserrat,
+    Arial,
+    sans-serif;
+
+  font-size:16px;
+  font-weight:900;
+}
+
+.opportunity-item p {
+  max-width:850px;
+
+  margin:
+    0 0 9px;
+
+  color:var(--muted);
+
+  font-size:12px;
+  line-height:1.55;
+}
+
+.opportunity-item a {
+  color:var(--amber);
+
+  font-family:
+    Montserrat,
+    Arial,
+    sans-serif;
+
+  font-size:9px;
+  font-weight:900;
+
+  text-decoration:none;
+}
+
+.member-no-listings {
+  padding:
+    20px 0;
+
+  color:var(--muted);
+
+  font-size:12px;
+}
+
+.opportunity-footer {
+  padding:
+    24px;
+
+  display:flex;
+
+  justify-content:space-between;
+
+  gap:20px;
+
+  flex-wrap:wrap;
+
+  background:var(--deep);
+  color:
+    rgba(255,255,255,.72);
+
+  font-size:9px;
+}
+
+.opportunity-footer strong,
+.opportunity-footer a {
+  color:#ffffff;
+
+  text-decoration:none;
+}
+
+@media(max-width:760px) {
+  .opportunity-controls-inner {
+    grid-template-columns:1fr;
+  }
+
+  .member-opportunities-heading {
+    align-items:flex-start;
+    flex-direction:column;
+  }
+
+  .member-org summary {
+    grid-template-columns:
+      50px 1fr 28px;
+  }
+
+  .member-org-total {
+    display:none;
+  }
+}

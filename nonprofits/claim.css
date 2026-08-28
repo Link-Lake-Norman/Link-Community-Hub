@@ -1,0 +1,105 @@
+.claim-page {
+  width:
+    min(
+      760px,
+      calc(100% - 34px)
+    );
+  margin: 0 auto;
+  padding: 60px 0 90px;
+  color: #0b2344;
+}
+
+.claim-card {
+  padding: 34px;
+  border: 1px solid #dfe4e8;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow:
+    0 16px 44px
+    rgba(11,35,68,.08);
+}
+
+.claim-card h1 {
+  margin: 0 0 12px;
+  font-family:
+    Montserrat,
+    Arial,
+    sans-serif;
+  font-size:
+    clamp(
+      2rem,
+      5vw,
+      3rem
+    );
+}
+
+.claim-eyebrow {
+  color: #2d7777;
+  font-family:
+    Montserrat,
+    Arial,
+    sans-serif;
+  font-size: .74rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+}
+
+.claim-org {
+  display: grid;
+  gap: 4px;
+  margin: 24px 0;
+  padding: 17px;
+  border-left: 4px solid #e0a52f;
+  background: #f7f3eb;
+}
+
+.claim-org strong {
+  font-size: 1.1rem;
+}
+
+.claim-org span {
+  color: #566070;
+}
+
+.claim-form {
+  display: grid;
+  gap: 15px;
+}
+
+.claim-form label {
+  display: grid;
+  gap: 6px;
+  color: #566070;
+  font-weight: 700;
+}
+
+.claim-form input {
+  min-height: 44px;
+  border: 1px solid #ccd5dc;
+  border-radius: 7px;
+  padding: 0 12px;
+  font: inherit;
+}
+
+.claim-form button {
+  min-height: 48px;
+  border: 0;
+  border-radius: 8px;
+  background: #0b2344;
+  color: #ffffff;
+  font-family:
+    Montserrat,
+    Arial,
+    sans-serif;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.claim-result {
+  margin-top: 18px;
+  line-height: 1.6;
+}
+
+.claim-error {
+  border-left: 5px solid #9b3a38;
+}

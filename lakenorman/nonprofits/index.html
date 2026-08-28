@@ -24,88 +24,68 @@
 
   <link
     rel="stylesheet"
-    href="./directory.css"
+    href="./directory.css?v=20260827-085809"
   >
 
   <link
     rel="stylesheet"
     href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
   >
+  <link rel="stylesheet" href="/lakenorman/assets/link-public-shell.css">
+
+<link rel="stylesheet" href="/lakenorman/assets/link-standard-header.css?v=20260827-094954">
+  <link rel="stylesheet" href="/lakenorman/assets/link-branded-graphic-panels.css?v=20260828">
+  <link rel="stylesheet" href="/lakenorman/assets/link-launch-final.css?v=20260828-122514">
+  <link rel="stylesheet" href="/lakenorman/assets/current-launch.css?v=20260828">
 </head>
 
 <body class="link-directory-page">
 
-<header class="directory-header">
-  <a
-    href="../"
-    class="directory-brand"
-  >
-    <strong>LINK</strong>
-    <span>Community Hub™</span>
-  </a>
-
-  <nav>
-    <a href="../">
-      Lake Norman Hub
+<header class="link-standard-header">
+  <div class="link-standard-header-inner">
+    <a
+      class="link-standard-brand"
+      href="/lakenorman/"
+      aria-label="LINK Community Hub — Lake Norman"
+    >
+      <img
+        src="/lakenorman/assets/brand/link-horizontal-logo.png"
+        alt="LINK Community Hub™ · Lake Norman"
+      >
     </a>
-
-    <a href="./register.html">
-      Register / Update Nonprofit
-    </a>
-  </nav>
+  </div>
 </header>
+
+<nav
+  class="link-standard-nav"
+  aria-label="LINK Community Hub navigation"
+>
+  <a href="/lakenorman/">Home</a>
+  <a href="/lakenorman/nonprofits/">Nonprofits</a>
+  <a href="/business/">Businesses</a>
+  <a href="/lakenorman/community/">Community</a>
+  <a href="/lakenorman/resources/">Resource Exchange</a>
+  <a href="/lakenorman/support-local/">
+    Support Local
+    <span class="link-standard-coming-soon">
+      COMING SOON
+    </span>
+  </a>
+</nav>
+
+
 
 <main>
 
-  <section class="directory-hero">
-
-    <div class="directory-eyebrow">
-      VERIFIED COMMUNITY ORGANIZATIONS
-    </div>
-
-    <h1>
-      Find nonprofits serving
-      the Lake Norman community.
-    </h1>
-
-    <p>
-      Explore organizations, missions, needs,
-      volunteer opportunities and events that
-      LINK has verified as serving communities
-      around Lake Norman.
-    </p>
-
-    <div class="directory-controls">
-
-      <input
-        id="directorySearch"
-        type="search"
-        placeholder="Search organizations, missions or categories..."
-        aria-label="Search nonprofit directory"
-      >
-
-      <select
-        id="directoryArea"
-        aria-label="Filter by service area"
-      >
-        <option value="">
-          All Lake Norman Areas
-        </option>
-
-        <option>Huntersville</option>
-        <option>Cornelius</option>
-        <option>Davidson</option>
-        <option>North Charlotte</option>
-        <option>Mooresville</option>
-        <option>Troutman</option>
-        <option>Denver</option>
-        <option>Sherrills Ford</option>
-        <option>Other Lake Norman Area</option>
-      </select>
-
-    </div>
-
-  </section>
+  <section
+  class="link-assigned-graphic-hero"
+  aria-label="Our Community. Connected."
+>
+  <img
+    src="/lakenorman/assets/page-heroes/LINK-nonprofit-directory-hero.png"
+    alt="Our Community. Connected. LINK Community Hub connects people, organizations, needs and opportunities across Lake Norman."
+  >
+</section>
 
 
   <section class="directory-summary">
@@ -126,6 +106,28 @@
     </div>
 
   </section>
+
+<!-- LINK CURRENT OPPORTUNITIES CTA START -->
+<section class="launch-opportunities-cta">
+
+  <div>
+    <strong>
+      See Every Member Need & Opportunity
+    </strong>
+
+    <span>
+      Open each nonprofit to view current needs,
+      volunteer opportunities, donations and ways to help.
+    </span>
+  </div>
+
+  <a href="/lakenorman/opportunities/">
+    BROWSE ALL NEEDS & OPPORTUNITIES →
+  </a>
+
+</section>
+<!-- LINK CURRENT OPPORTUNITIES CTA END -->
+
 
 
   <section class="directory-map-section">
@@ -188,6 +190,52 @@
 
   </section>
 
+
+<section
+  id="link-nonprofit-join-panel"
+  class="link-branded-section"
+  aria-labelledby="link-nonprofit-join-heading"
+>
+  <div class="link-branded-section-heading">
+    <span>FOR LOCAL NONPROFITS</span>
+
+    <h2 id="link-nonprofit-join-heading">
+      Join LINK Community Hub™ Free.
+    </h2>
+
+    <p>
+      Get listed, share your needs and opportunities,
+      connect with local businesses and community members,
+      and keep your organization information current.
+    </p>
+  </div>
+
+  <div class="link-branded-single">
+    <article class="link-branded-card">
+      <img
+        src="/lakenorman/assets/partner-graphics/nonprofit-join-free.png"
+        alt="Nonprofits join LINK Community Hub free — get listed, get seen and get supported"
+      >
+
+      <div class="link-branded-actions">
+        <a
+          class="green"
+          href="/lakenorman/nonprofits/register.html"
+        >
+          Apply to Join Free →
+        </a>
+
+        <a
+          class="secondary"
+          href="/nonprofits/"
+        >
+          Existing Nonprofit Sign In →
+        </a>
+      </div>
+    </article>
+  </div>
+</section>
+
 </main>
 
 
@@ -217,13 +265,134 @@
 </footer>
 
 
-<script src="../data/organizations.js"></script>
+<script src="../data/organizations.js?v=20260827-085809"></script>
 
 <script
   src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
 ></script>
 
-<script src="./directory.js"></script>
+<script src="./directory.js?v=20260827-085809"></script>
 
+<!-- LINK STANDARD LAUNCH FOOTER START -->
+<footer
+  class="link-launch-footer"
+  aria-label="LINK Community Hub footer"
+>
+  <div class="link-launch-footer-inner">
+
+    <div class="link-launch-footer-main">
+
+      <div>
+        <h3>
+          LINK Community Hub™ · Lake Norman
+        </h3>
+
+        <p>
+          Connecting people, organizations,
+          resources, needs and opportunities
+          across our community.
+        </p>
+
+        <a
+          class="link-launch-footer-email"
+          href="mailto:info@linkcommunityhub.com"
+        >
+          info@linkcommunityhub.com
+        </a>
+      </div>
+
+      <div class="link-launch-footer-column">
+
+        <h3>Connect With LINK</h3>
+
+        <a
+          href="https://www.facebook.com/profile.php?id=61589327911858"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Facebook
+        </a>
+
+        <a
+          href="https://www.instagram.com/linklkncommunityhub/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Instagram
+        </a>
+
+        <a
+          href="https://www.linkedin.com/showcase/143558228/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn
+        </a>
+
+      </div>
+
+      <div class="link-launch-footer-column">
+
+        <h3>
+          Information & Protection
+        </h3>
+
+        <a
+          href="/legal.html"
+        >
+          Privacy & Data Protection
+        </a>
+
+        <a
+          href="/legal.html"
+        >
+          Terms & Platform Use
+        </a>
+
+        <a
+          href="/legal.html#intellectual-property"
+        >
+          Intellectual Property & Content
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="link-launch-footer-bottom">
+
+      <div class="link-launch-footer-copyright">
+        © 2026 Link Holdings Group, LLC —
+        All Rights Reserved.
+        LINK Community Hub™ and associated
+        brand, platform, designs, content,
+        systems and materials are proprietary.
+      </div>
+
+      <div class="link-launch-footer-legal">
+
+        <a href="/legal.html">
+          Privacy
+        </a>
+
+        <a href="/legal.html">
+          Terms
+        </a>
+
+        <a href="/legal.html#intellectual-property">
+          IP Protection
+        </a>
+
+        <a href="mailto:info@linkcommunityhub.com">
+          Contact
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+</footer>
+<!-- LINK STANDARD LAUNCH FOOTER END -->
 </body>
 </html>

@@ -59,10 +59,19 @@
       return null;
     }
 
-    return String(value).replace(
-      /^\.\/assets\/logos\//,
-      "/lakenorman/assets/logos/"
-    );
+    var url = String(value).trim();
+
+    if (url.indexOf("./assets/logos/") === 0) {
+      url = "/lakenorman/assets/logos/" + url.slice("./assets/logos/".length);
+    } else if (url.indexOf("assets/logos/") === 0) {
+      url = "/lakenorman/assets/logos/" + url.slice("assets/logos/".length);
+    }
+
+    if (url.indexOf("/lakenorman/assets/logos/") === 0 && url.indexOf("?") === -1) {
+      url += "?v=20260828-directory-logo4";
+    }
+
+    return url;
   }
 
 
@@ -378,6 +387,14 @@
    * but must not erase richer existing public information.
    */
 
+  function registryKey(value) {
+    return String(value || "")
+      .toLowerCase()
+      .replace(/&/g, "and")
+      .replace(/[^a-z0-9]+/g, "")
+      .trim();
+  }
+
   function registryMap() {
     var registry =
       Array.isArray(
@@ -396,12 +413,20 @@
       )
       .forEach(
         function (org) {
-          map.set(
-            String(org.name || "")
-              .toLowerCase()
-              .trim(),
-            org
-          );
+          [
+            org.name,
+            org.id,
+            org.slug
+          ]
+            .filter(Boolean)
+            .forEach(
+              function (value) {
+                map.set(
+                  registryKey(value),
+                  org
+                );
+              }
+            );
         }
       );
 
@@ -415,9 +440,10 @@
 
     var legacy =
       registry.get(
-        String(org.name || "")
-          .toLowerCase()
-          .trim()
+        registryKey(org.name)
+      ) ||
+      registry.get(
+        registryKey(org.id)
       );
 
     if (!legacy) {

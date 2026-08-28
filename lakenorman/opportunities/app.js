@@ -31,6 +31,39 @@
   }
 
 
+  function logoUrl(value) {
+    var url =
+      clean(value);
+
+    if (!url) {
+      return "";
+    }
+
+    if (url.indexOf("./assets/") === 0) {
+      return (
+        "/lakenorman/" +
+        url.slice(2)
+      );
+    }
+
+    if (url.indexOf("assets/") === 0) {
+      return (
+        "/lakenorman/" +
+        url
+      );
+    }
+
+    if (url.indexOf("/assets/") === 0) {
+      return (
+        "/lakenorman" +
+        url
+      );
+    }
+
+    return url;
+  }
+
+
   function key(value) {
     return clean(value)
       .toLowerCase()
@@ -215,7 +248,7 @@
               clean(org.website),
 
             logo:
-              clean(org.logo),
+              logoUrl(org.logo),
 
             category:
               clean(org.category),
@@ -287,9 +320,9 @@
                 clean(old.website),
 
               logo:
-                clean(row.logo_url) ||
-                clean(row.logo) ||
-                clean(old.logo),
+                logoUrl(row.logo_url) ||
+                logoUrl(row.logo) ||
+                logoUrl(old.logo),
 
               category:
                 clean(row.category) ||

@@ -1,0 +1,48 @@
+html.link-preview-open,html.link-preview-open body{overflow:hidden!important}
+.link-universal-preview{
+  position:fixed!important; inset:0!important; z-index:2147483000!important;
+  display:none!important; align-items:center!important; justify-content:center!important;
+  padding:clamp(10px,2vw,28px)!important; box-sizing:border-box!important;
+}
+.link-universal-preview.is-open{display:flex!important}
+.link-universal-preview-backdrop{position:absolute!important;inset:0!important;background:rgba(6,28,50,.74)!important}
+.link-universal-preview-dialog{
+  position:relative!important; z-index:1!important;
+  width:min(96vw,1500px)!important; height:min(94vh,1100px)!important;
+  max-width:calc(100vw - 20px)!important; max-height:calc(100vh - 20px)!important;
+  background:#fff!important; border-radius:20px!important; overflow:hidden!important;
+  box-shadow:0 30px 90px rgba(0,0,0,.35)!important;
+  display:grid!important; grid-template-rows:auto minmax(0,1fr)!important;
+}
+.link-universal-preview-header{
+  min-width:0!important; display:flex!important; align-items:center!important; justify-content:space-between!important;
+  gap:18px!important; padding:18px 22px!important; background:#0b315a!important; color:#fff!important;
+  position:relative!important; z-index:2!important;
+}
+.link-universal-preview-header h2{
+  margin:0!important; min-width:0!important; color:#fff!important;
+  font-size:clamp(1.1rem,2vw,1.65rem)!important; line-height:1.2!important;
+  white-space:normal!important; overflow-wrap:anywhere!important;
+}
+.link-universal-preview-close{
+  flex:0 0 auto!important; width:44px!important; height:44px!important; border:0!important; border-radius:50%!important;
+  background:#fff!important; color:#0b315a!important; font-size:32px!important; line-height:1!important; cursor:pointer!important;
+}
+.link-universal-preview-body{
+  min-height:0!important; overflow:auto!important; background:#eef3f6!important;
+  display:flex!important; align-items:stretch!important; justify-content:center!important;
+}
+.link-universal-preview-body iframe{
+  display:block!important; width:100%!important; height:100%!important; min-height:0!important;
+  border:0!important; background:#fff!important;
+}
+.link-universal-preview-body img{
+  display:block!important; max-width:100%!important; max-height:100%!important;
+  width:auto!important; height:auto!important; object-fit:contain!important; margin:auto!important; padding:18px!important;
+  box-sizing:border-box!important;
+}
+@media(max-width:640px){
+  .link-universal-preview{padding:6px!important}
+  .link-universal-preview-dialog{width:100%!important;height:100%!important;max-width:100%!important;max-height:100%!important;border-radius:10px!important}
+  .link-universal-preview-header{padding:13px 14px!important}
+}

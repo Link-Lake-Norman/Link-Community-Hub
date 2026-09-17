@@ -1,0 +1,175 @@
+<!doctype html><html lang="en"><head>
+  <script src="/lakenorman/nonprofits/admin-session-v22-1.js?v=20260911-v22-1"></script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Business & Resource Manager | LINK Admin</title><link rel="stylesheet" href="/lakenorman/nonprofits/admin.css?v=20260903-business-shell"><link rel="stylesheet" href="/lakenorman/nonprofits/business-admin.css?v=20260903"><link rel="stylesheet" href="/lakenorman/assets/link-launch-final.css?v=20260828-122514">
+  <link rel="stylesheet" href="/lakenorman/assets/link-responsive-system.css?v=20260909">
+<link rel="stylesheet" href="/lakenorman/assets/backend-shell/link-backend-shell-v11.css?v=20260911-11">
+<link rel="stylesheet" href="/lakenorman/nonprofits/admin-ui-v22.css?v=20260911-v22">
+
+
+
+
+
+<link rel="stylesheet" href="/lakenorman/assets/link-approved-header-v6.css?v=20260914-v6">
+<link rel="stylesheet" href="/lakenorman/assets/link-readability-v6.css?v=20260914-v6">
+<link rel="stylesheet" href="/lakenorman/assets/link-global-format-v15.css?v=20260914-v15">
+<link rel="stylesheet" href="/lakenorman/assets/link-global-text-lock-v16.css?v=20260914-v16">
+  <link rel="stylesheet" href="/lakenorman/assets/link-edge-width-lock-v17.css?v=20260914-v17">
+<link rel="stylesheet" href="/lakenorman/assets/link-edge-width-v18.css?v=20260914-v18">
+<link rel="stylesheet" href="/lakenorman/assets/link-site-readable-v18.css?v=20260914-v18">
+
+<link rel="stylesheet" href="/lakenorman/assets/link-visual-runtime.css?v=20260914-v22">
+<script src="/lakenorman/assets/link-visual-placements.js?v=20260914-v19"></script>
+<script src="/lakenorman/assets/link-page-text-overrides.js?v=20260914-v19"></script>
+<script src="/lakenorman/assets/link-visual-runtime.js?v=20260914-v22" defer></script>
+
+
+<link rel="stylesheet" href="/lakenorman/assets/link-v20-stabilizer.css?v=20260914-v20">
+
+
+  <link rel="stylesheet" href="/lakenorman/assets/link-global-scale-v23.css?v=20260914-v23">
+<link rel="stylesheet" href="/lakenorman/assets/link-admin-key-input-fix-v32.css?v=20260914-v32">
+<link rel="stylesheet" href="/lakenorman/assets/link-footer-universal-v43.css?v=20260915-v43">
+</head><body class="link-v407e-page link-v407e-linked">
+<!-- LINK-V6-APPROVED-HEADER-START -->
+<header id="link-approved-header-v6">
+  <div class="link-approved-header-v6__inner">
+    <a class="link-approved-header-v6__brand" href="/lakenorman/" aria-label="LINK Community Hub Lake Norman home">
+      <img src="/lakenorman/assets/brand/link-horizontal-logo.png" alt="LINK Community Hub — Lake Norman">
+    </a>
+    <nav class="link-approved-header-v6__nav" aria-label="Primary navigation">
+      <a href="/lakenorman/">Home</a>
+      <a href="/lakenorman/nonprofits/">Nonprofits</a>
+      <a href="/lakenorman/opportunities/">Needs &amp; Opportunities</a>
+      <a href="/business/">Businesses</a>
+      <a href="/lakenorman/services/">Services</a>
+      <a href="/lakenorman/groups/">Schools &amp; Groups</a>
+      <a href="/lakenorman/community/">Community</a>
+      <a href="/lakenorman/events/">Events</a>
+      <a class="login" href="/lakenorman/portal-access.html">Login</a>
+      <a class="cta" href="/lakenorman/#get-involved">Get Involved</a>
+    </nav>
+  </div>
+</header>
+<!-- LINK-V6-APPROVED-HEADER-END -->
+
+
+
+
+
+<header class="bam-header"><a href="/lakenorman/"><strong>LINK</strong> Community Hub™ · Lake Norman</a><nav><a href="/lakenorman/nonprofits/admin.html">Operations</a><a href="/lakenorman/nonprofits/ecosystem-admin.html">Ecosystem Records</a><a class="active" href="/lakenorman/nonprofits/business-admin.html">Business Manager</a><a href="/lakenorman/nonprofits/publisher.html">Publish Content</a><a href="/lakenorman/nonprofits/partner-assets.html">Partner Assets</a></nav></header>
+<main class="admin-shell bam-shell">
+<!-- LINK BUSINESS MANAGER SHARED ADMIN HERO -->
+<section class="admin-hero">
+  <div>
+    <span class="admin-eyebrow">
+      LINK ADMIN
+    </span>
+
+    <h1>
+      Business &amp; Resource Manager
+    </h1>
+
+    <p>
+      Manage business profiles, memberships,
+      resources, images, files, contracts and
+      community-impact activity from the same
+      secure LINK administration workspace.
+    </p>
+  </div>
+
+  <div class="admin-hero-status">
+    <span>LAKE NORMAN</span>
+    <strong>Business Operations</strong>
+  </div>
+</section>
+<section id="bam-auth" class="bam-auth admin-unlock">
+<span class="admin-eyebrow">
+  SECURE ACCESS
+</span>
+
+<h2>
+  Open Business &amp; Resource Manager
+</h2>
+
+<p>
+  Use your existing LINK administrator access key.
+  Contracts, financial records and internal files
+  remain private.
+</p>
+<form id="bam-auth-form"><label>Admin key<input id="bam-key" type="password" autocomplete="off" autocapitalize="none" spellcheck="false" required></label><button>Open Manager</button></form><p id="bam-auth-error" class="error" aria-live="polite"></p></section>
+<section id="bam-app" hidden><div class="bam-title"><div><p class="eyebrow">PRIVATE ADMIN WORKSPACE</p><h1>Business & Resource Manager</h1></div><div class="bam-actions"><button id="bam-create">+ Add Business</button><button id="bam-refresh" class="secondary">Refresh</button><button id="bam-lock" class="secondary">Lock</button></div></div>
+<div class="bam-layout"><aside><label class="search">Search businesses<input id="bam-search" type="search" placeholder="Business, contact or email"></label><div id="bam-counts" class="counts"></div><div id="bam-list" class="business-list"></div></aside><section id="bam-workspace" class="workspace"><div class="empty"><h2>Select a business</h2><p>Choose an existing business or add one while meeting with a client.</p></div></section></div></section></main>
+<dialog id="bam-create-dialog"><form id="bam-create-form" method="dialog" class="panel"><button type="button" class="close" data-close="bam-create-dialog">×</button><h2>Add a Business</h2><div class="grid"><label>Business name *<input name="businessName" required maxlength="180"></label><label>Contact name *<input name="contactName" required maxlength="140"></label><label>Email *<input name="email" type="email" required maxlength="180"></label><label>Phone<input name="phone" maxlength="50"></label><label class="wide">Website<input name="websiteUrl" maxlength="1000"></label><label>Membership level<select name="planTier">
+<option value="community_free">Resource Contributor — Free</option>
+
+<option value="community_free">Resource Contributor — Free</option>
+<option value="community_business">Community Business — $150/year</option>
+<option value="community_partner">Community Ally</option>
+<option value="impact_partner">Impact Partner</option>
+<option value="community_champion">Community Champion</option>
+<option value="presenting_partner">Presenting Partner</option></select></label><label>Status<select name="status">
+<option value="pending">Pending</option>
+<option value="active">Active</option>
+<option value="closed">Closed</option></select></label><label>Resource limit<input name="activeListingLimit" type="number" min="0" max="100" value="1"></label><label class="wide">Private Admin notes<textarea name="adminNotes"></textarea></label></div><label class="check"><input name="publicProfileEnabled" type="checkbox"> Make public profile visible now</label><p class="notice">Creating a record does not email the client or publish private information.</p><div class="form-status"></div><button class="primary">Create Business</button></form></dialog>
+<script src="/lakenorman/nonprofits/business-admin.js?v=20260903v4" defer></script><!-- LINK APPROVED PRIVATE FOOTER START -->
+<!-- LINK APPROVED PRIVATE FOOTER END -->
+<script src="/lakenorman/assets/backend-shell/link-backend-shell-v11.js?v=20260911-11"></script>
+<script src="/lakenorman/nonprofits/admin-ui-v22.js?v=20260911-v22" defer></script>
+<script src="/lakenorman/nonprofits/admin-public-links-v27.js?v=20260911-v27" defer></script><script src="/lakenorman/nonprofits/admin-service-link-v30.js?v=20260912-v30" defer></script>
+
+
+
+
+
+<script defer src="/lakenorman/assets/link-global-format-v15.js?v=20260914-v15"></script>
+<script src="/lakenorman/assets/link-admin-key-input-fix-v32.js?v=20260914-v32" defer></script>
+
+<!-- LINK STANDARD LAUNCH FOOTER START -->
+<footer data-link-universal-footer="v43" class="link-v396-footer">
+  <div class="link-v396-footer-inner">
+    <div class="link-v396-footer-grid">
+      <div class="link-v396-footer-brand">
+        <h2>LINK Community Hub™ · Lake Norman</h2>
+        <p>Connecting people, nonprofits, businesses, schools, resources, needs and opportunities across the Lake Norman community.</p>
+        <a class="link-v396-footer-email" href="mailto:info@linkcommunityhub.com">info@linkcommunityhub.com</a>
+        <p>LINK Community Hub™ is operated by LINK Lake Norman, LLC. All platform, brand and content rights are reserved as stated in the site Terms and IP notices.</p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <div class="link-v396-footer-links">
+          <a href="/lakenorman/nonprofits/">Nonprofits</a>
+          <a href="/lakenorman/opportunities/">Needs &amp; Opportunities</a>
+          <a href="/business/">Businesses</a>
+          <a href="/lakenorman/services/">Services</a>
+          <a href="/lakenorman/community/">Community</a>
+          <a href="/lakenorman/resources/">Resource Exchange</a>
+          <a href="/lakenorman/events/">Events</a>
+          <a href="/lakenorman/media/">Media</a>
+          <a href="/lakenorman/app/">App</a>
+        </div>
+      </div>
+      <div>
+        <h3>Information &amp; Protection</h3>
+        <div class="link-v396-footer-links">
+          <a href="/lakenorman/privacy/">Privacy &amp; Data Protection</a>
+          <a href="/lakenorman/terms/">Terms &amp; Platform Use</a>
+          <a href="/lakenorman/ip/">Intellectual Property &amp; Content</a>
+          <a href="/lakenorman/brand-kit/">Approved Marketing Assets</a>
+          <a href="mailto:info@linkcommunityhub.com">Contact</a>
+        </div>
+      </div>
+    </div>
+    <div class="link-v396-footer-bottom">
+      <p>© 2026 LINK Community Hub™ · Lake Norman. All Rights Reserved.</p>
+      <div class="link-v396-footer-bottom-links">
+        <a href="/lakenorman/privacy/">Privacy</a>
+        <a href="/lakenorman/terms/">Terms</a>
+        <a href="/lakenorman/ip/">IP Protection</a>
+        <a href="mailto:info@linkcommunityhub.com">Contact</a>
+      </div>
+    </div>
+  </div>
+
+        <a class="link-launch-footer-admin-login" href="/lakenorman/nonprofits/admin.html" rel="nofollow">Admin Login</a>
+</footer>
+<!-- LINK STANDARD LAUNCH FOOTER END -->
+</body></html>

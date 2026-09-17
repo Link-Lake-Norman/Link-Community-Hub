@@ -96,7 +96,7 @@
     p1.textContent='Add donated resources, gift cards, auction or raffle items, supplies, equipment and other in-kind support for approved LINK nonprofits.';
     const p2=document.createElement('p');
     p2.className='link-tier-contributor-note';
-    p2.innerHTML='<strong>Includes a existing LINK digital badge.</strong> No public business profile, directory positioning or general-public business marketing.';
+    p2.innerHTML='<strong>Includes the existing LINK digital badge.</strong> No public business profile, directory positioning or general-public business marketing.';
     if(anchor?.parentElement && anchor.parentElement!==clone){
       anchor.parentElement.insertAdjacentElement('beforebegin',p1);
       p1.insertAdjacentElement('afterend',p2);
